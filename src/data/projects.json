@@ -34,6 +34,37 @@
     "order": 1
   },
   {
+    "id": "webcam-laser-fringelab",
+    "slug": "webcam-laser-fringelab",
+    "title": "FringeLab 激光干涉与衍射智能分析平台",
+    "shortTitle": "FringeLab",
+    "englishTitle": "Webcam Laser FringeLab",
+    "category": "digital-experiments",
+    "summary": "通过摄像头、实验图片或物理仿真采集激光图样，提取相对光强剖面并完成波长反演、模型比较与不确定度分析。",
+    "description": "面向单缝衍射和双缝干涉实验，将图样采集、ROI 选取、空间标定、光强剖面提取、特征识别、物理模型选择和波长反演组织为一条可追溯的数字化实验链路。",
+    "background": "传统激光干涉与衍射实验主要依靠肉眼观察亮暗条纹、手工测量间距并代入公式，难以完整呈现真实光强分布，也不利于连续、可重复的数据分析。FringeLab 将光屏图样转化为相对相机响应曲线，使学生能够从图样采集走向模型反演与实验质量评价。",
+    "audiences": ["高中物理教师", "高中学生", "实验教学研究者"],
+    "tags": ["激光干涉", "单缝衍射", "双缝干涉", "计算机视觉", "光强分布", "波长测量", "摄像头实验", "不确定度分析"],
+    "status": "active",
+    "featured": true,
+    "siteUrl": "https://webcam-laser-fringelab.netlify.app/",
+    "repositoryName": "WUHAO19831214/webcam-laser-fringelab",
+    "netlifySiteName": "webcam-laser-fringelab",
+    "imageUrl": "/projects/webcam-laser-fringelab.png",
+    "imageAlt": "FringeLab 生产界面，左侧显示红色激光干涉条纹和可调 ROI，右侧显示相对光强曲线与波长测量结果",
+    "notice": "摄像头模式需要 HTTPS 或 localhost，并需用户主动授予摄像头权限；不同手机与浏览器对曝光、对焦和白平衡锁定的支持不同。图片处理、仿真、曲线分析和会话参数保存均在当前浏览器完成，不依赖外部分析后端，摄像头帧不会上传。当前版本未提供可安装 PWA 所需的 manifest 与 Service Worker。源码仓库已核实但目前为私有，因此公共门户不显示 GitHub 按钮。",
+    "capabilities": ["摄像头、PNG/JPEG/WebP 图片与理想物理仿真三种输入", "可移动、旋转并通过四角拖动缩放的带状 ROI", "两点标定、实物尺识别与虚拟标尺套合", "RGB、亮度与自动通道选择，背景扣除和高斯平滑", "峰值、谷值、亚像素中心、FWHM 与过曝平台检测", "单缝多级暗纹与双缝多级亮纹波长反演", "精确几何回归与小角近似结果对照", "Fresnel 数、采样充分度、曝光与标定质量门控", "95% 扩展不确定度、理想模型拟合与 CSV/JSON/PNG 导出", "浏览器本地实验参数保存与恢复"],
+    "teachingValue": ["把“看条纹”提升为对相对光强分布的定量分析", "把公式代入提升为由实验数据驱动的模型反演", "支持饱和、采样、标定和不确定度的实验质量讨论", "便于比较理论曲线、真实图样、精确几何与小角近似", "适用于课堂演示、学生实验和研究性学习"],
+    "scenarios": ["双缝干涉条纹间距与激光波长测量", "单缝衍射暗纹和中央主极大宽度分析", "真实实验图样与理想模型比较", "实验误差、不确定度与远场条件讨论", "无器材条件下的光学仿真实验预习"],
+    "technicalHighlights": ["React、TypeScript 与 HTML Canvas", "浏览器 MediaDevices 摄像头接口", "纯浏览器像素处理与实时曲线绘制", "Web Worker 实物尺检测", "localStorage 本地会话参数保存", "无外部图像分析后端"],
+    "roadmap": ["继续验证不同手机和摄像头的曝光与对焦控制差异", "完善明显透视条件下的实物尺单应性校正", "补充真实器材条件下的重复测量与教学实证数据", "如需可安装体验，补充经过验证的 PWA manifest 与离线缓存策略"],
+    "versions": [
+      {"name": "FringeLab v0.1.0", "role": "research", "siteUrl": "https://webcam-laser-fringelab.netlify.app/", "status": "active", "note": "当前正式在线版本；源码仓库为私有"}
+    ],
+    "updatedAt": "2026-07-14",
+    "order": 2
+  },
+  {
     "id": "spot-vibration-tracking",
     "slug": "spot-vibration-tracking",
     "title": "光斑振动追踪与频率响应实验系统",
@@ -61,7 +92,7 @@
       {"name": "受迫振动 A-F 分析器", "role": "legacy", "siteUrl": "https://forced-vibration-af-analyzer.netlify.app/", "githubUrl": "https://github.com/WUHAO19831214/forced-vibration-af-analyzer-20260502-122715", "status": "prototype", "note": "早期原型，术语与测量边界已在文档中澄清"}
     ],
     "updatedAt": "2026-07-13",
-    "order": 2
+    "order": 3
   },
   {
     "id": "three-polarizer",
@@ -76,7 +107,7 @@
     "audiences": ["高中物理教师", "高中学生", "大学基础物理学习者"],
     "tags": ["偏振", "马吕斯定律", "三维模型", "光学"],
     "status": "prototype",
-    "featured": true,
+    "featured": false,
     "siteUrl": "https://3dpolarizer2.netlify.app/",
     "githubUrl": "https://github.com/WUHAO19831214/3D-",
     "repositoryName": "WUHAO19831214/3D-",
@@ -90,7 +121,7 @@
       {"name": "已构建在线版本", "role": "prototype", "siteUrl": "https://3dpolarizer2.netlify.app/", "githubUrl": "https://github.com/WUHAO19831214/3D-", "status": "prototype", "note": "当前唯一可用入口"}
     ],
     "updatedAt": "2026-04-22",
-    "order": 3
+    "order": 4
   },
   {
     "id": "pdf-ocr-to-text",
@@ -117,7 +148,7 @@
       {"name": "Netlify 在线版", "role": "research", "siteUrl": "https://pdfocrtotxt.netlify.app/", "status": "beta", "note": "功能可用；当前无法可靠访问对应 GitHub 仓库"}
     ],
     "updatedAt": "2026-04-19",
-    "order": 4
+    "order": 5
   },
   {
     "id": "solenoid-current-teaching",
@@ -144,7 +175,7 @@
     "roadmap": ["将随机 Netlify 名称迁移到清晰的新入口时保留旧站", "增加移动端交互说明", "补充磁场方向可视化"],
     "versions": [],
     "updatedAt": "2026-04-24",
-    "order": 5
+    "order": 6
   },
   {
     "id": "physics-mr-lab",
@@ -173,7 +204,7 @@
       {"name": "Netlify 前端演示", "role": "research", "siteUrl": "https://physics-mr-lab-development.netlify.app/", "githubUrl": "https://github.com/WUHAO19831214/Physics-MR-Lab-Development", "status": "beta", "note": "教学模式可用；自动分析需要本机后端"}
     ],
     "updatedAt": "2026-07-13",
-    "order": 6
+    "order": 7
   },
   {
     "id": "audio-visual-soundfield",
@@ -202,7 +233,7 @@
       {"name": "稳定基线 2026-07-11", "role": "stable", "githubUrl": "https://github.com/WUHAO19831214/audio-visual-soundfield-tracker-stable", "status": "active", "note": "经 64 项测试验证的复现实验基线，无在线入口"}
     ],
     "updatedAt": "2026-07-13",
-    "order": 7
+    "order": 8
   },
   {
     "id": "local-textbook-workbench",
@@ -229,7 +260,7 @@
       {"name": "Netlify 前端外壳", "role": "research", "siteUrl": "https://local-textbook-structure2.netlify.app/", "status": "beta", "note": "核心操作需要本地后端；重复站点不再列出"}
     ],
     "updatedAt": "2026-05-18",
-    "order": 8
+    "order": 9
   },
   {
     "id": "nihongo-master",
@@ -256,7 +287,7 @@
     "roadmap": ["避免在浏览器端配置私人 AI 密钥", "增加学习进度持久化", "完善真实 OCR 的隐私说明"],
     "versions": [],
     "updatedAt": "2026-02-10",
-    "order": 9
+    "order": 10
   },
   {
     "id": "physics-lecture-survey",
@@ -282,6 +313,6 @@
     "roadmap": ["移除临时 ngrok 地址", "建立合规的数据存储和隐私说明", "部署正式问卷入口"],
     "versions": [],
     "updatedAt": "2026-06-11",
-    "order": 10
+    "order": 11
   }
 ]

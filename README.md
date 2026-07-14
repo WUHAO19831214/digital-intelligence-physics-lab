@@ -33,7 +33,8 @@ npm run check-links
 3. GitHub 对应关系可靠时再填写 `githubUrl`；未填写时页面不会显示 GitHub 按钮。
 4. 同一项目的教师端、学生端、研究版和旧版放进 `versions`，不要拆成多个首页项目。
 5. 用 `featured: true` 控制首页重点项目，用 `order` 控制人工排序。
-6. 运行 `npm run validate-projects`，确认没有重复 id/slug、错误分类或不合法 URL。
+6. 有真实项目截图时，将图片放在 `public/projects/`，并填写根路径形式的 `imageUrl` 和准确的 `imageAlt`；校验脚本会检查图片是否存在。
+7. 运行 `npm run validate-projects`，确认没有重复 id/slug、错误分类、不合法 URL 或缺失图片。
 
 建议状态：
 

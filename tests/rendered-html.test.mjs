@@ -32,6 +32,7 @@ test("server-renders the finished portal homepage", async () => {
   assert.match(html, /数智物理实验室/);
   assert.match(html, /Digital Intelligence Physics Lab/);
   assert.match(html, /安培力三维可视化与实验教学平台/);
+  assert.match(html, /FringeLab/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|react-loading-skeleton/);
 });
 
@@ -46,13 +47,26 @@ test("renders project directory and detail routes", async () => {
   assert.match(html, /正式入口/);
   assert.match(html, /学生端 V2/);
   assert.match(html, /版本与研究历程/);
+
+  const fringeDetail = await render("/projects/webcam-laser-fringelab/");
+  assert.equal(fringeDetail.status, 200);
+  const fringeHtml = await fringeDetail.text();
+  assert.match(fringeHtml, /激光干涉与衍射智能分析平台/);
+  assert.match(fringeHtml, /Fresnel 数/);
+  assert.match(fringeHtml, /摄像头模式需要 HTTPS/);
+  assert.doesNotMatch(fringeHtml, /GitHub 仓库/);
 });
 
 test("keeps project data centralized and excludes broken formal links", async () => {
   const data = JSON.parse(await readFile(new URL("../src/data/projects.json", import.meta.url), "utf8"));
-  assert.equal(data.length, 10);
+  assert.equal(data.length, 11);
   const serialized = JSON.stringify(data);
   assert.doesNotMatch(serialized, /audio-visual-soundfield-tracker\.netlify\.app/);
   assert.doesNotMatch(serialized, /3d3polarizer\.netlify\.app/);
   assert.equal(new Set(data.map((project) => project.slug)).size, data.length);
+  const fringe = data.find((project) => project.slug === "webcam-laser-fringelab");
+  assert.equal(fringe.status, "active");
+  assert.equal(fringe.featured, true);
+  assert.equal(fringe.githubUrl, undefined);
+  assert.equal(fringe.repositoryName, "WUHAO19831214/webcam-laser-fringelab");
 });

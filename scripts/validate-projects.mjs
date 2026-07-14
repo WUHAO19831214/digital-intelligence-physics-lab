@@ -1,4 +1,4 @@
-import { readFile } from "node:fs/promises";
+import { access, readFile } from "node:fs/promises";
 
 const projects = JSON.parse(await readFile(new URL("../src/data/projects.json", import.meta.url), "utf8"));
 const allowedStatuses = new Set(["active", "beta", "prototype", "archived", "unknown"]);
@@ -31,6 +31,15 @@ for (const [index, project] of projects.entries()) {
   if (project.status === "active" && !project.siteUrl) errors.push(label + ": active project requires siteUrl");
   for (const field of ["siteUrl", "githubUrl"]) {
     if (project[field] && !validUrl(project[field])) errors.push(label + ": invalid HTTPS URL in " + field);
+  }
+  if (project.imageUrl) {
+    if (!project.imageUrl.startsWith("/")) errors.push(label + ": imageUrl must be a root-relative path");
+    if (!project.imageAlt) errors.push(label + ": imageAlt is required when imageUrl is present");
+    try {
+      await access(new URL("../public" + project.imageUrl, import.meta.url));
+    } catch {
+      errors.push(label + ": image file not found at public" + project.imageUrl);
+    }
   }
   if (!project.siteUrl) warnings.push(label + ": no formal online entry; card will show details only");
   if (!project.githubUrl) warnings.push(label + ": no reliable GitHub mapping; GitHub button will be hidden");

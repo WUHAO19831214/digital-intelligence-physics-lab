@@ -30,6 +30,8 @@ export type Project = {
   githubUrl?: string;
   repositoryName?: string;
   netlifySiteName?: string;
+  imageUrl?: string;
+  imageAlt?: string;
   notice?: string;
   versions?: ProjectVersion[];
   capabilities?: string[];

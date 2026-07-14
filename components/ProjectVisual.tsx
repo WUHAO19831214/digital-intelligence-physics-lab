@@ -3,6 +3,22 @@ import { getCategory } from "@/src/data/projects";
 
 export default function ProjectVisual({ project, compact = false }: { project: Project; compact?: boolean }) {
   const category = getCategory(project.category);
+  if (project.imageUrl) {
+    return (
+      <div className={`project-visual project-visual-image${compact ? " compact" : ""}`}>
+        {/* A plain image keeps this static portal compatible with both vinext and Netlify export. */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={project.imageUrl}
+          alt={project.imageAlt ?? `${project.title} 项目界面`}
+          loading={compact ? "lazy" : "eager"}
+          decoding="async"
+        />
+        <div className="project-image-shade" aria-hidden="true" />
+        <div className="visual-label" aria-hidden="true"><span>{category?.code ?? "P"}</span><small>{project.tags.slice(0, 2).join(" · ")}</small></div>
+      </div>
+    );
+  }
   return (
     <div className={`project-visual visual-${project.category}${compact ? " compact" : ""}`} aria-hidden="true">
       <div className="visual-grid" />
