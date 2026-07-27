@@ -1,34 +1,18 @@
 import assert from "node:assert/strict";
-import { readFile } from "node:fs/promises";
+import { access, readFile } from "node:fs/promises";
 import test from "node:test";
 
-async function render(pathname = "/") {
-  const workerUrl = new URL("../dist/server/index.js", import.meta.url);
-  workerUrl.searchParams.set("test", `${process.pid}-${Date.now()}`);
-  const { default: worker } = await import(workerUrl.href);
-
-  return worker.fetch(
-    new Request("http://localhost" + pathname, {
-      headers: { accept: "text/html" },
-    }),
-    {
-      ASSETS: {
-        fetch: async () => new Response("Not found", { status: 404 }),
-      },
-    },
-    {
-      waitUntil() {},
-      passThroughOnException() {},
-    },
-  );
+function exportedPageUrl(pathname = "/") {
+  const normalized = pathname === "/" ? "" : pathname.replace(/^\/|\/$/g, "") + "/";
+  return new URL(`../out/${normalized}index.html`, import.meta.url);
 }
 
-test("server-renders the finished portal homepage", async () => {
-  const response = await render();
-  assert.equal(response.status, 200);
-  assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
+async function readExportedPage(pathname = "/") {
+  return readFile(exportedPageUrl(pathname), "utf8");
+}
 
-  const html = await response.text();
+test("statically exports the finished portal homepage", async () => {
+  const html = await readExportedPage();
   assert.match(html, /数智物理实验室/);
   assert.match(html, /Digital Intelligence Physics Lab/);
   assert.match(html, /安培力三维可视化与实验教学平台/);
@@ -36,25 +20,36 @@ test("server-renders the finished portal homepage", async () => {
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|react-loading-skeleton/);
 });
 
-test("renders project directory and detail routes", async () => {
-  const directory = await render("/projects/");
-  assert.equal(directory.status, 200);
-  assert.match(await directory.text(), /项目目录/);
+test("exports project directory and every detail route as an index file", async () => {
+  const directoryHtml = await readExportedPage("/projects/");
+  assert.match(directoryHtml, /项目目录/);
 
-  const detail = await render("/projects/ampere-force-platform/");
-  assert.equal(detail.status, 200);
-  const html = await detail.text();
+  const html = await readExportedPage("/projects/ampere-force-platform/");
   assert.match(html, /正式入口/);
   assert.match(html, /学生端 V2/);
   assert.match(html, /版本与研究历程/);
 
-  const fringeDetail = await render("/projects/webcam-laser-fringelab/");
-  assert.equal(fringeDetail.status, 200);
-  const fringeHtml = await fringeDetail.text();
+  const fringeHtml = await readExportedPage("/projects/webcam-laser-fringelab/");
   assert.match(fringeHtml, /激光干涉与衍射智能分析平台/);
   assert.match(fringeHtml, /Fresnel 数/);
   assert.match(fringeHtml, /摄像头模式需要 HTTPS/);
   assert.doesNotMatch(fringeHtml, /GitHub 仓库/);
+
+  const data = JSON.parse(await readFile(new URL("../src/data/projects.json", import.meta.url), "utf8"));
+  await Promise.all(data.map((project) => access(exportedPageUrl(`/projects/${project.slug}/`))));
+});
+
+test("exports static assets and fallback pages at stable root-relative paths", async () => {
+  await Promise.all([
+    access(new URL("../out/404.html", import.meta.url)),
+    access(new URL("../out/404/index.html", import.meta.url)),
+    access(new URL("../out/og.png", import.meta.url)),
+    access(new URL("../out/projects/webcam-laser-fringelab.png", import.meta.url)),
+  ]);
+
+  const fringeHtml = await readExportedPage("/projects/webcam-laser-fringelab/");
+  assert.match(fringeHtml, /\/projects\/webcam-laser-fringelab\.png/);
+  assert.match(fringeHtml, /\/_next\/static\//);
 });
 
 test("keeps project data centralized and excludes broken formal links", async () => {

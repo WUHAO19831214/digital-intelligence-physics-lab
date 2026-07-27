@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: process.env.BUILD_TARGET === "netlify" ? "export" : undefined,
+  output: "export",
   trailingSlash: true,
   turbopack: { root: process.cwd() },
 };

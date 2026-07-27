@@ -18,11 +18,10 @@ npm run validate-projects
 npm run lint
 npm run build
 npm test
-npm run build:netlify
 npm run check-links
 ```
 
-`npm run build` 验证 Sites/vinext 构建，`npm run build:netlify` 生成 Netlify 使用的 `out/` 静态目录。
+`npm run build` 执行 Next.js 静态导出并生成 `out/`。如需验证 Sites/vinext 运行时，可单独执行 `npm run build:sites`。
 
 ## 新增项目
 
@@ -54,7 +53,9 @@ npm run check-links
 
 ## 部署
 
-Netlify 配置位于 [`netlify.toml`](netlify.toml)：构建命令为 `npm run validate-projects && npm run build:netlify`，发布目录为 `out`。
+EdgeOne Makers 配置位于 [`edgeone.json`](edgeone.json)：生产分支为 `main`，构建命令为 `npm run build`，发布目录为 `out`。完整操作与故障排查见 [`docs/EDGEONE_DEPLOYMENT.md`](docs/EDGEONE_DEPLOYMENT.md)。
+
+Netlify 配置位于 [`netlify.toml`](netlify.toml)，同样使用静态导出目录 `out`。
 
 门户不在前端读取 GitHub Token、Netlify Token 或其他私人密钥。外部项目链接默认在新标签页打开，并使用 `noopener noreferrer`。
 
