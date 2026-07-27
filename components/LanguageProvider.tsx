@@ -1,6 +1,8 @@
 "use client";
 
 import { createContext, useContext, useEffect, useMemo, useState } from "react";
+import { usePathname } from "next/navigation";
+import { getProjectBySlug } from "@/src/data/projects";
 import { siteCopy, type Locale, type SiteCopy } from "@/src/i18n/siteCopy";
 
 type LanguageContextValue = {
@@ -26,6 +28,7 @@ function detectLocale(): Locale {
 
 export default function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [locale, updateLocale] = useState<Locale>("zh");
+  const pathname = usePathname();
 
   useEffect(() => {
     const timer = window.setTimeout(() => updateLocale(detectLocale()), 0);
@@ -35,8 +38,18 @@ export default function LanguageProvider({ children }: { children: React.ReactNo
   useEffect(() => {
     document.documentElement.lang = htmlLanguages[locale];
     document.documentElement.dataset.locale = locale;
-    document.title = siteCopy[locale].meta.title;
-  }, [locale]);
+    const copy = siteCopy[locale];
+    const normalizedPath = pathname.replace(/\/+$/, "") || "/";
+    let title = copy.meta.title;
+    if (normalizedPath === "/about") title = `${copy.about.title} | ${copy.common.brand}`;
+    if (normalizedPath === "/projects") title = `${copy.projects.title} | ${copy.common.brand}`;
+    if (normalizedPath.startsWith("/projects/")) {
+      const slug = normalizedPath.split("/").pop() ?? "";
+      const project = getProjectBySlug(slug, locale);
+      if (project) title = `${project.title} | ${copy.common.brand}`;
+    }
+    document.title = title;
+  }, [locale, pathname]);
 
   const setLocale = (nextLocale: Locale) => {
     updateLocale(nextLocale);
