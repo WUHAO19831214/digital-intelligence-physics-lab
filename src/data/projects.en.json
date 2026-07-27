@@ -1,0 +1,779 @@
+[
+  {
+    "id": "ampere-force-platform",
+    "slug": "ampere-force-platform",
+    "title": "Ampere Force 3D visualization and experimental teaching platform",
+    "shortTitle": "Ampere Experimental Teaching Platform",
+    "englishTitle": "Ampere Force Teaching Platform",
+    "category": "electromagnetism-3d",
+    "summary": "Organize DIS screen readings, magnetic field direction identification, and 3D force vectors into the same classroom workflow.",
+    "description": "For the teaching of Ampere's force experiment and left-hand rule in high school physics, it combines experimental data reading, visual evidence and spatial models to support two complementary entrances for teacher demonstration and student inquiry.",
+    "background": "Traditional Ampere force teaching tends to stay in the memory of formulas, and experimental readings, magnetic field directions and three-dimensional force relationships are often scattered in different tools. This project attempts to put multiple sources of evidence into the same teaching link.",
+    "audiences": [
+      "high school physics teacher",
+      "high school student",
+      "Teaching and research staff"
+    ],
+    "tags": [
+      "Ampere force",
+      "3D visualization",
+      "Screen OCR",
+      "computer vision",
+      "Classroom inquiry"
+    ],
+    "status": "active",
+    "featured": true,
+    "siteUrl": "https://ampere-force-visualizer-teacher-yanan.netlify.app/",
+    "githubUrl": "https://github.com/WUHAO19831214/ampere-force-visualizer-teacher-yanan",
+    "repositoryName": "WUHAO19831214/ampere-force-visualizer-teacher-yanan",
+    "netlifySiteName": "ampere-force-visualizer-teacher-yanan",
+    "capabilities": [
+      "DIS screen capture and ROI digital readout",
+      "Camera magnetic pole direction recognition",
+      "F1, F2, F3 three force synthesis and three-dimensional display",
+      "Research on the spatial relationship between I, B and F on the student side",
+      "Experimental data CSV export"
+    ],
+    "teachingValue": [
+      "Transform the left-hand rule from formula memory to evidential reasoning",
+      "Help students establish the correspondence between the y-z plane and three-dimensional space",
+      "Let teachers present experimental readings, visual evidence, and physical models simultaneously"
+    ],
+    "scenarios": [
+      "Ampere Force Demonstration Experiment",
+      "Left Hand Rule Rule Discovery Lesson",
+      "Digital experimental data discussion",
+      "Teachers’ open classes and regional teaching and research"
+    ],
+    "technicalHighlights": [
+      "Vite, React and Three.js",
+      "Browser Screen Capture API",
+      "Tesseract.js local OCR",
+      "Color marking and magnetic field direction mapping"
+    ],
+    "roadmap": [
+      "Continue to verify the stability of OCR under different DIS interfaces",
+      "Improve camera space calibration",
+      "Form a reusable classroom experiment data protocol"
+    ],
+    "versions": [
+      {
+        "name": "Teacher's side",
+        "role": "teacher",
+        "siteUrl": "https://ampere-force-visualizer-teacher-yanan.netlify.app/",
+        "githubUrl": "https://github.com/WUHAO19831214/ampere-force-visualizer-teacher-yanan",
+        "status": "active",
+        "note": "Formal teacher entrance"
+      },
+      {
+        "name": "Student terminal V2",
+        "role": "student",
+        "siteUrl": "https://ampere-force-student-explorer-yananv2.netlify.app/",
+        "githubUrl": "https://github.com/WUHAO19831214/ampere-force-student-explorer-yanan-v2",
+        "status": "active",
+        "note": "Official student portal, corrected coordinate system and supplemented research documentation"
+      },
+      {
+        "name": "Old version of student version",
+        "role": "legacy",
+        "siteUrl": "https://ampere-force-student-explorer-yanan.netlify.app/",
+        "githubUrl": "https://github.com/WUHAO19831214/ampere-force-student-explorer-yanan",
+        "status": "archived",
+        "note": "Historical version"
+      },
+      {
+        "name": "Yan'an Middle School Experimental Edition",
+        "role": "research",
+        "siteUrl": "https://physics-force-vector-visualizer-mvp-y.netlify.app/",
+        "githubUrl": "https://github.com/WUHAO19831214/physics-force-vector-visualizer-mvp-yananzhongxue",
+        "status": "beta",
+        "note": "Direct predecessor of the teacher-facing version"
+      },
+      {
+        "name": "Universal Force Vector MVP",
+        "role": "prototype",
+        "siteUrl": "https://physics-force-vector-visualizer-mvp.netlify.app/",
+        "githubUrl": "https://github.com/WUHAO19831214/physics-force-vector-visualizer-mvp",
+        "status": "prototype",
+        "note": "Universal Technology Base Prototype"
+      },
+      {
+        "name": "Multi-source experimental data bridging prototype",
+        "role": "prototype",
+        "githubUrl": "https://github.com/WUHAO19831214/physics-experiment-bridge-mvp",
+        "status": "prototype",
+        "note": "GitHub archived prototype, no official online entrance"
+      }
+    ],
+    "updatedAt": "2026-07-13",
+    "order": 1
+  },
+  {
+    "id": "webcam-laser-fringelab",
+    "slug": "webcam-laser-fringelab",
+    "title": "FringeLab laser interference and diffraction intelligent analysis platform",
+    "shortTitle": "FringeLab",
+    "englishTitle": "Webcam Laser FringeLab",
+    "category": "digital-experiments",
+    "summary": "Collect laser patterns through cameras, experimental pictures or physical simulations, extract relative light intensity profiles and complete wavelength estimation, model comparison and uncertainty analysis.",
+    "description": "For single-slit diffraction and double-slit interference experiments, pattern collection, ROI selection, spatial calibration, light intensity profile extraction, feature identification, physical model selection and wavelength estimation are organized into a traceable digital experimental link.",
+    "background": "Traditional laser interference and diffraction experiments mainly rely on observing bright and dark fringes with the naked eye, manually measuring the spacing and substituting them into formulas. It is difficult to completely present the true light intensity distribution and is not conducive to continuous and repeatable data analysis. FringeLab converts light screen patterns into relative camera response curves, allowing students to move from pattern collection to model inversion and experimental quality evaluation.",
+    "audiences": [
+      "high school physics teacher",
+      "high school student",
+      "Experimental teaching researcher"
+    ],
+    "tags": [
+      "laser interference",
+      "single slit diffraction",
+      "double slit interference",
+      "computer vision",
+      "Light intensity distribution",
+      "Wavelength measurement",
+      "Camera experiment",
+      "Uncertainty analysis"
+    ],
+    "status": "active",
+    "featured": true,
+    "siteUrl": "https://webcam-laser-fringelab.netlify.app/",
+    "repositoryName": "WUHAO19831214/webcam-laser-fringelab",
+    "netlifySiteName": "webcam-laser-fringelab",
+    "imageUrl": "/projects/webcam-laser-fringelab.png",
+    "imageAlt": "FringeLab production interface, the left side displays red laser interference fringes and adjustable ROI, and the right side displays the relative light intensity curve and wavelength measurement results",
+    "notice": "Camera mode requires HTTPS or localhost, and requires the user to actively grant camera permissions; different phones and browsers have different support for exposure, focus, and white balance lock. Image processing, simulation, curve analysis and session parameter saving are all completed in the current browser, without relying on external analysis backends, and camera frames will not be uploaded. The current version does not provide the manifest and service worker required to install PWA. The source repository is verified but currently private, so the GitHub button does not appear on the public portal.",
+    "capabilities": [
+      "Three inputs: camera, PNG/JPEG/WebP pictures and ideal physical simulation",
+      "Strip ROI that can be moved, rotated, and scaled by dragging the corners",
+      "Two-point calibration, physical ruler identification and virtual ruler integration",
+      "RGB, brightness and automatic channel selection, background subtraction and Gaussian smoothing",
+      "Peak, valley, sub-pixel center, FWHM and overexposure plateau detection",
+      "Wavelength estimation from multiple dark fringes in single-slit diffraction and multiple bright fringes in double-slit interference",
+      "Comparison of exact geometric regression and small angle approximation results",
+      "Fresnel number, sampling adequacy, exposure and calibration quality gating",
+      "95% expanded uncertainty, ideal model fit, and CSV/JSON/PNG export",
+      "Saving and restoring local experimental parameters in the browser"
+    ],
+    "teachingValue": [
+      "Elevate \"looking at stripes\" to a quantitative analysis of relative light intensity distribution",
+      "Improve formula substitution into model inversion driven by experimental data",
+      "Supports experimental quality discussions of saturation, sampling, calibration and uncertainty",
+      "Facilitates comparison of theoretical curves, real patterns, exact geometry and small angle approximations",
+      "Ideal for classroom demonstrations, student experiments, and research studies"
+    ],
+    "scenarios": [
+      "Double-slit interference fringe spacing and laser wavelength measurement",
+      "Analysis of single-slit diffraction dark fringes and central main maximum width",
+      "Comparison of real experimental drawings and ideal models",
+      "Discussion on Experimental Error, Uncertainty and Far Field Conditions",
+      "Preview of optical simulation experiments without equipment"
+    ],
+    "technicalHighlights": [
+      "React, TypeScript and HTML Canvas",
+      "Browser MediaDevices Camera Interface",
+      "Pure browser pixel processing and real-time curve drawing",
+      "Web Worker physical ruler detection",
+      "localStorage local session parameter storage",
+      "No external image analysis backend"
+    ],
+    "roadmap": [
+      "Continue to verify the differences in exposure and focus control between different mobile phones and cameras",
+      "Improve the real ruler homography correction under obvious perspective conditions",
+      "Supplement repeated measurement and teaching empirical data under real equipment conditions",
+      "For an installable experience, supplement with a proven PWA manifest and offline caching strategy"
+    ],
+    "versions": [
+      {
+        "name": "FringeLab v0.1.0",
+        "role": "research",
+        "siteUrl": "https://webcam-laser-fringelab.netlify.app/",
+        "status": "active",
+        "note": "The current official online version; the source code repository is private"
+      }
+    ],
+    "updatedAt": "2026-07-14",
+    "order": 2
+  },
+  {
+    "id": "spot-vibration-tracking",
+    "slug": "spot-vibration-tracking",
+    "title": "Spot vibration tracking and frequency response experimental system",
+    "shortTitle": "Spot vibration tracking system",
+    "englishTitle": "Spot Vibration Tracking System",
+    "category": "digital-experiments",
+    "summary": "Use the browser camera to track the red reflected light spot, and automatically associate the displacement range with the driving frequency.",
+    "description": "Serving forced vibration, periodic vibration and frequency response experiments, real-time spot center of gravity tracking is used instead of frame-by-frame artificial punctuation to form frequency-displacement range data and response curves.",
+    "background": "Manual video analysis is inefficient, readings are subjective, and frequency and displacement data are easily misaligned. The system combines camera tracking, spatial calibration, frequency sweep recording and chart presentation in the browser.",
+    "audiences": [
+      "high school physics teacher",
+      "student experimental group",
+      "Experimental teaching researcher"
+    ],
+    "tags": [
+      "vibration",
+      "Spot tracking",
+      "camera",
+      "frequency response",
+      "Experimental measurements"
+    ],
+    "status": "beta",
+    "featured": true,
+    "siteUrl": "https://fspot-vibration-tracking-system.netlify.app/",
+    "githubUrl": "https://github.com/WUHAO19831214/spot-vibration-tracking-system-20260508-171952",
+    "repositoryName": "WUHAO19831214/spot-vibration-tracking-system-20260508-171952",
+    "netlifySiteName": "fspot-vibration-tracking-system",
+    "capabilities": [
+      "Red light spot real-time tracking",
+      "1 cm pixel ruler calibration",
+      "Automatic round trip frequency sweep",
+      "Frequency-displacement range scatter points and curves",
+      "Experimental conditions and error tips"
+    ],
+    "teachingValue": [
+      "Reduce the burden of manual punctuation on a frame-by-frame basis",
+      "Help students understand the formation process of frequency response data",
+      "Emphasis on term boundaries between peak-to-peak displacement and mechanical amplitude"
+    ],
+    "scenarios": [
+      "forced vibration experiment",
+      "Research on resonance phenomena",
+      "Optical lever or reflected light spot measurement",
+      "student research study"
+    ],
+    "technicalHighlights": [
+      "Native browser camera API",
+      "HSV red threshold and weighted center of gravity",
+      "Web Audio sine signal",
+      "Browser-side real-time drawing"
+    ],
+    "roadmap": [
+      "Add CSV export",
+      "Supplementary filtering and outlier processing",
+      "Verify reflection optical path amplification and measurement uncertainty"
+    ],
+    "versions": [
+      {
+        "name": "Spot vibration tracking system",
+        "role": "research",
+        "siteUrl": "https://fspot-vibration-tracking-system.netlify.app/",
+        "githubUrl": "https://github.com/WUHAO19831214/spot-vibration-tracking-system-20260508-171952",
+        "status": "beta",
+        "note": "Current recommended version"
+      },
+      {
+        "name": "Forced Vibration A-F Analyzer",
+        "role": "legacy",
+        "siteUrl": "https://forced-vibration-af-analyzer.netlify.app/",
+        "githubUrl": "https://github.com/WUHAO19831214/forced-vibration-af-analyzer-20260502-122715",
+        "status": "prototype",
+        "note": "Early prototype, terminology and measurement boundaries have been clarified in the documentation"
+      }
+    ],
+    "updatedAt": "2026-07-13",
+    "order": 3
+  },
+  {
+    "id": "three-polarizer",
+    "slug": "three-polarizer",
+    "title": "Demonstration of light intensity and polarization direction of three polarizers",
+    "shortTitle": "Three polarizer demonstration",
+    "englishTitle": "Three-Polarizer Demonstration",
+    "category": "optics-mr",
+    "summary": "Continuously adjust the three polarization directions P1, P2, and P3 to observe light-intensity projection and Malus's law.",
+    "description": "A three-dimensional interactive prototype for polarization teaching, explaining the phenomenon of transmitted light reappearing after adding a third polarizer between two orthogonal polarizers.",
+    "background": "The three-polarizer experiment is often described as counterintuitive. The interactive model unfolds each polarization projection and light intensity attenuation in physical order to help learners build a continuous process model.",
+    "audiences": [
+      "high school physics teacher",
+      "high school student",
+      "College basic physics learners"
+    ],
+    "tags": [
+      "polarization",
+      "Malus's law",
+      "3D model",
+      "Optics"
+    ],
+    "status": "prototype",
+    "featured": false,
+    "siteUrl": "https://3dpolarizer2.netlify.app/",
+    "githubUrl": "https://github.com/WUHAO19831214/3D-",
+    "repositoryName": "WUHAO19831214/3D-",
+    "netlifySiteName": "3dpolarizer2",
+    "capabilities": [
+      "The angles of the three polarizers can be adjusted independently",
+      "Step-by-step transmittance calculation",
+      "Three-dimensional polarization direction display",
+      "Switching between two typical experimental combinations"
+    ],
+    "teachingValue": [
+      "Connect Malus's law with the continuous projection process",
+      "Explain why intermediate polarizers can restore part of the transmitted light",
+      "Support teachers to quickly change parameters for comparison"
+    ],
+    "scenarios": [
+      "Polarization of light classroom demonstration",
+      "Exploration of Malus's law",
+      "Preview before class and review after class"
+    ],
+    "technicalHighlights": [
+      "React Three Fiber",
+      "Three.js",
+      "Real-time light intensity calculation"
+    ],
+    "roadmap": [
+      "Fix web page metadata",
+      "Add accessibility keyboard control instructions",
+      "Supplementary experimental data comparison"
+    ],
+    "versions": [
+      {
+        "name": "Online version built",
+        "role": "prototype",
+        "siteUrl": "https://3dpolarizer2.netlify.app/",
+        "githubUrl": "https://github.com/WUHAO19831214/3D-",
+        "status": "prototype",
+        "note": "Currently the only available entrance"
+      }
+    ],
+    "updatedAt": "2026-04-22",
+    "order": 4
+  },
+  {
+    "id": "pdf-ocr-to-text",
+    "slug": "pdf-ocr-to-text",
+    "title": "PDF OCR to text tool",
+    "shortTitle": "PDF OCR tool",
+    "englishTitle": "PDF OCR to Text",
+    "category": "teaching-tools",
+    "summary": "Extract PDF native text within the browser and provide Chinese and English OCR for scanned pages.",
+    "description": "A lightweight tool for teacher data organization, supporting drag-and-drop PDF, page-by-page text extraction, scanned page OCR, result deduplication and text copying.",
+    "background": "Scanned lecture notes and teaching materials are often difficult to retrieve and re-edit. This front-end tool provides a basic conversion process that does not rely on server uploads.",
+    "audiences": [
+      "teacher",
+      "Teaching and research staff",
+      "student"
+    ],
+    "tags": [
+      "PDF",
+      "OCR",
+      "Data organization",
+      "Pure front-end"
+    ],
+    "status": "beta",
+    "featured": true,
+    "siteUrl": "https://pdfocrtotxt.netlify.app/",
+    "netlifySiteName": "pdfocrtotxt",
+    "capabilities": [
+      "PDF native text extraction",
+      "Scan page Chinese and English OCR",
+      "Duplicate text detection",
+      "Clear and copy results"
+    ],
+    "teachingValue": [
+      "Reduce the cost of translating scanned data",
+      "Facilitate subsequent creation of searchable classroom materials",
+      "Files are processed on the browser side"
+    ],
+    "scenarios": [
+      "Scan handouts to text",
+      "Teaching materials archive",
+      "Organizing classroom materials"
+    ],
+    "technicalHighlights": [
+      "PDF.js",
+      "Tesseract.js",
+      "Browser side processing"
+    ],
+    "roadmap": [
+      "Confirm or restore public source repositories",
+      "Added download TXT and structured export",
+      "Supplementary performance tips for large files"
+    ],
+    "versions": [
+      {
+        "name": "Netlify online version",
+        "role": "research",
+        "siteUrl": "https://pdfocrtotxt.netlify.app/",
+        "status": "beta",
+        "note": "Feature available; currently there is no reliable access to the corresponding GitHub repository"
+      }
+    ],
+    "updatedAt": "2026-04-19",
+    "order": 5
+  },
+  {
+    "id": "solenoid-current-teaching",
+    "slug": "solenoid-current-teaching",
+    "title": "Solenoid Current Direction 3D Teaching Tool",
+    "shortTitle": "Solenoid current direction",
+    "englishTitle": "Solenoid Current Direction Teaching",
+    "category": "electromagnetism-3d",
+    "summary": "Compare the physical view with the 3D coil model to identify the winding direction, lead insertion and current direction.",
+    "description": "The Three.js teaching prototype for computer-side demonstration reduces the difficulty of solenoid space judgment through orientation switching, current animation and multi-view reference.",
+    "background": "The front and rear obstruction of the conductors on the surface of the solenoid can easily make spatial judgment difficult. The project also provides physical reference drawings, transparent end caps and dynamic current arrows.",
+    "audiences": [
+      "Middle and high school physics teacher",
+      "middle school student"
+    ],
+    "tags": [
+      "solenoid",
+      "Current direction",
+      "3D visualization",
+      "electromagnetism"
+    ],
+    "status": "prototype",
+    "featured": false,
+    "siteUrl": "https://resplendent-caramel-cff4b6.netlify.app/",
+    "githubUrl": "https://github.com/WUHAO19831214/solenoid-current-mr-teaching",
+    "repositoryName": "WUHAO19831214/solenoid-current-mr-teaching",
+    "netlifySiteName": "resplendent-caramel-cff4b6",
+    "capabilities": [
+      "Wrap around A/B switch",
+      "On-lead entry or exit switching",
+      "Current direction animation",
+      "Stereo, top view, front view reference",
+      "Show and hide answers"
+    ],
+    "teachingValue": [
+      "Reduce the spatial judgment burden caused by occlusion",
+      "Verify the two-dimensional discrimination and the three-dimensional model against each other",
+      "Suitable for instant classroom presentations"
+    ],
+    "scenarios": [
+      "Judging the direction of the energized solenoid",
+      "Review of the right-hand spiral rule",
+      "Classroom space model demonstration"
+    ],
+    "technicalHighlights": [
+      "Native Three.js",
+      "Multi-view model control",
+      "Current arrow animation"
+    ],
+    "roadmap": [
+      "Keep old site when migrating random Netlify names to clean new portal",
+      "Add mobile interactive instructions",
+      "Supplementary magnetic field direction visualization"
+    ],
+    "versions": [],
+    "updatedAt": "2026-04-24",
+    "order": 6
+  },
+  {
+    "id": "physics-mr-lab",
+    "slug": "physics-mr-lab",
+    "title": "MR Physics Laboratory: Refraction and Total Reflection of Light",
+    "shortTitle": "MR Optics Laboratory",
+    "englishTitle": "Physics MR Lab",
+    "category": "optics-mr",
+    "summary": "Connect 2D annotation and refractive-index calculation in the glass-block experiment with a 3D optical-path model.",
+    "description": "A mixed reality research prototype for high school optical experiments that supports pictures, videos and camera basemaps, manual annotation, teaching simulation and experimental records.",
+    "background": "There are large errors in the readings of hand-drawn drawings and protractors, and it is not easy for students to establish a spatial picture of light propagating in a transparent medium from a two-dimensional paper.",
+    "audiences": [
+      "high school physics teacher",
+      "high school student",
+      "Experimental teaching researcher"
+    ],
+    "tags": [
+      "refraction of light",
+      "total reflection",
+      "mixed reality",
+      "computer vision",
+      "Three.js"
+    ],
+    "status": "beta",
+    "featured": false,
+    "githubUrl": "https://github.com/WUHAO19831214/Physics-MR-Lab-Development",
+    "repositoryName": "WUHAO19831214/Physics-MR-Lab-Development",
+    "netlifySiteName": "physics-mr-lab-development",
+    "notice": "The Netlify page can be used for teaching simulation and manual annotation; automatic OpenCV analysis still relies on the native FastAPI service, so it is not used as the official online entrance to the homepage.",
+    "capabilities": [
+      "Pictures, videos and camera basemaps",
+      "Manual labeling of rectangles, semicircles and quadrilaterals",
+      "Refraction and total reflection teaching simulation",
+      "2D/3D split screen comparison",
+      "Experiment history and JSON export"
+    ],
+    "teachingValue": [
+      "Connect real experimental images and spatial optical path models",
+      "Helps compare automatically identified, manually labeled and simulated data",
+      "Supports exploration of refractive index and critical angle"
+    ],
+    "scenarios": [
+      "Measuring the refractive index of glass blocks",
+      "An exploration of the laws of refraction",
+      "total reflection demonstration",
+      "Mixed reality teaching research"
+    ],
+    "technicalHighlights": [
+      "React and Three.js",
+      "OpenCV + FastAPI local analysis",
+      "SVG manual annotation",
+      "Data source tiering"
+    ],
+    "roadmap": [
+      "Deploy a standalone backend or change to a local full application",
+      "Add perspective correction",
+      "Supplementary classroom empirical data"
+    ],
+    "versions": [
+      {
+        "name": "Netlify front-end demo",
+        "role": "research",
+        "siteUrl": "https://physics-mr-lab-development.netlify.app/",
+        "githubUrl": "https://github.com/WUHAO19831214/Physics-MR-Lab-Development",
+        "status": "beta",
+        "note": "Tutorial mode available; automatic analysis requires native backend"
+      }
+    ],
+    "updatedAt": "2026-07-13",
+    "order": 7
+  },
+  {
+    "id": "audio-visual-soundfield",
+    "slug": "audio-visual-soundfield",
+    "title": "Vision-sound synchronized acquisition and spatial sound field analysis system",
+    "shortTitle": "Audio-visual fusion sound field analysis",
+    "englishTitle": "Audio-Visual Soundfield Tracker",
+    "category": "digital-experiments",
+    "summary": "Simultaneously record the person's position and microphone characteristics to form the trajectory, relative sound intensity and main frequency spatial distribution.",
+    "description": "A completely natively running Python/Streamlit experimental system that integrates human tracking, audio feature extraction and unified timestamp data.",
+    "background": "In sound field experiments, spatial position and audio readings are often recorded separately. This project uses a shared clock to align visual tracks with audio chunks and define boundaries between relative dBFS and true sound pressure levels.",
+    "audiences": [
+      "physics teacher",
+      "experimental researcher",
+      "Science Education Developer"
+    ],
+    "tags": [
+      "Sound field",
+      "Audio and video synchronization",
+      "target tracking",
+      "Python",
+      "experimental data"
+    ],
+    "status": "beta",
+    "featured": false,
+    "githubUrl": "https://github.com/WUHAO19831214/audio-visual-soundfield-tracker",
+    "repositoryName": "WUHAO19831214/audio-visual-soundfield-tracker",
+    "notice": "The original Netlify address currently returns 404. The portal only provides GitHub and local running instructions, and does not generate invalid online buttons.",
+    "capabilities": [
+      "Pictures and Videos person count",
+      "Synchronous collection of cameras and microphones",
+      "RMS, dBFS, main frequency and spectrum centroid",
+      "Trajectory and acoustic distribution map",
+      "Fusion CSV export"
+    ],
+    "teachingValue": [
+      "Demonstrate how to synchronize multi-modal experimental data",
+      "Help understand relative sound intensity and spatial calibration",
+      "Suitable for discussion of experimental methods and data quality"
+    ],
+    "scenarios": [
+      "Preliminary measurement of spatial sound field",
+      "Audio-visual synchronization experiment",
+      "Classroom Behavior and Acoustics Research Prototype"
+    ],
+    "technicalHighlights": [
+      "Streamlit",
+      "YOLOv8 and ByteTrack",
+      "OpenCV HOG fallback",
+      "shared monotonic clock"
+    ],
+    "roadmap": [
+      "Create a truly usable portal for online or remote presentations",
+      "Supplementary metric space calibration",
+      "Fixed acoustic gain and dB SPL calibration"
+    ],
+    "versions": [
+      {
+        "name": "Development main line",
+        "role": "research",
+        "githubUrl": "https://github.com/WUHAO19831214/audio-visual-soundfield-tracker",
+        "status": "beta",
+        "note": "Run locally"
+      },
+      {
+        "name": "Stable baseline 2026-07-11",
+        "role": "stable",
+        "githubUrl": "https://github.com/WUHAO19831214/audio-visual-soundfield-tracker-stable",
+        "status": "active",
+        "note": "Reproducible experimental baseline verified by 64 tests, no online access"
+      }
+    ],
+    "updatedAt": "2026-07-13",
+    "order": 8
+  },
+  {
+    "id": "local-textbook-workbench",
+    "slug": "local-textbook-workbench",
+    "title": "Local teaching materials structured workbench",
+    "shortTitle": "Textbook structured workbench",
+    "englishTitle": "Local Textbook Structure Workbench",
+    "category": "teaching-tools",
+    "summary": "Read local Markdown textbook data, organize chapter titles, generate mind maps, and extract card printing content.",
+    "description": "A structured workbench front-end for local teaching materials, including reader, chapter brain map, rule extraction and Anki/CSV export interface.",
+    "background": "After textbook OCR, only continuous text and picture lists are often obtained. Teachers still need to organize chapter levels, locate page numbers, and generate reusable learning materials.",
+    "audiences": [
+      "teacher",
+      "Textbook researcher",
+      "local knowledge base users"
+    ],
+    "tags": [
+      "Textbook structure",
+      "Markdown",
+      "brain map",
+      "Card making",
+      "local tools"
+    ],
+    "status": "beta",
+    "featured": false,
+    "netlifySiteName": "local-textbook-structure2",
+    "notice": "The two Netlify addresses are duplicate deployments of the same submission; the core functionality relies on undeployed local APIs and therefore is not used as a formal online entrance.",
+    "capabilities": [
+      "Markdown textbook reading",
+      "Chapter title organization",
+      "dynamic brain map",
+      "Rule extraction and card making",
+      "CSV export"
+    ],
+    "teachingValue": [
+      "Convert textbook OCR results into a navigable structure",
+      "Support chapter level checking",
+      "Prepare data for local question cards and knowledge base"
+    ],
+    "scenarios": [
+      "Textbook OCR post-processing",
+      "Chapter structure check",
+      "Review card making"
+    ],
+    "technicalHighlights": [
+      "Vue frontend",
+      "Markdown and mathematical formula rendering",
+      "Native API workflow"
+    ],
+    "roadmap": [
+      "Confirm or restore a GitHub repository",
+      "Deploy a secure backend or explicitly target it as a native app",
+      "Merge duplicate Netlify project IDs"
+    ],
+    "versions": [
+      {
+        "name": "Netlify front-end shell",
+        "role": "research",
+        "siteUrl": "https://local-textbook-structure2.netlify.app/",
+        "status": "beta",
+        "note": "Core operations require local backend; duplicate sites are no longer listed"
+      }
+    ],
+    "updatedAt": "2026-05-18",
+    "order": 9
+  },
+  {
+    "id": "nihongo-master",
+    "slug": "nihongo-master",
+    "title": "Nihongo Master Japanese Vocabulary Learning Tool",
+    "shortTitle": "Nihongo Master",
+    "englishTitle": "Nihongo Master",
+    "category": "personal-tools",
+    "summary": "A personal Japanese learning tool that combines flashcards, pronunciation, custom word lists, and simulated AI feedback.",
+    "description": "An interactive web page for personal vocabulary practice that supports Japanese, Romaji, Chinese and English definitions and custom word lists.",
+    "background": "The project combines personal vocabulary review, custom content input and instant feedback in a lightweight learning interface.",
+    "audiences": [
+      "Japanese language learners",
+      "Personal learning tool users"
+    ],
+    "tags": [
+      "Japanese",
+      "Vocabulary",
+      "learning tools",
+      "AI feedback"
+    ],
+    "status": "beta",
+    "featured": false,
+    "siteUrl": "https://nihongo-master.netlify.app/",
+    "githubUrl": "https://github.com/WUHAO19831214/nihongo-master",
+    "repositoryName": "WUHAO19831214/nihongo-master",
+    "netlifySiteName": "nihongo-master",
+    "capabilities": [
+      "Japanese word cards",
+      "Browser voice reading",
+      "Custom word list",
+      "practice notes",
+      "Simulate AI feedback"
+    ],
+    "teachingValue": [
+      "Demonstrate practice with non-physical personal learning tools",
+      "Supports custom word lists and multilingual definitions"
+    ],
+    "scenarios": [
+      "Japanese vocabulary review",
+      "Organizing personal study materials"
+    ],
+    "technicalHighlights": [
+      "React",
+      "Web Speech API",
+      "AI service simulation rollback"
+    ],
+    "roadmap": [
+      "Avoid configuring private AI keys on the browser side",
+      "Increase learning progress persistence",
+      "Improve the privacy statement of real OCR"
+    ],
+    "versions": [],
+    "updatedAt": "2026-02-10",
+    "order": 10
+  },
+  {
+    "id": "physics-lecture-survey",
+    "slug": "physics-lecture-survey",
+    "title": "Physics lecture on-site interaction and evaluation system",
+    "shortTitle": "Physics Lecture Survey",
+    "englishTitle": "Physics Lecture Survey",
+    "category": "teaching-tools",
+    "summary": "Collect participating teachers’ information, teaching needs and on-site evaluation for junior high school physics special lectures.",
+    "description": "A mobile-first one-page questionnaire prototype for live interaction in lectures and teacher demand collection.",
+    "background": "Regional teaching and research activities need to quickly summarize the backgrounds, teaching difficulties and activity evaluations of participating teachers. This prototype explores the on-site QR code filling process.",
+    "audiences": [
+      "Teaching and Research Fellow",
+      "physics teacher",
+      "event organizer"
+    ],
+    "tags": [
+      "Teacher Survey",
+      "Teaching and research activities",
+      "Questionnaire",
+      "Mobile terminal"
+    ],
+    "status": "prototype",
+    "featured": false,
+    "githubUrl": "https://github.com/WUHAO19831214/physics-survey",
+    "repositoryName": "WUHAO19831214/physics-survey",
+    "notice": "The current commit endpoint points to a temporary ngrok local service with no reliable production entry.",
+    "capabilities": [
+      "Collection of information from participating teachers",
+      "Teaching needs survey",
+      "Activity evaluation",
+      "Mobile form"
+    ],
+    "teachingValue": [
+      "Support regional teaching and research needs analysis",
+      "Create a structured portal for event feedback"
+    ],
+    "scenarios": [
+      "Special lectures",
+      "Regional teaching and research activities",
+      "Teacher training feedback"
+    ],
+    "technicalHighlights": [
+      "Single file HTML",
+      "Mobile form",
+      "Multiple backend submission solution prototype"
+    ],
+    "roadmap": [
+      "Remove temporary ngrok address",
+      "Establish compliant data storage and privacy practices",
+      "Deploy formal questionnaire portal"
+    ],
+    "versions": [],
+    "updatedAt": "2026-06-11",
+    "order": 11
+  }
+]

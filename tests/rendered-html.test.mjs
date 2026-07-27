@@ -65,3 +65,25 @@ test("keeps project data centralized and excludes broken formal links", async ()
   assert.equal(fringe.githubUrl, undefined);
   assert.equal(fringe.repositoryName, "WUHAO19831214/webcam-laser-fringelab");
 });
+
+test("keeps English and Japanese project content aligned with the Chinese source", async () => {
+  const source = JSON.parse(await readFile(new URL("../src/data/projects.json", import.meta.url), "utf8"));
+  const english = JSON.parse(await readFile(new URL("../src/data/projects.en.json", import.meta.url), "utf8"));
+  const japanese = JSON.parse(await readFile(new URL("../src/data/projects.ja.json", import.meta.url), "utf8"));
+  const sourceIds = source.map((project) => project.id);
+
+  for (const localized of [english, japanese]) {
+    assert.deepEqual(localized.map((project) => project.id), sourceIds);
+    localized.forEach((project, index) => {
+      assert.notEqual(project.title, source[index].title);
+      assert.notEqual(project.summary, source[index].summary);
+      for (const key of ["audiences", "tags", "capabilities", "teachingValue", "scenarios", "technicalHighlights", "roadmap"]) {
+        assert.equal(project[key]?.length ?? 0, source[index][key]?.length ?? 0, `${project.id}.${key}`);
+      }
+      assert.equal(project.versions?.length ?? 0, source[index].versions?.length ?? 0, `${project.id}.versions`);
+    });
+  }
+
+  assert.match(JSON.stringify(english), /Malus's law/);
+  assert.match(JSON.stringify(japanese), /マリュスの法則/);
+});

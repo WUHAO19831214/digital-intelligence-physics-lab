@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
+import LanguageProvider, { LocalizedSkipLink } from "@/components/LanguageProvider";
 import "./globals.css";
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://digital-intelligence-physics-lab.netlify.app";
@@ -20,4 +21,17 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = { width: "device-width", initialScale: 1, themeColor: "#102a43", colorScheme: "light" };
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) { return <html lang="zh-CN"><body><a className="skip-link" href="#main-content">跳到主要内容</a><SiteHeader /><div id="main-content">{children}</div><SiteFooter /></body></html>; }
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  return (
+    <html lang="zh-CN" suppressHydrationWarning>
+      <body>
+        <LanguageProvider>
+          <LocalizedSkipLink />
+          <SiteHeader />
+          <div id="main-content">{children}</div>
+          <SiteFooter />
+        </LanguageProvider>
+      </body>
+    </html>
+  );
+}

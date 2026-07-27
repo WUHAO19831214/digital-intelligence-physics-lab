@@ -1,0 +1,779 @@
+[
+  {
+    "id": "ampere-force-platform",
+    "slug": "ampere-force-platform",
+    "title": "Ampere 3D 視覚化および実験教育プラットフォーム",
+    "shortTitle": "アンペア実験教育プラットフォーム",
+    "englishTitle": "アンペアフォース教育プラットフォーム",
+    "category": "electromagnetism-3d",
+    "summary": "DIS 画面の読み取り、磁場の方向の特定、および 3D 力ベクトルを同じ教室ワークフローにまとめます。",
+    "description": "高校物理におけるアンペール力の実験と左手の法則の指導のために、実験データの読み取り、視覚的証拠、空間モデルを組み合わせ、教師の演示と生徒の探究という相補的な二つの入口を支えます。",
+    "background": "従来のアンペール力の指導は公式の暗記にとどまりやすく、実験値、磁場の方向、3Dの力関係も別々のツールに分散しがちです。本プロジェクトでは、複数の根拠を一つの授業プロセスにまとめます。",
+    "audiences": [
+      "高校の物理教師",
+      "高校生",
+      "教育および研究スタッフ"
+    ],
+    "tags": [
+      "アンペア力",
+      "3D ビジュアライゼーション",
+      "画面OCR",
+      "コンピュータビジョン",
+      "教室のお問い合わせ"
+    ],
+    "status": "active",
+    "featured": true,
+    "siteUrl": "https://ampere-force-visualizer-teacher-yanan.netlify.app/",
+    "githubUrl": "https://github.com/WUHAO19831214/ampere-force-visualizer-teacher-yanan",
+    "repositoryName": "WUHAO19831214/ampere-force-visualizer-teacher-yanan",
+    "netlifySiteName": "ampere-force-visualizer-teacher-yanan",
+    "capabilities": [
+      "DIS 画面キャプチャと ROI デジタル読み出し",
+      "カメラ磁極方向認識",
+      "F1、F2、F3の3力合成と立体表示",
+      "学生側におけるI、B、Fの空間関係の研究",
+      "実験データのCSVエクスポート"
+    ],
+    "teachingValue": [
+      "左手の法則を公式の暗記から根拠に基づく推論へ転換する",
+      "生徒が y-z 平面と 3 次元空間の間の対応関係を確立できるように支援します。",
+      "教師が実験結果、視覚的証拠、物理モデルを同時に提示できるようにする"
+    ],
+    "scenarios": [
+      "アンペアフォース実証実験",
+      "左手のルール ルール発見レッスン",
+      "デジタル実験データのディスカッション",
+      "教師の公開授業と地域の教育研究"
+    ],
+    "technicalHighlights": [
+      "Vite、React、Three.js",
+      "ブラウザ画面キャプチャ API",
+      "Tesseract.js ローカル OCR",
+      "カラーマーキングと磁場方向マッピング"
+    ],
+    "roadmap": [
+      "さまざまな DIS インターフェイスでの OCR の安定性を引き続き検証します。",
+      "カメラ空間のキャリブレーションを改善する",
+      "再利用可能な教室実験データ プロトコルを作成する"
+    ],
+    "versions": [
+      {
+        "name": "先生側",
+        "role": "teacher",
+        "siteUrl": "https://ampere-force-visualizer-teacher-yanan.netlify.app/",
+        "githubUrl": "https://github.com/WUHAO19831214/ampere-force-visualizer-teacher-yanan",
+        "status": "active",
+        "note": "正式な教師の入学"
+      },
+      {
+        "name": "学生端末V2",
+        "role": "student",
+        "siteUrl": "https://ampere-force-student-explorer-yananv2.netlify.app/",
+        "githubUrl": "https://github.com/WUHAO19831214/ampere-force-student-explorer-yanan-v2",
+        "status": "active",
+        "note": "公式学生ポータル、修正された座標系、および補足された研究文書"
+      },
+      {
+        "name": "学生版の旧バージョン",
+        "role": "legacy",
+        "siteUrl": "https://ampere-force-student-explorer-yanan.netlify.app/",
+        "githubUrl": "https://github.com/WUHAO19831214/ampere-force-student-explorer-yanan",
+        "status": "archived",
+        "note": "歴史的バージョン"
+      },
+      {
+        "name": "延安中学校実験版",
+        "role": "research",
+        "siteUrl": "https://physics-force-vector-visualizer-mvp-y.netlify.app/",
+        "githubUrl": "https://github.com/WUHAO19831214/physics-force-vector-visualizer-mvp-yananzhongxue",
+        "status": "beta",
+        "note": "先生の直接の歴史上の先祖"
+      },
+      {
+        "name": "ユニバーサル フォース ベクター MVP",
+        "role": "prototype",
+        "siteUrl": "https://physics-force-vector-visualizer-mvp.netlify.app/",
+        "githubUrl": "https://github.com/WUHAO19831214/physics-force-vector-visualizer-mvp",
+        "status": "prototype",
+        "note": "ユニバーサル技術基盤プロトタイプ"
+      },
+      {
+        "name": "マルチソース実験データブリッジングプロトタイプ",
+        "role": "prototype",
+        "githubUrl": "https://github.com/WUHAO19831214/physics-experiment-bridge-mvp",
+        "status": "prototype",
+        "note": "GitHub にアーカイブされたプロトタイプ、公式オンライン入口なし"
+      }
+    ],
+    "updatedAt": "2026-07-13",
+    "order": 1
+  },
+  {
+    "id": "webcam-laser-fringelab",
+    "slug": "webcam-laser-fringelab",
+    "title": "FringeLab レーザー干渉および回折インテリジェント分析プラットフォーム",
+    "shortTitle": "フリンジラボ",
+    "englishTitle": "ウェブカメラ レーザー FringeLab",
+    "category": "digital-experiments",
+    "summary": "カメラ、実験画像、物理シミュレーションからレーザーパターンを取得し、相対光強度プロファイルの抽出、波長推定、モデル比較、不確かさ解析を行います。",
+    "description": "単スリット回折と二重スリット干渉の実験を対象に、パターン取得、ROI選択、空間校正、光強度プロファイル抽出、特徴検出、物理モデル選択、波長推定を追跡可能なデジタル実験プロセスとして構成します。",
+    "background": "従来のレーザー干渉・回折実験は、明暗縞を目視し、間隔を手作業で測って式に代入する方法が中心でした。実際の光強度分布を十分に示しにくく、連続的で再現可能なデータ解析にも適しません。FringeLabはスクリーン上のパターンを相対的なカメラ応答曲線に変換し、パターン取得から逆解析、実験品質の評価へ学習を広げます。",
+    "audiences": [
+      "高校の物理教師",
+      "高校生",
+      "実験教育研究者"
+    ],
+    "tags": [
+      "レーザー干渉",
+      "単一スリット回折",
+      "二重スリット干渉",
+      "コンピュータビジョン",
+      "光強度分布",
+      "波長測定",
+      "カメラ実験",
+      "不確かさの分析"
+    ],
+    "status": "active",
+    "featured": true,
+    "siteUrl": "https://webcam-laser-fringelab.netlify.app/",
+    "repositoryName": "WUHAO19831214/webcam-laser-fringelab",
+    "netlifySiteName": "webcam-laser-fringelab",
+    "imageUrl": "/projects/webcam-laser-fringelab.png",
+    "imageAlt": "FringeLab 制作インターフェイス、左側には赤色レーザー干渉縞と調整可能な ROI が表示され、右側には相対光強度曲線と波長測定結果が表示されます",
+    "notice": "カメラ モードには HTTPS または localhost が必要で、ユーザーがカメラのアクセス許可を積極的に付与する必要があります。携帯電話やブラウザによって、露出、フォーカス、ホワイト バランス ロックのサポートが異なります。画像処理、シミュレーション、曲線解析、セッションパラメータの保存はすべて現在のブラウザ内で完了し、外部解析バックエンドに依存せず、カメラフレームはアップロードされません。現在のバージョンには、PWA のインストールに必要なマニフェストと Service Worker が提供されていません。ソース リポジトリは検証されていますが、現在はプライベートであるため、GitHub ボタンはパブリック ポータルに表示されません。",
+    "capabilities": [
+      "3 つの入力: カメラ、PNG/JPEG/WebP 画像、理想的な物理シミュレーション",
+      "角をドラッグして移動、回転、拡大縮小できるストリップ ROI",
+      "2 点キャリブレーション、物理定規の識別、および仮想定規の統合",
+      "RGB、明るさ、自動チャンネル選択、背景減算、ガウス平滑化",
+      "ピーク、谷、サブピクセル中心、FWHM、露出過度プラトー検出",
+      "単スリットの複数暗線と二重スリットの複数明線による波長推定",
+      "正確な幾何回帰と小角近似の結果の比較",
+      "フレネル数、サンプリングの適切性、露出およびキャリブレーション品質のゲーティング",
+      "95% 拡張された不確実性、理想的なモデル適合、CSV/JSON/PNG エクスポート",
+      "ブラウザでのローカル実験パラメータの保存と復元"
+    ],
+    "teachingValue": [
+      "「縞を見る」を相対光強度分布の定量解析に高める",
+      "公式への代入から実験データに基づく逆解析へ発展させる",
+      "飽和、サンプリング、校正、不確かさに関する実験品質の議論をサポート",
+      "理論上の曲線、実際のパターン、正確な形状、および小さな角度の近似の比較が容易になります。",
+      "教室でのデモンストレーション、学生実験、調査研究に最適"
+    ],
+    "scenarios": [
+      "ダブルスリット干渉縞間隔とレーザー波長測定",
+      "単一スリット回折のダークフリンジと中央の主最大幅の解析",
+      "実際の実験図と理想モデルの比較",
+      "実験誤差、不確実性、遠方界条件に関するディスカッション",
+      "装置を使わない光学シミュレーション実験のプレビュー"
+    ],
+    "technicalHighlights": [
+      "React、TypeScript、HTML Canvas",
+      "ブラウザ メディアデバイス カメラ インターフェイス",
+      "純粋なブラウザーのピクセル処理とリアルタイムの曲線描画",
+      "Web Worker の物理定規の検出",
+      "localStorage ローカル セッション パラメータ ストレージ",
+      "外部画像分析バックエンドなし"
+    ],
+    "roadmap": [
+      "携帯電話やカメラごとに露出やフォーカス制御の違いを検証し続ける",
+      "明らかな遠近条件下での実際の定規のホモグラフィー補正を改善します。",
+      "実機条件下での繰り返し測定とティーチングの経験データを補足",
+      "インストール可能なエクスペリエンスを実現するには、実績のある PWA マニフェストとオフライン キャッシュ戦略を追加します。"
+    ],
+    "versions": [
+      {
+        "name": "フリンジラボ v0.1.0",
+        "role": "research",
+        "siteUrl": "https://webcam-laser-fringelab.netlify.app/",
+        "status": "active",
+        "note": "現在の公式オンライン バージョン。ソースコードリポジトリは非公開です"
+      }
+    ],
+    "updatedAt": "2026-07-14",
+    "order": 2
+  },
+  {
+    "id": "spot-vibration-tracking",
+    "slug": "spot-vibration-tracking",
+    "title": "スポット振動追跡および周波数応答実験システム",
+    "shortTitle": "スポット振動追跡システム",
+    "englishTitle": "スポット振動追跡システム",
+    "category": "digital-experiments",
+    "summary": "ブラウザのカメラを使用して赤色の反射光スポットを追跡し、変位範囲を駆動周波数に自動的に関連付けます。",
+    "description": "強制振動、周期振動、および周波数応答の実験に対応し、フレームごとの人工的な句読点の代わりにリアルタイムのスポット重心追跡を使用して、周波数変位範囲データと応答曲線を形成します。",
+    "background": "手動によるビデオ分析は非効率的で、測定値は主観的なものであり、周波数と変位データはずれやすくなります。このシステムは、カメラ追跡、空間キャリブレーション、周波数スイープ記録、およびブラウザでのチャート表示を組み合わせています。",
+    "audiences": [
+      "高校の物理教師",
+      "学生実験グループ",
+      "実験教育研究者"
+    ],
+    "tags": [
+      "振動",
+      "スポットトラッキング",
+      "カメラ",
+      "周波数応答",
+      "実験測定"
+    ],
+    "status": "beta",
+    "featured": true,
+    "siteUrl": "https://fspot-vibration-tracking-system.netlify.app/",
+    "githubUrl": "https://github.com/WUHAO19831214/spot-vibration-tracking-system-20260508-171952",
+    "repositoryName": "WUHAO19831214/spot-vibration-tracking-system-20260508-171952",
+    "netlifySiteName": "fspot-vibration-tracking-system",
+    "capabilities": [
+      "赤色光スポットのリアルタイム追跡",
+      "1 cm ピクセル定規のキャリブレーション",
+      "自動往復周波数スイープ",
+      "周波数変位範囲の散布点と曲線",
+      "実験条件とエラーのヒント"
+    ],
+    "teachingValue": [
+      "フレームごとに手動で句読点を入力する負担を軽減します。",
+      "学生が周波数応答データの形成プロセスを理解できるように支援します。",
+      "ピーク間の変位と機械的振幅の間の用語の境界を強調"
+    ],
+    "scenarios": [
+      "強制振動実験",
+      "共鳴現象の研究",
+      "光てこまたは反射光スポット測定",
+      "学生の研究調査"
+    ],
+    "technicalHighlights": [
+      "ネイティブブラウザカメラAPI",
+      "HSV 赤のしきい値と重み付けされた重心",
+      "Web オーディオ正弦波信号",
+      "ブラウザ側のリアルタイム描画"
+    ],
+    "roadmap": [
+      "CSVエクスポートを追加",
+      "補足的なフィルタリングと外れ値の処理",
+      "反射光路の増幅と測定の不確かさを検証"
+    ],
+    "versions": [
+      {
+        "name": "スポット振動追跡システム",
+        "role": "research",
+        "siteUrl": "https://fspot-vibration-tracking-system.netlify.app/",
+        "githubUrl": "https://github.com/WUHAO19831214/spot-vibration-tracking-system-20260508-171952",
+        "status": "beta",
+        "note": "現在の推奨バージョン"
+      },
+      {
+        "name": "強制振動A-Fアナライザー",
+        "role": "legacy",
+        "siteUrl": "https://forced-vibration-af-analyzer.netlify.app/",
+        "githubUrl": "https://github.com/WUHAO19831214/forced-vibration-af-analyzer-20260502-122715",
+        "status": "prototype",
+        "note": "初期のプロトタイプ、用語、測定の境界がドキュメントで明確化されました"
+      }
+    ],
+    "updatedAt": "2026-07-13",
+    "order": 3
+  },
+  {
+    "id": "three-polarizer",
+    "slug": "three-polarizer",
+    "title": "3 つの偏光子の光強度と偏光方向のデモンストレーション",
+    "shortTitle": "3 つの偏光板のデモンストレーション",
+    "englishTitle": "3 つの偏光子のデモンストレーション",
+    "category": "optics-mr",
+    "summary": "P1・P2・P3の三つの偏光方向を連続的に調整し、光強度の射影とマリュスの法則を観察します。",
+    "description": "偏光教示用の 3 次元インタラクティブ プロトタイプ。2 つの直交する偏光子の間に 3 番目の偏光子を追加した後に透過光が再び現れる現象を説明します。",
+    "background": "3 つの偏光子の実験は、直観に反するとよく言われます。インタラクティブなモデルでは、各偏光投影と光強度減衰が物理的な順序で展開され、学習者が連続プロセス モデルを構築するのに役立ちます。",
+    "audiences": [
+      "高校の物理教師",
+      "高校生",
+      "大学の基礎物理学学習者"
+    ],
+    "tags": [
+      "分極化",
+      "マリュスの法則",
+      "3Dモデル",
+      "光学"
+    ],
+    "status": "prototype",
+    "featured": false,
+    "siteUrl": "https://3dpolarizer2.netlify.app/",
+    "githubUrl": "https://github.com/WUHAO19831214/3D-",
+    "repositoryName": "WUHAO19831214/3D-",
+    "netlifySiteName": "3dpolarizer2",
+    "capabilities": [
+      "3つの偏光子の角度は独立して調整可能",
+      "段階的な透過率計算",
+      "3次元偏光方向表示",
+      "2 つの典型的な実験の組み合わせ間の切り替え"
+    ],
+    "teachingValue": [
+      "マリュスの法則を連続的な射影過程に対応づける",
+      "中間偏光子が透過光の一部を復元できる理由を説明する",
+      "教師が比較用のパラメータを迅速に変更できるようにサポートします。"
+    ],
+    "scenarios": [
+      "光の偏光教室デモンストレーション",
+      "マリュスの法則の探究",
+      "授業前にプレビューし、授業後に復習する"
+    ],
+    "technicalHighlights": [
+      "リアクトスリーファイバー",
+      "Three.js",
+      "リアルタイム光強度計算"
+    ],
+    "roadmap": [
+      "Webページのメタデータを修正する",
+      "アクセシビリティキーボード制御命令を追加",
+      "補足的な実験データの比較"
+    ],
+    "versions": [
+      {
+        "name": "オンライン版を構築",
+        "role": "prototype",
+        "siteUrl": "https://3dpolarizer2.netlify.app/",
+        "githubUrl": "https://github.com/WUHAO19831214/3D-",
+        "status": "prototype",
+        "note": "現在利用できる唯一の入り口"
+      }
+    ],
+    "updatedAt": "2026-04-22",
+    "order": 4
+  },
+  {
+    "id": "pdf-ocr-to-text",
+    "slug": "pdf-ocr-to-text",
+    "title": "PDF OCR からテキストへのツール",
+    "shortTitle": "PDF OCRツール",
+    "englishTitle": "PDF OCR からテキストへ",
+    "category": "teaching-tools",
+    "summary": "ブラウザ内で PDF ネイティブ テキストを抽出し、スキャンしたページに中国語と英語の OCR を提供します。",
+    "description": "教師データを整理するための軽量ツールで、PDF のドラッグ アンド ドロップ、ページごとのテキスト抽出、スキャンされたページの OCR、結果の重複排除、テキストのコピーをサポートしています。",
+    "background": "スキャンした講義ノートや教材は、検索して再編集するのが難しいことがよくあります。このフロントエンド ツールは、サーバーのアップロードに依存しない基本的な変換プロセスを提供します。",
+    "audiences": [
+      "先生",
+      "教育および研究スタッフ",
+      "学生"
+    ],
+    "tags": [
+      "PDF",
+      "OCR",
+      "データ構成",
+      "純粋なフロントエンド"
+    ],
+    "status": "beta",
+    "featured": true,
+    "siteUrl": "https://pdfocrtotxt.netlify.app/",
+    "netlifySiteName": "pdfocrtotxt",
+    "capabilities": [
+      "PDFネイティブテキスト抽出",
+      "ページの中国語と英語の OCR をスキャンします",
+      "重複テキストの検出",
+      "結果をクリアしてコピーする"
+    ],
+    "teachingValue": [
+      "スキャンデータの翻訳コストを削減",
+      "検索可能な教室資料のその後の作成を容易にする",
+      "ファイルはブラウザ側で処理されます"
+    ],
+    "scenarios": [
+      "配布資料をスキャンしてテキスト化する",
+      "教材アーカイブ",
+      "教室の教材を整理する"
+    ],
+    "technicalHighlights": [
+      "PDF.js",
+      "Tesseract.js",
+      "ブラウザ側の処理"
+    ],
+    "roadmap": [
+      "パブリックソースリポジトリの確認または復元",
+      "ダウンロードTXTと構造化エクスポートを追加しました",
+      "大きなファイルのパフォーマンスに関する補足的なヒント"
+    ],
+    "versions": [
+      {
+        "name": "Netlify オンライン版",
+        "role": "research",
+        "siteUrl": "https://pdfocrtotxt.netlify.app/",
+        "status": "beta",
+        "note": "利用可能な機能。現在、対応する GitHub リポジトリへの信頼できるアクセスはありません。"
+      }
+    ],
+    "updatedAt": "2026-04-19",
+    "order": 5
+  },
+  {
+    "id": "solenoid-current-teaching",
+    "slug": "solenoid-current-teaching",
+    "title": "ソレノイド電流方向 3Dティーチングツール",
+    "shortTitle": "ソレノイド電流の方向",
+    "englishTitle": "ソレノイド電流方向ティーチング",
+    "category": "electromagnetism-3d",
+    "summary": "物理的なビューと 3D コイル モデルを比較して、巻線方向、リード線の挿入、電流の方向を特定します。",
+    "description": "コンピュータ側デモンストレーション用の Three.js 教育プロトタイプは、向きの切り替え、現在のアニメーション、およびマルチビューの参照を通じて、ソレノイド空間の判断の困難さを軽減します。",
+    "background": "ソレノイド表面の導体の前後の障害物により、空間判断が困難になりやすい。このプロジェクトでは、物理的な参照図面、透明なエンド キャップ、および動的な電流矢印も提供します。",
+    "audiences": [
+      "中学・高校の物理教師",
+      "中学生"
+    ],
+    "tags": [
+      "ソレノイド",
+      "電流の方向",
+      "3D ビジュアライゼーション",
+      "電磁気学"
+    ],
+    "status": "prototype",
+    "featured": false,
+    "siteUrl": "https://resplendent-caramel-cff4b6.netlify.app/",
+    "githubUrl": "https://github.com/WUHAO19831214/solenoid-current-mr-teaching",
+    "repositoryName": "WUHAO19831214/solenoid-current-mr-teaching",
+    "netlifySiteName": "resplendent-caramel-cff4b6",
+    "capabilities": [
+      "ラップアラウンドA/Bスイッチ",
+      "オンリードのエントリーまたはエグジットスイッチング",
+      "現在の方向のアニメーション",
+      "ステレオ、上面図、正面図のリファレンス",
+      "回答の表示と非表示を切り替える"
+    ],
+    "teachingValue": [
+      "オクルージョンによる空間判断の負担を軽減",
+      "二次元判別と三次元モデルを相互に検証する",
+      "インスタント教室でのプレゼンテーションに最適"
+    ],
+    "scenarios": [
+      "ソレノイド通電方向の判定",
+      "右巻きの法則の復習",
+      "教室空間モデルのデモンストレーション"
+    ],
+    "technicalHighlights": [
+      "ネイティブ Three.js",
+      "マルチビューモデル制御",
+      "現在の矢印アニメーション"
+    ],
+    "roadmap": [
+      "ランダムな Netlify 名を新しいポータルに移行するときに古いサイトを維持する",
+      "モバイル向けのインタラクティブな手順を追加する",
+      "補足的な磁場方向の視覚化"
+    ],
+    "versions": [],
+    "updatedAt": "2026-04-24",
+    "order": 6
+  },
+  {
+    "id": "physics-mr-lab",
+    "slug": "physics-mr-lab",
+    "title": "MR物理学研究室：光の屈折と全反射",
+    "shortTitle": "MR光学研究室",
+    "englishTitle": "物理MRラボ",
+    "category": "optics-mr",
+    "summary": "ガラスブロック実験の2D注釈と屈折率計算を3D光路モデルに結びつけます。",
+    "description": "写真、ビデオ、カメラのベースマップ、手動注釈、教育シミュレーション、実験記録をサポートする、高校の光学実験向けの複合現実研究プロトタイプです。",
+    "background": "手描きの図面や分度器の読み取りには誤差が大きく、二次元の紙から透明な媒質中を伝播する光の空間像を学生が確立することは容易ではない。",
+    "audiences": [
+      "高校の物理教師",
+      "高校生",
+      "実験教育研究者"
+    ],
+    "tags": [
+      "光の屈折",
+      "全反射",
+      "複合現実",
+      "コンピュータビジョン",
+      "Three.js"
+    ],
+    "status": "beta",
+    "featured": false,
+    "githubUrl": "https://github.com/WUHAO19831214/Physics-MR-Lab-Development",
+    "repositoryName": "WUHAO19831214/Physics-MR-Lab-Development",
+    "netlifySiteName": "physics-mr-lab-development",
+    "notice": "Netlify ページは、教育シミュレーションと手動注釈に使用できます。 OpenCV の自動分析は依然としてネイティブの FastAPI サービスに依存しているため、ホームページへの公式のオンライン入口としては使用されていません。",
+    "capabilities": [
+      "写真、ビデオ、カメラのベースマップ",
+      "長方形、半円、四角形の手動ラベル付け",
+      "屈折と全反射の教育シミュレーション",
+      "2D/3D 分割画面の比較",
+      "実験履歴と JSON エクスポート"
+    ],
+    "teachingValue": [
+      "実際の実験画像と空間光路モデルを接続する",
+      "自動的に識別され、手動でラベル付けされ、シミュレートされたデータの比較に役立ちます",
+      "屈折率と臨界角の探索をサポート"
+    ],
+    "scenarios": [
+      "ガラスブロックの屈折率測定",
+      "屈折の法則の探求",
+      "全反射デモンストレーション",
+      "複合現実教育の研究"
+    ],
+    "technicalHighlights": [
+      "React と Three.js",
+      "OpenCV + FastAPI ローカル分析",
+      "SVG手動注釈",
+      "データソースの階層化"
+    ],
+    "roadmap": [
+      "スタンドアロン バックエンドをデプロイするか、ローカルの完全なアプリケーションに変更します",
+      "遠近補正を追加する",
+      "補足的な教室の実証データ"
+    ],
+    "versions": [
+      {
+        "name": "Netlify フロントエンドのデモ",
+        "role": "research",
+        "siteUrl": "https://physics-mr-lab-development.netlify.app/",
+        "githubUrl": "https://github.com/WUHAO19831214/Physics-MR-Lab-Development",
+        "status": "beta",
+        "note": "チュートリアルモードが利用可能。自動分析にはネイティブ バックエンドが必要です"
+      }
+    ],
+    "updatedAt": "2026-07-13",
+    "order": 7
+  },
+  {
+    "id": "audio-visual-soundfield",
+    "slug": "audio-visual-soundfield",
+    "title": "視覚・音響同期収集・空間音場解析システム",
+    "shortTitle": "オーディオビジュアル融合音場解析",
+    "englishTitle": "オーディオビジュアル音場トラッカー",
+    "category": "digital-experiments",
+    "summary": "人の位置とマイクの特性を同時に記録して、軌道、相対的な音の強さ、主な周波数空間分布を形成します。",
+    "description": "人間の追跡、音声特徴抽出、および統一されたタイムスタンプ データを統合する、完全にネイティブで実行される Python/Streamlit 実験システム。",
+    "background": "音場の実験では、空間位置と音声の読み取り値が別々に記録されることがよくあります。このプロジェクトでは、共有クロックを使用してビジュアル トラックをオーディオ チャンクと位置合わせし、相対的な dBFS と実際の音圧レベルの間の境界を定義します。",
+    "audiences": [
+      "物理の先生",
+      "実験研究者",
+      "科学教育開発者"
+    ],
+    "tags": [
+      "音場",
+      "オーディオとビデオの同期",
+      "ターゲット追跡",
+      "パイソン",
+      "実験データ"
+    ],
+    "status": "beta",
+    "featured": false,
+    "githubUrl": "https://github.com/WUHAO19831214/audio-visual-soundfield-tracker",
+    "repositoryName": "WUHAO19831214/audio-visual-soundfield-tracker",
+    "notice": "現在、元の Netlify アドレスは 404 を返します。ポータルは GitHub とローカルの実行手順のみを提供し、無効なオンライン ボタンは生成しません。",
+    "capabilities": [
+      "写真とビデオの人数",
+      "カメラとマイクの同期収集",
+      "RMS、dBFS、主周波数およびスペクトル重心",
+      "弾道と音響分布図",
+      "Fusion CSV エクスポート"
+    ],
+    "teachingValue": [
+      "マルチモーダル実験データを同期する方法をデモンストレーションする",
+      "相対的な音響強度と空間キャリブレーションを理解するのに役立ちます",
+      "実験方法やデータ品質についての議論に適しています"
+    ],
+    "scenarios": [
+      "空間音場の予備測定",
+      "視聴覚同期実験",
+      "教室行動と音響研究のプロトタイプ"
+    ],
+    "technicalHighlights": [
+      "ストリームライト",
+      "YOLOv8 と ByteTrack",
+      "OpenCV HOG フォールバック",
+      "共有モノトニッククロック"
+    ],
+    "roadmap": [
+      "オンラインまたはリモートのプレゼンテーションに真に使えるポータルを作成する",
+      "補足的なメートル空間校正",
+      "固定音響ゲインとdB SPLキャリブレーション"
+    ],
+    "versions": [
+      {
+        "name": "開発幹線",
+        "role": "research",
+        "githubUrl": "https://github.com/WUHAO19831214/audio-visual-soundfield-tracker",
+        "status": "beta",
+        "note": "ローカルで実行"
+      },
+      {
+        "name": "安定したベースライン 2026-07-11",
+        "role": "stable",
+        "githubUrl": "https://github.com/WUHAO19831214/audio-visual-soundfield-tracker-stable",
+        "status": "active",
+        "note": "64 のテストによって検証された再現可能な実験ベースライン、オンライン アクセスなし"
+      }
+    ],
+    "updatedAt": "2026-07-13",
+    "order": 8
+  },
+  {
+    "id": "local-textbook-workbench",
+    "slug": "local-textbook-workbench",
+    "title": "ローカル教材の構造化ワークベンチ",
+    "shortTitle": "教科書に沿った構造化ワークベンチ",
+    "englishTitle": "ローカル教科書構造ワークベンチ",
+    "category": "teaching-tools",
+    "summary": "ローカルの Markdown 教科書データを読み取り、章タイトルを整理し、マインド マップを生成し、カード印刷コンテンツを抽出します。",
+    "description": "リーダー、チャプターブレインマップ、ルール抽出、Anki/CSV エクスポートインターフェイスを含む、ローカル教材用の構造化されたワークベンチフロントエンド。",
+    "background": "教科書の OCR 後は、連続したテキストと画像のリストのみが得られることがよくあります。教師は引き続き、章レベルを整理し、ページ番号を見つけ、再利用可能な学習教材を生成する必要があります。",
+    "audiences": [
+      "先生",
+      "教科書研究者",
+      "ローカルナレッジベースのユーザー"
+    ],
+    "tags": [
+      "教科書の構成",
+      "マークダウン",
+      "脳の地図",
+      "カードメイキング",
+      "ローカルツール"
+    ],
+    "status": "beta",
+    "featured": false,
+    "netlifySiteName": "local-textbook-structure2",
+    "notice": "2 つの Netlify アドレスは、同じ送信の重複デプロイメントです。コア機能はデプロイされていないローカル API に依存しているため、正式なオンライン入口としては使用されません。",
+    "capabilities": [
+      "Markdownの教科書を読む",
+      "章タイトル構成",
+      "動的脳マップ",
+      "ルール抽出とカード作成",
+      "CSVエクスポート"
+    ],
+    "teachingValue": [
+      "教科書の OCR 結果をナビゲート可能な構造に変換する",
+      "章レベルのチェックをサポート",
+      "ローカルの質問カードとナレッジベース用のデータを準備する"
+    ],
+    "scenarios": [
+      "教科書OCR後処理",
+      "章構成のチェック",
+      "レビューカード作成"
+    ],
+    "technicalHighlights": [
+      "Vueフロントエンド",
+      "マークダウンと数式のレンダリング",
+      "ネイティブAPIのワークフロー"
+    ],
+    "roadmap": [
+      "GitHub リポジトリを確認または復元する",
+      "安全なバックエンドをデプロイするか、ネイティブ アプリとして明示的にターゲットにする",
+      "重複する Netlify プロジェクト ID をマージする"
+    ],
+    "versions": [
+      {
+        "name": "Netlify フロントエンド シェル",
+        "role": "research",
+        "siteUrl": "https://local-textbook-structure2.netlify.app/",
+        "status": "beta",
+        "note": "コア操作にはローカル バックエンドが必要です。重複したサイトはリストされなくなりました"
+      }
+    ],
+    "updatedAt": "2026-05-18",
+    "order": 9
+  },
+  {
+    "id": "nihongo-master",
+    "slug": "nihongo-master",
+    "title": "日本語マスター 日本語語彙学習ツール",
+    "shortTitle": "日本語マスター",
+    "englishTitle": "日本語マスター",
+    "category": "personal-tools",
+    "summary": "フラッシュカード、発音、カスタム単語リスト、シミュレートされた AI フィードバックを組み合わせた個人的な日本語学習ツールです。",
+    "description": "日本語、ローマ字、中国語、英語の定義とカスタム単語リストをサポートする、個人の語彙練習用のインタラクティブな Web ページです。",
+    "background": "このプロジェクトは、個人の語彙レビュー、カスタム コンテンツ入力、即時フィードバックを軽量な学習インターフェイスに組み合わせたものです。",
+    "audiences": [
+      "日本語学習者",
+      "個人学習ツールのユーザー"
+    ],
+    "tags": [
+      "日本語",
+      "語彙",
+      "学習ツール",
+      "AIフィードバック"
+    ],
+    "status": "beta",
+    "featured": false,
+    "siteUrl": "https://nihongo-master.netlify.app/",
+    "githubUrl": "https://github.com/WUHAO19831214/nihongo-master",
+    "repositoryName": "WUHAO19831214/nihongo-master",
+    "netlifySiteName": "nihongo-master",
+    "capabilities": [
+      "日本語単語カード",
+      "ブラウザ音声読み上げ",
+      "カスタム単語リスト",
+      "練習ノート",
+      "AI フィードバックをシミュレートする"
+    ],
+    "teachingValue": [
+      "非物理的な個人学習ツールを使用した実践をデモンストレーションする",
+      "カスタム単語リストと多言語定義をサポート"
+    ],
+    "scenarios": [
+      "日本語の語彙の復習",
+      "個人的な学習教材の整理"
+    ],
+    "technicalHighlights": [
+      "反応する",
+      "ウェブスピーチAPI",
+      "AI サービス シミュレーションのロールバック"
+    ],
+    "roadmap": [
+      "ブラウザ側で秘密 AI キーを設定しないようにする",
+      "学習進捗の持続性を高める",
+      "実際の OCR のプライバシーに関する声明を改善する"
+    ],
+    "versions": [],
+    "updatedAt": "2026-02-10",
+    "order": 10
+  },
+  {
+    "id": "physics-lecture-survey",
+    "slug": "physics-lecture-survey",
+    "title": "物理講義の現場対話・評価システム",
+    "shortTitle": "物理学講義アンケート",
+    "englishTitle": "物理学講義アンケート",
+    "category": "teaching-tools",
+    "summary": "中学校物理特別講義の参加教師の情報、指導ニーズ、現場での評価を収集します。",
+    "description": "講義や教師の要望を収集するための、ライブ インタラクションのためのモバイル ファーストの 1 ページ アンケートのプロトタイプ。",
+    "background": "地域の教育研究活動では、参加した教師の背景や指導の難しさ、活動の評価などを迅速にまとめる必要がある。このプロトタイプは、オンサイトでの QR コード入力プロセスを調査します。",
+    "audiences": [
+      "教育研究員",
+      "物理の先生",
+      "イベント主催者"
+    ],
+    "tags": [
+      "教師アンケート",
+      "教育および研究活動",
+      "アンケート",
+      "携帯端末"
+    ],
+    "status": "prototype",
+    "featured": false,
+    "githubUrl": "https://github.com/WUHAO19831214/physics-survey",
+    "repositoryName": "WUHAO19831214/physics-survey",
+    "notice": "現在のコミット エンドポイントは、信頼できる運用エントリのない一時的な ngrok ローカル サービスを指しています。",
+    "capabilities": [
+      "参加教師からの情報収集",
+      "教育ニーズ調査",
+      "活動評価",
+      "モバイルフォーム"
+    ],
+    "teachingValue": [
+      "地域の教育と研究のニーズ分析をサポートする",
+      "イベントのフィードバック用に構造化されたポータルを作成する"
+    ],
+    "scenarios": [
+      "特別講義",
+      "地域での教育研究活動",
+      "教師トレーニングのフィードバック"
+    ],
+    "technicalHighlights": [
+      "単一ファイルの HTML",
+      "モバイルフォーム",
+      "複数のバックエンド送信ソリューションのプロトタイプ"
+    ],
+    "roadmap": [
+      "一時的な ngrok アドレスを削除する",
+      "準拠したデータストレージとプライバシー慣行を確立する",
+      "正式なアンケートポータルを展開する"
+    ],
+    "versions": [],
+    "updatedAt": "2026-06-11",
+    "order": 11
+  }
+]

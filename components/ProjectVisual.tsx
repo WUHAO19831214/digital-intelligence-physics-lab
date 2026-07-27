@@ -1,8 +1,12 @@
+"use client";
+
 import type { Project } from "@/src/data/projects";
 import { getCategory } from "@/src/data/projects";
+import { useLanguage } from "./LanguageProvider";
 
 export default function ProjectVisual({ project, compact = false }: { project: Project; compact?: boolean }) {
-  const category = getCategory(project.category);
+  const { locale, copy } = useLanguage();
+  const category = getCategory(project.category, locale);
   if (project.imageUrl) {
     return (
       <div className={`project-visual project-visual-image${compact ? " compact" : ""}`}>
@@ -10,7 +14,7 @@ export default function ProjectVisual({ project, compact = false }: { project: P
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={project.imageUrl}
-          alt={project.imageAlt ?? `${project.title} 项目界面`}
+          alt={project.imageAlt ?? `${project.title} · ${copy.projects.open}`}
           loading={compact ? "lazy" : "eager"}
           decoding="async"
         />
