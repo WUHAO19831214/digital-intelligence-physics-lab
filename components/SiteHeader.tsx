@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { GithubIcon, MenuIcon } from "./Icons";
+import { GiteeIcon, GithubIcon, MenuIcon } from "./Icons";
 import { LanguageSwitcher, useLanguage } from "./LanguageProvider";
 
 function NavLinks({ mobile = false }: { mobile?: boolean }) {
@@ -16,9 +16,14 @@ function NavLinks({ mobile = false }: { mobile?: boolean }) {
   return (
     <nav className={mobile ? "mobile-nav" : "desktop-nav"} aria-label={mobile ? copy.nav.mobile : copy.nav.main}>
       {navItems.map((item) => <Link key={item.href} href={item.href}>{item.label}</Link>)}
-      <a className="nav-github" href="https://github.com/WUHAO19831214" target="_blank" rel="noreferrer noopener">
-        <GithubIcon size={17} /> GitHub <span className="sr-only">{copy.common.newTab}</span>
-      </a>
+      <span className="nav-platforms" aria-label="GitHub / Gitee">
+        <a href="https://github.com/WUHAO19831214" target="_blank" rel="noreferrer noopener">
+          <GithubIcon size={17} /> GitHub <span className="sr-only">{copy.common.newTab}</span>
+        </a>
+        <a className="nav-gitee" href="https://gitee.com/henhenhahi/projects" target="_blank" rel="noreferrer noopener">
+          <GiteeIcon size={17} /> Gitee <span className="sr-only">{copy.common.newTab}</span>
+        </a>
+      </span>
     </nav>
   );
 }

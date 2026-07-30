@@ -17,6 +17,8 @@ test("statically exports the finished portal homepage", async () => {
   assert.match(html, /Digital Intelligence Physics Lab/);
   assert.match(html, /安培力三维可视化与实验教学平台/);
   assert.match(html, /FringeLab/);
+  assert.match(html, /href="https:\/\/gitee\.com\/henhenhahi\/projects"/);
+  assert.match(html, /> Gitee <span/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|react-loading-skeleton/);
 });
 
