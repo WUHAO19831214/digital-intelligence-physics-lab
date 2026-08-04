@@ -37,6 +37,12 @@ test("exports project directory and every detail route as an index file", async 
   assert.match(fringeHtml, /摄像头模式需要 HTTPS/);
   assert.doesNotMatch(fringeHtml, /GitHub 仓库/);
 
+  const dualCameraHtml = await readExportedPage("/projects/dual-camera-acoustic-marker-tracker/");
+  assert.match(dualCameraHtml, /双摄颜色标记与声场同步追踪系统/);
+  assert.match(dualCameraHtml, /dual-camera-acoustic-marker-tracker-a\.netlify\.app/);
+  assert.match(dualCameraHtml, /dual-camera-acoustic-marker-tracker-antigravity/);
+  assert.match(dualCameraHtml, /dBFS 是相对于数字满刻度的电平/);
+
   const data = JSON.parse(await readFile(new URL("../src/data/projects.json", import.meta.url), "utf8"));
   await Promise.all(data.map((project) => access(exportedPageUrl(`/projects/${project.slug}/`))));
 });
@@ -56,7 +62,7 @@ test("exports static assets and fallback pages at stable root-relative paths", a
 
 test("keeps project data centralized and excludes broken formal links", async () => {
   const data = JSON.parse(await readFile(new URL("../src/data/projects.json", import.meta.url), "utf8"));
-  assert.equal(data.length, 11);
+  assert.equal(data.length, 12);
   const serialized = JSON.stringify(data);
   assert.doesNotMatch(serialized, /audio-visual-soundfield-tracker\.netlify\.app/);
   assert.doesNotMatch(serialized, /3d3polarizer\.netlify\.app/);
@@ -66,6 +72,11 @@ test("keeps project data centralized and excludes broken formal links", async ()
   assert.equal(fringe.featured, true);
   assert.equal(fringe.githubUrl, undefined);
   assert.equal(fringe.repositoryName, "WUHAO19831214/webcam-laser-fringelab");
+  const dualCamera = data.find((project) => project.slug === "dual-camera-acoustic-marker-tracker");
+  assert.equal(dualCamera.status, "active");
+  assert.equal(dualCamera.featured, true);
+  assert.equal(dualCamera.netlifySiteName, "dual-camera-acoustic-marker-tracker-a");
+  assert.equal(dualCamera.repositoryName, "WUHAO19831214/dual-camera-acoustic-marker-tracker-antigravity");
 });
 
 test("keeps English and Japanese project content aligned with the Chinese source", async () => {

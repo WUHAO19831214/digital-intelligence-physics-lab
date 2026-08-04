@@ -194,6 +194,36 @@
     "order": 2
   },
   {
+    "id": "dual-camera-acoustic-marker-tracker",
+    "slug": "dual-camera-acoustic-marker-tracker",
+    "title": "Dual-camera color marker and acoustic field synchronized tracking system",
+    "shortTitle": "Dual-camera acoustic tracking",
+    "englishTitle": "Dual-Camera Acoustic Marker Tracker",
+    "category": "digital-experiments",
+    "summary": "Track an HSV color marker with two cameras, capture microphone features in sync, and analyze the fused data in 2D, 3D, and acoustic-field views.",
+    "description": "A browser-only tool for combined motion and acoustic-field experiments, bringing dual-camera color-marker tracking, microphone feature extraction, timestamp alignment, and interactive 2D/3D visualization into one workflow.",
+    "background": "Motion trajectories and sound measurements are often recorded by separate devices, making timing and spatial relationships difficult to compare. This project fuses visual and audio records with a browser monotonic clock and falls back to a single-camera 2D mode when a second camera is unavailable.",
+    "audiences": ["Physics teachers", "Student laboratory groups", "Experimental teaching researchers"],
+    "tags": ["Dual-camera tracking", "Acoustic field", "HSV color marker", "Audio-visual synchronization", "3D trajectory", "Browser experiment"],
+    "status": "active",
+    "featured": true,
+    "siteUrl": "https://dual-camera-acoustic-marker-tracker-a.netlify.app/",
+    "githubUrl": "https://github.com/WUHAO19831214/dual-camera-acoustic-marker-tracker-antigravity",
+    "repositoryName": "WUHAO19831214/dual-camera-acoustic-marker-tracker-antigravity",
+    "netlifySiteName": "dual-camera-acoustic-marker-tracker-a",
+    "notice": "Camera and microphone features require HTTPS or localhost and explicit device permission. The displayed dBFS value is relative to digital full scale, not calibrated sound pressure level in dB SPL; dual-camera 3D trajectories also require spatial calibration for the experimental setup.",
+    "capabilities": ["Enumerate, select, and preview two cameras with automatic fallback when the second feed is unavailable", "Estimate HSV thresholds from a selected target region and track connected components after morphological cleanup", "Extract RMS, dBFS, fundamental frequency, spectral centroid, and zero-crossing rate", "Match visual and audio observations by nearest timestamp on the performance.now() monotonic clock", "Synchronize 2D trajectories, acoustic-field points, and an interactive rotatable and zoomable 3D trajectory", "Export visual, audio, and fused CSV files, a complete JSON session, and PNG trajectory captures"],
+    "teachingValue": ["Place kinematic trajectories and acoustic measurements in one traceable experiment workflow", "Help students understand time synchronization and fusion across multiple sensors", "Support comparison between single-camera 2D recording and dual-camera 3D reconstruction", "Provide real data for discussing dBFS, pitch, spectral features, and spatial calibration"],
+    "scenarios": ["Synchronized study of moving and sound-producing objects", "Investigation of spatial acoustic fields and trajectories", "Dual-camera visual measurement and 3D reconstruction lessons", "Multimodal experiment data capture and export"],
+    "technicalHighlights": ["Vite, TypeScript, and browser-only static deployment", "MediaDevices and Web Audio API", "Web Worker image processing and exponential smoothing", "Shared monotonic clock with tolerance-based matching", "Interactive Canvas 2D and 3D visualization"],
+    "roadmap": ["Add dual-camera geometric calibration and conversion to physical length units", "Establish a dB SPL calibration workflow with fixed gain and a reference sound source", "Continue compatibility testing across browsers and multi-camera devices"],
+    "versions": [
+      {"name": "Official Netlify release", "role": "stable", "siteUrl": "https://dual-camera-acoustic-marker-tracker-a.netlify.app/", "githubUrl": "https://github.com/WUHAO19831214/dual-camera-acoustic-marker-tracker-antigravity", "status": "active", "note": "Official browser-only entry with dual-camera tracking, acoustic features, and fused-data export"}
+    ],
+    "updatedAt": "2026-08-04",
+    "order": 3
+  },
+  {
     "id": "spot-vibration-tracking",
     "slug": "spot-vibration-tracking",
     "title": "Spot vibration tracking and frequency response experimental system",
@@ -269,7 +299,7 @@
       }
     ],
     "updatedAt": "2026-07-13",
-    "order": 3
+    "order": 4
   },
   {
     "id": "three-polarizer",
@@ -335,7 +365,7 @@
       }
     ],
     "updatedAt": "2026-04-22",
-    "order": 4
+    "order": 5
   },
   {
     "id": "pdf-ocr-to-text",
@@ -398,7 +428,7 @@
       }
     ],
     "updatedAt": "2026-04-19",
-    "order": 5
+    "order": 6
   },
   {
     "id": "solenoid-current-teaching",
@@ -455,7 +485,7 @@
     ],
     "versions": [],
     "updatedAt": "2026-04-24",
-    "order": 6
+    "order": 7
   },
   {
     "id": "physics-mr-lab",
@@ -525,7 +555,7 @@
       }
     ],
     "updatedAt": "2026-07-13",
-    "order": 7
+    "order": 8
   },
   {
     "id": "audio-visual-soundfield",
@@ -599,7 +629,7 @@
       }
     ],
     "updatedAt": "2026-07-13",
-    "order": 8
+    "order": 9
   },
   {
     "id": "local-textbook-workbench",
@@ -664,7 +694,7 @@
       }
     ],
     "updatedAt": "2026-05-18",
-    "order": 9
+    "order": 10
   },
   {
     "id": "nihongo-master",
@@ -719,7 +749,7 @@
     ],
     "versions": [],
     "updatedAt": "2026-02-10",
-    "order": 10
+    "order": 11
   },
   {
     "id": "physics-lecture-survey",
@@ -774,6 +804,6 @@
     ],
     "versions": [],
     "updatedAt": "2026-06-11",
-    "order": 11
+    "order": 12
   }
 ]

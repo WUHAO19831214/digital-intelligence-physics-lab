@@ -65,6 +65,36 @@
     "order": 2
   },
   {
+    "id": "dual-camera-acoustic-marker-tracker",
+    "slug": "dual-camera-acoustic-marker-tracker",
+    "title": "双摄颜色标记与声场同步追踪系统",
+    "shortTitle": "双摄声场同步追踪",
+    "englishTitle": "Dual-Camera Acoustic Marker Tracker",
+    "category": "digital-experiments",
+    "summary": "用双摄像头实时追踪 HSV 颜色标记，同步采集麦克风声学特征，并在二维、三维轨迹与声场视图中融合分析。",
+    "description": "面向运动与声场融合实验的纯前端工具，将双摄颜色标记追踪、麦克风特征提取、统一时间戳对齐和交互式二维/三维可视化组织在同一浏览器工作流中。",
+    "background": "物理实验中的运动轨迹与声音数据常由不同设备分别记录，时间难以对齐，空间关系也不直观。本项目使用浏览器单调时钟融合视觉与音频记录，并在第二台摄像头不可用时自动降级到单摄二维模式。",
+    "audiences": ["物理教师", "学生实验小组", "实验教学研究者"],
+    "tags": ["双摄追踪", "声场", "HSV 颜色标记", "音视频同步", "三维轨迹", "浏览器实验"],
+    "status": "active",
+    "featured": true,
+    "siteUrl": "https://dual-camera-acoustic-marker-tracker-a.netlify.app/",
+    "githubUrl": "https://github.com/WUHAO19831214/dual-camera-acoustic-marker-tracker-antigravity",
+    "repositoryName": "WUHAO19831214/dual-camera-acoustic-marker-tracker-antigravity",
+    "netlifySiteName": "dual-camera-acoustic-marker-tracker-a",
+    "notice": "摄像头和麦克风功能需要 HTTPS 或 localhost，并需用户主动授予设备权限。系统显示的 dBFS 是相对于数字满刻度的电平，不等同于经过校准的真实声压级 dB SPL；双摄三维轨迹也需要结合实验装置完成空间标定。",
+    "capabilities": ["双摄像头枚举、选择与实时预览，第二路不可用时自动降级", "框选目标区域并自动估算 HSV 阈值，结合形态学去噪与连通域追踪", "提取 RMS、dBFS、主频、频谱质心与过零率等音频特征", "以 performance.now() 单调时钟进行视觉—音频最邻近时间匹配", "二维轨迹、声场散点与可旋转缩放的三维轨迹同步展示", "导出视觉、音频与融合 CSV、完整 JSON 会话及 PNG 轨迹截图"],
+    "teachingValue": ["把运动学轨迹与声学测量放入同一可追溯实验链路", "帮助学生理解多传感器数据的时间同步与融合", "支持比较单摄二维记录与双摄三维重构的能力边界", "为 dBFS、主频、频谱特征和空间标定讨论提供真实数据"],
+    "scenarios": ["运动物体与发声过程同步研究", "空间声场与轨迹关系探究", "双摄视觉测量与三维重构教学", "多模态实验数据采集与导出"],
+    "technicalHighlights": ["Vite、TypeScript 与纯浏览器静态部署", "MediaDevices 与 Web Audio API", "Web Worker 图像处理与指数平滑", "统一单调时钟与容差匹配", "交互式 Canvas 二维/三维可视化"],
+    "roadmap": ["补充双摄几何标定与真实长度单位换算", "在固定增益和标准声源条件下建立 dB SPL 校准流程", "继续验证不同浏览器和多摄像头设备的兼容性"],
+    "versions": [
+      {"name": "Netlify 正式在线版", "role": "stable", "siteUrl": "https://dual-camera-acoustic-marker-tracker-a.netlify.app/", "githubUrl": "https://github.com/WUHAO19831214/dual-camera-acoustic-marker-tracker-antigravity", "status": "active", "note": "纯浏览器正式入口，支持双摄追踪、声学特征与融合导出"}
+    ],
+    "updatedAt": "2026-08-04",
+    "order": 3
+  },
+  {
     "id": "spot-vibration-tracking",
     "slug": "spot-vibration-tracking",
     "title": "光斑振动追踪与频率响应实验系统",
@@ -92,7 +122,7 @@
       {"name": "受迫振动 A-F 分析器", "role": "legacy", "siteUrl": "https://forced-vibration-af-analyzer.netlify.app/", "githubUrl": "https://github.com/WUHAO19831214/forced-vibration-af-analyzer-20260502-122715", "status": "prototype", "note": "早期原型，术语与测量边界已在文档中澄清"}
     ],
     "updatedAt": "2026-07-13",
-    "order": 3
+    "order": 4
   },
   {
     "id": "three-polarizer",
@@ -121,7 +151,7 @@
       {"name": "已构建在线版本", "role": "prototype", "siteUrl": "https://3dpolarizer2.netlify.app/", "githubUrl": "https://github.com/WUHAO19831214/3D-", "status": "prototype", "note": "当前唯一可用入口"}
     ],
     "updatedAt": "2026-04-22",
-    "order": 4
+    "order": 5
   },
   {
     "id": "pdf-ocr-to-text",
@@ -148,7 +178,7 @@
       {"name": "Netlify 在线版", "role": "research", "siteUrl": "https://pdfocrtotxt.netlify.app/", "status": "beta", "note": "功能可用；当前无法可靠访问对应 GitHub 仓库"}
     ],
     "updatedAt": "2026-04-19",
-    "order": 5
+    "order": 6
   },
   {
     "id": "solenoid-current-teaching",
@@ -175,7 +205,7 @@
     "roadmap": ["将随机 Netlify 名称迁移到清晰的新入口时保留旧站", "增加移动端交互说明", "补充磁场方向可视化"],
     "versions": [],
     "updatedAt": "2026-04-24",
-    "order": 6
+    "order": 7
   },
   {
     "id": "physics-mr-lab",
@@ -204,7 +234,7 @@
       {"name": "Netlify 前端演示", "role": "research", "siteUrl": "https://physics-mr-lab-development.netlify.app/", "githubUrl": "https://github.com/WUHAO19831214/Physics-MR-Lab-Development", "status": "beta", "note": "教学模式可用；自动分析需要本机后端"}
     ],
     "updatedAt": "2026-07-13",
-    "order": 7
+    "order": 8
   },
   {
     "id": "audio-visual-soundfield",
@@ -233,7 +263,7 @@
       {"name": "稳定基线 2026-07-11", "role": "stable", "githubUrl": "https://github.com/WUHAO19831214/audio-visual-soundfield-tracker-stable", "status": "active", "note": "经 64 项测试验证的复现实验基线，无在线入口"}
     ],
     "updatedAt": "2026-07-13",
-    "order": 8
+    "order": 9
   },
   {
     "id": "local-textbook-workbench",
@@ -260,7 +290,7 @@
       {"name": "Netlify 前端外壳", "role": "research", "siteUrl": "https://local-textbook-structure2.netlify.app/", "status": "beta", "note": "核心操作需要本地后端；重复站点不再列出"}
     ],
     "updatedAt": "2026-05-18",
-    "order": 9
+    "order": 10
   },
   {
     "id": "nihongo-master",
@@ -287,7 +317,7 @@
     "roadmap": ["避免在浏览器端配置私人 AI 密钥", "增加学习进度持久化", "完善真实 OCR 的隐私说明"],
     "versions": [],
     "updatedAt": "2026-02-10",
-    "order": 10
+    "order": 11
   },
   {
     "id": "physics-lecture-survey",
@@ -313,6 +343,6 @@
     "roadmap": ["移除临时 ngrok 地址", "建立合规的数据存储和隐私说明", "部署正式问卷入口"],
     "versions": [],
     "updatedAt": "2026-06-11",
-    "order": 11
+    "order": 12
   }
 ]

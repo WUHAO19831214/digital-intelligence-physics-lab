@@ -194,6 +194,36 @@
     "order": 2
   },
   {
+    "id": "dual-camera-acoustic-marker-tracker",
+    "slug": "dual-camera-acoustic-marker-tracker",
+    "title": "デュアルカメラ色マーカー・音場同期追跡システム",
+    "shortTitle": "デュアルカメラ音場追跡",
+    "englishTitle": "Dual-Camera Acoustic Marker Tracker",
+    "category": "digital-experiments",
+    "summary": "2台のカメラで HSV 色マーカーをリアルタイム追跡し、マイクの音響特徴量を同期取得して、2D・3D軌跡と音場ビューで統合解析します。",
+    "description": "運動と音場を組み合わせた実験向けのブラウザ完結型ツールです。デュアルカメラの色マーカー追跡、マイク特徴量抽出、タイムスタンプ同期、インタラクティブな2D・3D可視化を一つのワークフローにまとめます。",
+    "background": "物理実験では運動軌跡と音響データが別々の機器で記録されることが多く、時間合わせと空間関係の比較が難しくなります。本プロジェクトはブラウザの単調クロックで映像と音声を統合し、2台目のカメラが利用できない場合は単眼2Dモードへ自動的に切り替えます。",
+    "audiences": ["物理教師", "学生実験グループ", "実験教育研究者"],
+    "tags": ["デュアルカメラ追跡", "音場", "HSV 色マーカー", "音声・映像同期", "3D軌跡", "ブラウザ実験"],
+    "status": "active",
+    "featured": true,
+    "siteUrl": "https://dual-camera-acoustic-marker-tracker-a.netlify.app/",
+    "githubUrl": "https://github.com/WUHAO19831214/dual-camera-acoustic-marker-tracker-antigravity",
+    "repositoryName": "WUHAO19831214/dual-camera-acoustic-marker-tracker-antigravity",
+    "netlifySiteName": "dual-camera-acoustic-marker-tracker-a",
+    "notice": "カメラとマイクの機能には HTTPS または localhost と、利用者による明示的な機器アクセス許可が必要です。表示される dBFS はデジタル最大値に対するレベルであり、校正済み音圧レベルの dB SPL ではありません。デュアルカメラの3D軌跡にも実験装置に合わせた空間校正が必要です。",
+    "capabilities": ["2台のカメラを列挙・選択・プレビューし、2台目が使えない場合は自動的に縮退", "選択した対象領域から HSV しきい値を推定し、モルフォロジー処理と連結成分で追跡", "RMS、dBFS、基本周波数、スペクトル重心、ゼロ交差率を抽出", "performance.now() の単調クロック上で映像と音声を最も近いタイムスタンプにより対応付け", "2D軌跡、音場散布図、回転・ズーム可能な3D軌跡を同期表示", "映像・音声・統合 CSV、完全な JSON セッション、PNG 軌跡画像を出力"],
+    "teachingValue": ["運動学的軌跡と音響測定を一つの追跡可能な実験プロセスに統合", "複数センサーの時間同期とデータ融合の理解を支援", "単眼2D記録とデュアルカメラ3D再構成の能力範囲を比較", "dBFS、基本周波数、スペクトル特徴、空間校正を実データで議論"],
+    "scenarios": ["運動物体と発音過程の同期研究", "空間音場と軌跡の関係探究", "デュアルカメラ計測と3D再構成の授業", "マルチモーダル実験データの収集と出力"],
+    "technicalHighlights": ["Vite、TypeScript、ブラウザ完結の静的配信", "MediaDevices と Web Audio API", "Web Worker による画像処理と指数平滑", "共通単調クロックと許容幅付きマッチング", "インタラクティブな Canvas 2D・3D可視化"],
+    "roadmap": ["デュアルカメラの幾何校正と実長単位への変換を追加", "固定ゲインと基準音源による dB SPL 校正手順を構築", "ブラウザと複数カメラ機器の互換性検証を継続"],
+    "versions": [
+      {"name": "Netlify 公式オンライン版", "role": "stable", "siteUrl": "https://dual-camera-acoustic-marker-tracker-a.netlify.app/", "githubUrl": "https://github.com/WUHAO19831214/dual-camera-acoustic-marker-tracker-antigravity", "status": "active", "note": "デュアルカメラ追跡、音響特徴量、統合データ出力に対応したブラウザ完結の公式入口"}
+    ],
+    "updatedAt": "2026-08-04",
+    "order": 3
+  },
+  {
     "id": "spot-vibration-tracking",
     "slug": "spot-vibration-tracking",
     "title": "スポット振動追跡および周波数応答実験システム",
@@ -269,7 +299,7 @@
       }
     ],
     "updatedAt": "2026-07-13",
-    "order": 3
+    "order": 4
   },
   {
     "id": "three-polarizer",
@@ -335,7 +365,7 @@
       }
     ],
     "updatedAt": "2026-04-22",
-    "order": 4
+    "order": 5
   },
   {
     "id": "pdf-ocr-to-text",
@@ -398,7 +428,7 @@
       }
     ],
     "updatedAt": "2026-04-19",
-    "order": 5
+    "order": 6
   },
   {
     "id": "solenoid-current-teaching",
@@ -455,7 +485,7 @@
     ],
     "versions": [],
     "updatedAt": "2026-04-24",
-    "order": 6
+    "order": 7
   },
   {
     "id": "physics-mr-lab",
@@ -525,7 +555,7 @@
       }
     ],
     "updatedAt": "2026-07-13",
-    "order": 7
+    "order": 8
   },
   {
     "id": "audio-visual-soundfield",
@@ -599,7 +629,7 @@
       }
     ],
     "updatedAt": "2026-07-13",
-    "order": 8
+    "order": 9
   },
   {
     "id": "local-textbook-workbench",
@@ -664,7 +694,7 @@
       }
     ],
     "updatedAt": "2026-05-18",
-    "order": 9
+    "order": 10
   },
   {
     "id": "nihongo-master",
@@ -719,7 +749,7 @@
     ],
     "versions": [],
     "updatedAt": "2026-02-10",
-    "order": 10
+    "order": 11
   },
   {
     "id": "physics-lecture-survey",
@@ -774,6 +804,6 @@
     ],
     "versions": [],
     "updatedAt": "2026-06-11",
-    "order": 11
+    "order": 12
   }
 ]
