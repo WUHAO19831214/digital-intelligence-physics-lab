@@ -1,0 +1,45 @@
+version: "1.0"
+name: cloudflare-pages-main
+displayName: Cloudflare Pages Auto Deploy
+stages:
+- name: Build and Deploy
+  displayName: Build and Deploy
+  strategy: naturally
+  trigger: auto
+  executor: []
+  steps:
+  - step: build@nodejs
+    name: cloudflare-pages
+    displayName: Build and Deploy to Cloudflare Pages
+    nodeVersion: 14.16.0
+    commands:
+    - set -e && curl -fsSL https://nodejs.org/dist/v22.17.1/node-v22.17.1-linux-x64.tar.xz
+      -o /tmp/node-v22.17.1-linux-x64.tar.xz && mkdir -p /tmp/node22 && tar -xJf /tmp/node-v22.17.1-linux-x64.tar.xz
+      -C /tmp/node22 --strip-components=1 && export PATH="/tmp/node22/bin:$PATH" &&
+      node --version && npm --version && npm config set registry https://registry.npmmirror.com
+      && npm ci && npm run build && test -f out/index.html && npx wrangler pages deploy
+      out --project-name digital-intelligence-physics-lab --branch main --account-id
+      "$CLOUDFLARE_ACCOUNT_ID"
+    artifacts:
+    - name: STATIC_EXPORT
+      path:
+      - ./out
+      type: .tar.gz
+    caches:
+    - "~/.npm"
+    notify: []
+    strategy:
+      retry: "0"
+triggers:
+  trigger: auto
+  push:
+    branches:
+      prefix:
+      - main
+      precise: []
+      include: []
+notify: []
+variables:
+  global:
+  - CLOUDFLARE_ACCOUNT_ID
+  - CLOUDFLARE_API_TOKEN
