@@ -47,3 +47,15 @@
 预览部署：`6ac0b5bb5b9257bbf9735f94`。旧生产部署 `6a71eac01afc762d81fe83ee` 保留，可在 Netlify 重新发布用于回滚。
 
 后续内容更改必须重新完整构建，以生成匹配的 CSP 哈希。
+
+## MR 光学实验室新入口同步
+
+用户补充授权后，已将 https://physics-mr-lab.netlify.app/ 设为 MR 光学实验室在线入口，同步中英日资料，更新资料日期为 2026-10-03。旧 physics-mr-lab-development 入口保留为历史归档版本。
+
+新站映射到同一公开仓库，发布源码提交为 `366181e6ac12c65688ced457802b1939d9b7e5e1`。本次是入口同步，不宣称自动分析能力升级。保留研究测试状态及“自动 OpenCV 分析需要本机 FastAPI 后端”说明。薄膜平整度继续排除。
+
+精确主机允许列表新增 physics-mr-lab.netlify.app。完整静态重建并重新计算 CSP 哈希；构建、lint、TypeScript、9 项测试通过。预览三语言切换通过，预览和正式页浏览器无 error/warn。正式首页、目录、MR 详情均 HTTP 200，内容与本地导出一致（仅移除准确的 Netlify 平台注释），全部内联脚本被 CSP 覆盖，DENY 头生效；4 个敏感路径为 404。
+
+预览部署：`6ac0b9d190c8c0966428b5ad`。正式部署：`6ac0ba0845051f937cf6fd5a`。上一正式部署 `6ac0b663acb1d8631024b364` 保留，可回滚。仍使用隔离目录、空函数目录、仅静态文件发布。
+
+部署详情：https://app.netlify.com/projects/digital-intelligence-physics-lab/deploys/6ac0ba0845051f937cf6fd5a
