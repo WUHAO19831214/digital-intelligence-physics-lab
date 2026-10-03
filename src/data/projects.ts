@@ -9,6 +9,7 @@ export type ProjectVersionRole = "teacher" | "student" | "prototype" | "legacy" 
 export type ProjectVersion = {
   name: string;
   role?: ProjectVersionRole;
+  downloadUrl?: string;
   siteUrl?: string;
   githubUrl?: string;
   status: ProjectStatus;

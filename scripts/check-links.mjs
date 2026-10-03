@@ -6,6 +6,7 @@ for (const project of projects) {
   if (project.siteUrl) urls.add(project.siteUrl);
   if (project.githubUrl) urls.add(project.githubUrl);
   for (const version of project.versions ?? []) {
+    if (version.downloadUrl) urls.add(version.downloadUrl);
     if (version.siteUrl) urls.add(version.siteUrl);
     if (version.githubUrl) urls.add(version.githubUrl);
   }

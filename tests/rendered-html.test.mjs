@@ -35,7 +35,7 @@ test("exports project directory and every detail route as an index file", async 
   assert.match(fringeHtml, /激光干涉与衍射智能分析平台/);
   assert.match(fringeHtml, /Fresnel 数/);
   assert.match(fringeHtml, /摄像头模式需要 HTTPS/);
-  assert.doesNotMatch(fringeHtml, /GitHub 仓库/);
+  assert.match(fringeHtml, /GitHub 仓库/);
 
   const dualCameraHtml = await readExportedPage("/projects/dual-camera-acoustic-marker-tracker/");
   assert.match(dualCameraHtml, /双摄颜色标记与声场同步追踪系统/);
@@ -62,7 +62,7 @@ test("exports static assets and fallback pages at stable root-relative paths", a
 
 test("keeps project data centralized and excludes broken formal links", async () => {
   const data = JSON.parse(await readFile(new URL("../src/data/projects.json", import.meta.url), "utf8"));
-  assert.equal(data.length, 12);
+  assert.equal(data.length, 16);
   const serialized = JSON.stringify(data);
   assert.doesNotMatch(serialized, /audio-visual-soundfield-tracker\.netlify\.app/);
   assert.doesNotMatch(serialized, /3d3polarizer\.netlify\.app/);
@@ -70,7 +70,7 @@ test("keeps project data centralized and excludes broken formal links", async ()
   const fringe = data.find((project) => project.slug === "webcam-laser-fringelab");
   assert.equal(fringe.status, "active");
   assert.equal(fringe.featured, true);
-  assert.equal(fringe.githubUrl, undefined);
+  assert.equal(fringe.githubUrl, "https://github.com/WUHAO19831214/webcam-laser-fringelab");
   assert.equal(fringe.repositoryName, "WUHAO19831214/webcam-laser-fringelab");
   const dualCamera = data.find((project) => project.slug === "dual-camera-acoustic-marker-tracker");
   assert.equal(dualCamera.status, "active");

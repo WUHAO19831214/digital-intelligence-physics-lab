@@ -103,9 +103,17 @@
         "githubUrl": "https://github.com/WUHAO19831214/physics-experiment-bridge-mvp",
         "status": "prototype",
         "note": "GitHub にアーカイブされたプロトタイプ、公式オンライン入口なし"
+      },
+      {
+        "name": "生徒向けV2・単一HTMLオフライン版",
+        "role": "student",
+        "status": "beta",
+        "downloadUrl": "https://github.com/WUHAO19831214/ampere-force-student-explorer-yanan-v2/releases/download/v0.1.0-offline.1/ampere-force-student-explorer-yanan-v2.html",
+        "githubUrl": "https://github.com/WUHAO19831214/ampere-force-student-explorer-yanan-v2",
+        "note": "ダウンロード後、WebGL対応Chrome/Edgeで開きます。ネット接続・ローカルサーバー不要。方向入力と視点切替に対応。"
       }
     ],
-    "updatedAt": "2026-07-13",
+    "updatedAt": "2026-10-03",
     "order": 1
   },
   {
@@ -140,7 +148,7 @@
     "netlifySiteName": "webcam-laser-fringelab",
     "imageUrl": "/projects/webcam-laser-fringelab.png",
     "imageAlt": "FringeLab 制作インターフェイス、左側には赤色レーザー干渉縞と調整可能な ROI が表示され、右側には相対光強度曲線と波長測定結果が表示されます",
-    "notice": "カメラ モードには HTTPS または localhost が必要で、ユーザーがカメラのアクセス許可を積極的に付与する必要があります。携帯電話やブラウザによって、露出、フォーカス、ホワイト バランス ロックのサポートが異なります。画像処理、シミュレーション、曲線解析、セッションパラメータの保存はすべて現在のブラウザ内で完了し、外部解析バックエンドに依存せず、カメラフレームはアップロードされません。現在のバージョンには、PWA のインストールに必要なマニフェストと Service Worker が提供されていません。ソース リポジトリは検証されていますが、現在はプライベートであるため、GitHub ボタンはパブリック ポータルに表示されません。",
+    "notice": "カメラ利用はHTTPSまたはlocalhostと明示的な許可が必要です。露出・焦点・ホワイトバランス制御は端末に依存します。画像・モデル・グラフ・設定はブラウザで処理し、外部解析やカメラ映像の送信はありません。インストール型PWAはなく、ソースは公開済みです。",
     "capabilities": [
       "3 つの入力: カメラ、PNG/JPEG/WebP 画像、理想的な物理シミュレーション",
       "角をドラッグして移動、回転、拡大縮小できるストリップ ROI",
@@ -187,11 +195,13 @@
         "role": "research",
         "siteUrl": "https://webcam-laser-fringelab.netlify.app/",
         "status": "active",
-        "note": "現在の公式オンライン バージョン。ソースコードリポジトリは非公開です"
+        "note": "現在のオンライン版。公開ソースを確認済み",
+        "githubUrl": "https://github.com/WUHAO19831214/webcam-laser-fringelab"
       }
     ],
-    "updatedAt": "2026-07-14",
-    "order": 2
+    "updatedAt": "2026-10-03",
+    "order": 2,
+    "githubUrl": "https://github.com/WUHAO19831214/webcam-laser-fringelab"
   },
   {
     "id": "dual-camera-acoustic-marker-tracker",
@@ -203,8 +213,19 @@
     "summary": "2台のカメラで HSV 色マーカーをリアルタイム追跡し、マイクの音響特徴量を同期取得して、2D・3D軌跡と音場ビューで統合解析します。",
     "description": "運動と音場を組み合わせた実験向けのブラウザ完結型ツールです。デュアルカメラの色マーカー追跡、マイク特徴量抽出、タイムスタンプ同期、インタラクティブな2D・3D可視化を一つのワークフローにまとめます。",
     "background": "物理実験では運動軌跡と音響データが別々の機器で記録されることが多く、時間合わせと空間関係の比較が難しくなります。本プロジェクトはブラウザの単調クロックで映像と音声を統合し、2台目のカメラが利用できない場合は単眼2Dモードへ自動的に切り替えます。",
-    "audiences": ["物理教師", "学生実験グループ", "実験教育研究者"],
-    "tags": ["デュアルカメラ追跡", "音場", "HSV 色マーカー", "音声・映像同期", "3D軌跡", "ブラウザ実験"],
+    "audiences": [
+      "物理教師",
+      "学生実験グループ",
+      "実験教育研究者"
+    ],
+    "tags": [
+      "デュアルカメラ追跡",
+      "音場",
+      "HSV 色マーカー",
+      "音声・映像同期",
+      "3D軌跡",
+      "ブラウザ実験"
+    ],
     "status": "active",
     "featured": true,
     "siteUrl": "https://dual-camera-acoustic-marker-tracker-a.netlify.app/",
@@ -212,15 +233,57 @@
     "repositoryName": "WUHAO19831214/dual-camera-acoustic-marker-tracker-antigravity",
     "netlifySiteName": "dual-camera-acoustic-marker-tracker-a",
     "notice": "カメラとマイクの機能には HTTPS または localhost と、利用者による明示的な機器アクセス許可が必要です。表示される dBFS はデジタル最大値に対するレベルであり、校正済み音圧レベルの dB SPL ではありません。デュアルカメラの3D軌跡にも実験装置に合わせた空間校正が必要です。",
-    "capabilities": ["2台のカメラを列挙・選択・プレビューし、2台目が使えない場合は自動的に縮退", "選択した対象領域から HSV しきい値を推定し、モルフォロジー処理と連結成分で追跡", "RMS、dBFS、基本周波数、スペクトル重心、ゼロ交差率を抽出", "performance.now() の単調クロック上で映像と音声を最も近いタイムスタンプにより対応付け", "2D軌跡、音場散布図、回転・ズーム可能な3D軌跡を同期表示", "映像・音声・統合 CSV、完全な JSON セッション、PNG 軌跡画像を出力"],
-    "teachingValue": ["運動学的軌跡と音響測定を一つの追跡可能な実験プロセスに統合", "複数センサーの時間同期とデータ融合の理解を支援", "単眼2D記録とデュアルカメラ3D再構成の能力範囲を比較", "dBFS、基本周波数、スペクトル特徴、空間校正を実データで議論"],
-    "scenarios": ["運動物体と発音過程の同期研究", "空間音場と軌跡の関係探究", "デュアルカメラ計測と3D再構成の授業", "マルチモーダル実験データの収集と出力"],
-    "technicalHighlights": ["Vite、TypeScript、ブラウザ完結の静的配信", "MediaDevices と Web Audio API", "Web Worker による画像処理と指数平滑", "共通単調クロックと許容幅付きマッチング", "インタラクティブな Canvas 2D・3D可視化"],
-    "roadmap": ["デュアルカメラの幾何校正と実長単位への変換を追加", "固定ゲインと基準音源による dB SPL 校正手順を構築", "ブラウザと複数カメラ機器の互換性検証を継続"],
-    "versions": [
-      {"name": "Netlify 公式オンライン版", "role": "stable", "siteUrl": "https://dual-camera-acoustic-marker-tracker-a.netlify.app/", "githubUrl": "https://github.com/WUHAO19831214/dual-camera-acoustic-marker-tracker-antigravity", "status": "active", "note": "デュアルカメラ追跡、音響特徴量、統合データ出力に対応したブラウザ完結の公式入口"}
+    "capabilities": [
+      "2台のカメラを列挙・選択・プレビューし、2台目が使えない場合は自動的に縮退",
+      "選択した対象領域から HSV しきい値を推定し、モルフォロジー処理と連結成分で追跡",
+      "RMS、dBFS、基本周波数、スペクトル重心、ゼロ交差率を抽出",
+      "performance.now() の単調クロック上で映像と音声を最も近いタイムスタンプにより対応付け",
+      "2D軌跡、音場散布図、回転・ズーム可能な3D軌跡を同期表示",
+      "映像・音声・統合 CSV、完全な JSON セッション、PNG 軌跡画像を出力"
     ],
-    "updatedAt": "2026-08-04",
+    "teachingValue": [
+      "運動学的軌跡と音響測定を一つの追跡可能な実験プロセスに統合",
+      "複数センサーの時間同期とデータ融合の理解を支援",
+      "単眼2D記録とデュアルカメラ3D再構成の能力範囲を比較",
+      "dBFS、基本周波数、スペクトル特徴、空間校正を実データで議論"
+    ],
+    "scenarios": [
+      "運動物体と発音過程の同期研究",
+      "空間音場と軌跡の関係探究",
+      "デュアルカメラ計測と3D再構成の授業",
+      "マルチモーダル実験データの収集と出力"
+    ],
+    "technicalHighlights": [
+      "Vite、TypeScript、ブラウザ完結の静的配信",
+      "MediaDevices と Web Audio API",
+      "Web Worker による画像処理と指数平滑",
+      "共通単調クロックと許容幅付きマッチング",
+      "インタラクティブな Canvas 2D・3D可視化"
+    ],
+    "roadmap": [
+      "デュアルカメラの幾何校正と実長単位への変換を追加",
+      "固定ゲインと基準音源による dB SPL 校正手順を構築",
+      "ブラウザと複数カメラ機器の互換性検証を継続"
+    ],
+    "versions": [
+      {
+        "name": "Netlify 公式オンライン版",
+        "role": "stable",
+        "siteUrl": "https://dual-camera-acoustic-marker-tracker-a.netlify.app/",
+        "githubUrl": "https://github.com/WUHAO19831214/dual-camera-acoustic-marker-tracker-antigravity",
+        "status": "active",
+        "note": "デュアルカメラ追跡、音響特徴量、統合データ出力に対応したブラウザ完結の公式入口"
+      },
+      {
+        "name": "連係カメラ探索版",
+        "role": "research",
+        "status": "beta",
+        "siteUrl": "https://dual-camera-acoustic-marker-tracker.netlify.app/",
+        "githubUrl": "https://github.com/WUHAO19831214/dual-camera-acoustic-marker-tracker",
+        "note": "独立アップロード版。公開説明にiPhone連係カメラの検出を記載。公開ソースとの完全な対応は未検証。"
+      }
+    ],
+    "updatedAt": "2026-10-03",
     "order": 3
   },
   {
@@ -298,8 +361,9 @@
         "note": "初期のプロトタイプ、用語、測定の境界がドキュメントで明確化されました"
       }
     ],
-    "updatedAt": "2026-07-13",
-    "order": 4
+    "updatedAt": "2026-08-17",
+    "order": 4,
+    "notice": "固定v0.6.0センサーのオフライン再生比較アダプターを追加。ブラウザ実時間追跡は従来方式です。合成再生は実測検証を意味しません。"
   },
   {
     "id": "three-polarizer",
@@ -414,7 +478,7 @@
       "ブラウザ側の処理"
     ],
     "roadmap": [
-      "パブリックソースリポジトリの確認または復元",
+      "OCR結果の確認手順を補足する",
       "ダウンロードTXTと構造化エクスポートを追加しました",
       "大きなファイルのパフォーマンスに関する補足的なヒント"
     ],
@@ -424,11 +488,14 @@
         "role": "research",
         "siteUrl": "https://pdfocrtotxt.netlify.app/",
         "status": "beta",
-        "note": "利用可能な機能。現在、対応する GitHub リポジトリへの信頼できるアクセスはありません。"
+        "note": "ブラウザ内PDF抽出とOCR。公開リポジトリ対応を確認済み",
+        "githubUrl": "https://github.com/WUHAO19831214/pdf-pdf-html"
       }
     ],
-    "updatedAt": "2026-04-19",
-    "order": 6
+    "updatedAt": "2026-10-03",
+    "order": 6,
+    "githubUrl": "https://github.com/WUHAO19831214/pdf-pdf-html",
+    "repositoryName": "WUHAO19831214/pdf-pdf-html"
   },
   {
     "id": "solenoid-current-teaching",
@@ -583,7 +650,7 @@
     "featured": false,
     "githubUrl": "https://github.com/WUHAO19831214/audio-visual-soundfield-tracker",
     "repositoryName": "WUHAO19831214/audio-visual-soundfield-tracker",
-    "notice": "現在、元の Netlify アドレスは 404 を返します。ポータルは GitHub とローカルの実行手順のみを提供し、無効なオンライン ボタンは生成しません。",
+    "notice": "主要な取得・解析にはローカルPython/Streamlit環境が必要です。ソースと実行手順を提供し、静的ページを完全な実験入口と扱いません。",
     "capabilities": [
       "写真とビデオの人数",
       "カメラとマイクの同期収集",
@@ -639,7 +706,7 @@
     "englishTitle": "ローカル教科書構造ワークベンチ",
     "category": "teaching-tools",
     "summary": "ローカルの Markdown 教科書データを読み取り、章タイトルを整理し、マインド マップを生成し、カード印刷コンテンツを抽出します。",
-    "description": "リーダー、チャプターブレインマップ、ルール抽出、Anki/CSV エクスポートインターフェイスを含む、ローカル教材用の構造化されたワークベンチフロントエンド。",
+    "description": "教材のローカル構造化ワークベンチ。読書・章マップ・規則抽出・Anki/CSV・数式表示・原レイアウト/編集用Word出力に対応。",
     "background": "教科書の OCR 後は、連続したテキストと画像のリストのみが得られることがよくあります。教師は引き続き、章レベルを整理し、ページ番号を見つけ、再利用可能な学習教材を生成する必要があります。",
     "audiences": [
       "先生",
@@ -662,7 +729,8 @@
       "章タイトル構成",
       "動的脳マップ",
       "ルール抽出とカード作成",
-      "CSVエクスポート"
+      "CSVエクスポート",
+      "数式表示と原レイアウト/編集用Word出力"
     ],
     "teachingValue": [
       "教科書の OCR 結果をナビゲート可能な構造に変換する",
@@ -680,7 +748,7 @@
       "ネイティブAPIのワークフロー"
     ],
     "roadmap": [
-      "GitHub リポジトリを確認または復元する",
+      "数式と編集用出力の正確性を検証する",
       "安全なバックエンドをデプロイするか、ネイティブ アプリとして明示的にターゲットにする",
       "重複する Netlify プロジェクト ID をマージする"
     ],
@@ -690,11 +758,21 @@
         "role": "research",
         "siteUrl": "https://local-textbook-structure2.netlify.app/",
         "status": "beta",
-        "note": "コア操作にはローカル バックエンドが必要です。重複したサイトはリストされなくなりました"
+        "note": "コア操作にはローカル バックエンドが必要です。重複したサイトはリストされなくなりました",
+        "githubUrl": "https://github.com/WUHAO19831214/local-textbook-structure-workbench"
+      },
+      {
+        "name": "Local OCR Dataset Builder",
+        "role": "research",
+        "status": "beta",
+        "githubUrl": "https://github.com/WUHAO19831214/local-ocr-dataset-builder",
+        "note": "macOS補助アプリ。ローカルOCR・数式確認・二形式Word出力。設定済みOCR環境が必要。"
       }
     ],
-    "updatedAt": "2026-05-18",
-    "order": 10
+    "updatedAt": "2026-09-29",
+    "order": 10,
+    "githubUrl": "https://github.com/WUHAO19831214/local-textbook-structure-workbench",
+    "repositoryName": "WUHAO19831214/local-textbook-structure-workbench"
   },
   {
     "id": "nihongo-master",
@@ -754,12 +832,12 @@
   {
     "id": "physics-lecture-survey",
     "slug": "physics-lecture-survey",
-    "title": "物理講義の現場対話・評価システム",
-    "shortTitle": "物理学講義アンケート",
+    "title": "物理教員のAI活用力・実験開発ニーズ調査",
+    "shortTitle": "教員の革新・実験ニーズ調査",
     "englishTitle": "物理学講義アンケート",
     "category": "teaching-tools",
-    "summary": "中学校物理特別講義の参加教師の情報、指導ニーズ、現場での評価を収集します。",
-    "description": "講義や教師の要望を収集するための、ライブ インタラクションのためのモバイル ファーストの 1 ページ アンケートのプロトタイプ。",
+    "summary": "モバイル調査とリアルタイム表示で、教員のAI利用・活用力・実験開発ニーズを整理します。",
+    "description": "モバイル調査とリアルタイム表示で、教員のAI利用・活用力・実験開発ニーズを整理します。",
     "background": "地域の教育研究活動では、参加した教師の背景や指導の難しさ、活動の評価などを迅速にまとめる必要がある。このプロトタイプは、オンサイトでの QR コード入力プロセスを調査します。",
     "audiences": [
       "教育研究員",
@@ -776,12 +854,12 @@
     "featured": false,
     "githubUrl": "https://github.com/WUHAO19831214/physics-survey",
     "repositoryName": "WUHAO19831214/physics-survey",
-    "notice": "現在のコミット エンドポイントは、信頼できる運用エントリのない一時的な ngrok ローカル サービスを指しています。",
+    "notice": "v2.0はローカルNode.jsサービスが必要です。一時トンネルは恒久入口として掲載しません。教員情報の収集前に目的・保存先・権限を明示してください。",
     "capabilities": [
-      "参加教師からの情報収集",
-      "教育ニーズ調査",
-      "活動評価",
-      "モバイルフォーム"
+      "モバイル段階式調査",
+      "AI利用と五次元活用力プロファイル",
+      "実験ニーズと革新段階の統計",
+      "講師用リアルタイム表示とローカル分析提案"
     ],
     "teachingValue": [
       "地域の教育と研究のニーズ分析をサポートする",
@@ -793,9 +871,9 @@
       "教師トレーニングのフィードバック"
     ],
     "technicalHighlights": [
-      "単一ファイルの HTML",
-      "モバイルフォーム",
-      "複数のバックエンド送信ソリューションのプロトタイプ"
+      "Node.js標準サーバー",
+      "モバイル調査と研究ダッシュボード",
+      "ローカルモデル・規則分析"
     ],
     "roadmap": [
       "一時的な ngrok アドレスを削除する",
@@ -803,7 +881,179 @@
       "正式なアンケートポータルを展開する"
     ],
     "versions": [],
-    "updatedAt": "2026-06-11",
+    "updatedAt": "2026-08-28",
     "order": 12
+  },
+  {
+    "id": "isochoric-gas-workbench",
+    "category": "digital-experiments",
+    "order": 3.5,
+    "featured": true,
+    "status": "beta",
+    "slug": "isochoric-gas-workbench",
+    "title": "気体の定積変化実験・微視的可視化ワークベンチ",
+    "summary": "圧力・温度の画面OCR、実験カメラ、p–Tグラフ、分子熱運動モデルを一つの実験手順に統合します。",
+    "notice": "両版とも研究テスト段階です。カメラ・画面共有には許可が必要です。微視的モデルはシミュレーションであり、OCR値の確認とデモ・実測の区別が必要です。",
+    "capabilities": [
+      "圧力・温度の二つのOCR領域",
+      "p–T / p–tグラフと線形近似",
+      "実験カメラと時系列再生",
+      "分子熱運動の3Dモデル",
+      "CSV / JSONデータ出力"
+    ],
+    "teachingValue": [
+      "巨視的実験データと微視的説明を結ぶ",
+      "摂氏温度と絶対温度を比較する",
+      "採取・近似・再生の証拠を保存する"
+    ],
+    "tags": [
+      "定積変化",
+      "画面OCR",
+      "分子熱運動",
+      "実験再生"
+    ],
+    "audiences": [
+      "高校物理教員",
+      "生徒の実験グループ"
+    ],
+    "description": "圧力・温度の画面OCR、実験カメラ、p–Tグラフ、分子熱運動モデルを一つの実験手順に統合します。",
+    "background": "巨視的実験データと微視的説明を結ぶ",
+    "githubUrl": "https://github.com/WUHAO19831214/charles-law-isochoric-lab",
+    "repositoryName": "WUHAO19831214/charles-law-isochoric-lab",
+    "updatedAt": "2026-10-02",
+    "versions": [
+      {
+        "name": "定積実験・二つの微視的モデル版",
+        "note": "p–T / p–tグラフ、二つの微視的モデル、再生に対応",
+        "role": "research",
+        "status": "beta",
+        "siteUrl": "https://charles-law-isochoric-lab.netlify.app/",
+        "githubUrl": "https://github.com/WUHAO19831214/charles-law-isochoric-lab"
+      },
+      {
+        "name": "C+KIMI K3ワークベンチ",
+        "note": "列配置の実験記録と巨視的・微視的証拠の連携。同じ実験テーマの独立版",
+        "role": "research",
+        "status": "beta",
+        "siteUrl": "https://isochoric-gas-workbench-c-kimi-k3.netlify.app/",
+        "githubUrl": "https://github.com/WUHAO19831214/isochoric-gas-workbench-c-kimi-k3"
+      }
+    ],
+    "siteUrl": "https://charles-law-isochoric-lab.netlify.app/",
+    "netlifySiteName": "charles-law-isochoric-lab"
+  },
+  {
+    "id": "arc-track-force-demo",
+    "category": "digital-experiments",
+    "order": 4.5,
+    "featured": false,
+    "status": "prototype",
+    "slug": "arc-track-force-demo",
+    "title": "円弧軌道の力の演示ツール",
+    "summary": "三軸力の画面OCR、カメラ色追跡、2D/3Dベクトルを組み合わせ、軌道と球の相互作用を示します。",
+    "notice": "公開ソースとローカル実行手順を提供します。検証済みNetlify入口はありません。模擬値とOCR値を区別し、画素追跡には幾何学的校正が必要です。",
+    "capabilities": [
+      "信頼度付き三チャンネル力OCR",
+      "HSVによる球の色追跡",
+      "2D/3Dの力と反作用ベクトル",
+      "ゼロ調整・力グラフ・CSV出力"
+    ],
+    "teachingValue": [
+      "センサー値とニュートン第三法則を結ぶ",
+      "モデルと実験値を比較する"
+    ],
+    "tags": [
+      "円運動",
+      "力ベクトル",
+      "画面OCR",
+      "色追跡"
+    ],
+    "audiences": [
+      "物理教員",
+      "生徒の実験グループ"
+    ],
+    "description": "三軸力の画面OCR、カメラ色追跡、2D/3Dベクトルを組み合わせ、軌道と球の相互作用を示します。",
+    "background": "センサー値とニュートン第三法則を結ぶ",
+    "githubUrl": "https://github.com/WUHAO19831214/arc-track-force-demo",
+    "repositoryName": "WUHAO19831214/arc-track-force-demo",
+    "updatedAt": "2026-08-17",
+    "versions": []
+  },
+  {
+    "id": "physics-software-sensors",
+    "category": "digital-experiments",
+    "order": 9.5,
+    "featured": false,
+    "status": "beta",
+    "slug": "physics-software-sensors",
+    "title": "物理実験ソフトウェアセンサーライブラリ",
+    "summary": "カメラ・画面・OCR・追跡機能を、追跡可能なデータ契約で実験アプリと処理ツールにつなぎます。",
+    "notice": "オンライン入口は多言語ドキュメントと機能紹介です。7つのソフトウェアセンサーと1つの補助処理ツールの観測値は、物理量として用いる際に校正が必要です。",
+    "capabilities": [
+      "カメラ・画面取得の契約",
+      "数値OCRと光点重心処理",
+      "追跡可能なFramePacket / SensorEvent記録",
+      "3Dベクトル合成補助ツール",
+      "中国語・英語・日本語の完全な文書"
+    ],
+    "teachingValue": [
+      "実験アプリ間の重複実装を減らす",
+      "ソフトウェア観測と物理校正の境界を明示する"
+    ],
+    "tags": [
+      "機能ライブラリ",
+      "OCR",
+      "センサー契約",
+      "データ品質"
+    ],
+    "audiences": [
+      "実験ソフト開発者",
+      "実験教育研究者"
+    ],
+    "description": "カメラ・画面・OCR・追跡機能を、追跡可能なデータ契約で実験アプリと処理ツールにつなぎます。",
+    "background": "実験アプリ間の重複実装を減らす",
+    "githubUrl": "https://github.com/WUHAO19831214/physics-software-sensors",
+    "repositoryName": "WUHAO19831214/physics-software-sensors",
+    "updatedAt": "2026-08-17",
+    "versions": [],
+    "siteUrl": "https://wuhao19831214.github.io/physics-software-sensors/"
+  },
+  {
+    "id": "classroom-signal-console",
+    "category": "teaching-tools",
+    "order": 10.5,
+    "featured": false,
+    "status": "prototype",
+    "slug": "classroom-signal-console",
+    "title": "授業シグナルコンソール",
+    "summary": "ローカル音声やJSONL再生から授業イベントを整理し、検証可能な方針で教員専用の提示を生成します。",
+    "notice": "正式オンライン入口のないローカル研究プロトタイプです。音声認識は端末上で行い、Jevは文字と構造化状態を処理します。利用前にモデルサービスへのデータ送信先を確認してください。顔・声紋認識や生徒への自動通知はありません。",
+    "capabilities": [
+      "マイク入力とJSONL再生",
+      "二段階中国語音声認識",
+      "時間境界・証拠品質を持つイベント",
+      "構造化判断と決定的な介入方針",
+      "教員専用提示と検証可能なログ"
+    ],
+    "teachingValue": [
+      "授業の進行と介入時機を研究する",
+      "教員の判断とフィードバックの証拠を残す"
+    ],
+    "tags": [
+      "授業研究",
+      "ローカル音声認識",
+      "教員提示",
+      "検証可能な方針"
+    ],
+    "audiences": [
+      "教員",
+      "授業研究者"
+    ],
+    "description": "ローカル音声やJSONL再生から授業イベントを整理し、検証可能な方針で教員専用の提示を生成します。",
+    "background": "授業の進行と介入時機を研究する",
+    "githubUrl": "https://github.com/WUHAO19831214/classroom-signal-console",
+    "repositoryName": "WUHAO19831214/classroom-signal-console",
+    "updatedAt": "2026-09-21",
+    "versions": []
   }
 ]

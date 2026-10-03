@@ -103,9 +103,17 @@
         "githubUrl": "https://github.com/WUHAO19831214/physics-experiment-bridge-mvp",
         "status": "prototype",
         "note": "GitHub archived prototype, no official online entrance"
+      },
+      {
+        "name": "Student V2 standalone offline HTML",
+        "role": "student",
+        "status": "beta",
+        "downloadUrl": "https://github.com/WUHAO19831214/ampere-force-student-explorer-yanan-v2/releases/download/v0.1.0-offline.1/ampere-force-student-explorer-yanan-v2.html",
+        "githubUrl": "https://github.com/WUHAO19831214/ampere-force-student-explorer-yanan-v2",
+        "note": "Open the downloaded file in WebGL-capable Chrome/Edge, without a network or local server; includes direction inputs and view switching."
       }
     ],
-    "updatedAt": "2026-07-13",
+    "updatedAt": "2026-10-03",
     "order": 1
   },
   {
@@ -140,7 +148,7 @@
     "netlifySiteName": "webcam-laser-fringelab",
     "imageUrl": "/projects/webcam-laser-fringelab.png",
     "imageAlt": "FringeLab production interface, the left side displays red laser interference fringes and adjustable ROI, and the right side displays the relative light intensity curve and wavelength measurement results",
-    "notice": "Camera mode requires HTTPS or localhost, and requires the user to actively grant camera permissions; different phones and browsers have different support for exposure, focus, and white balance lock. Image processing, simulation, curve analysis and session parameter saving are all completed in the current browser, without relying on external analysis backends, and camera frames will not be uploaded. The current version does not provide the manifest and service worker required to install PWA. The source repository is verified but currently private, so the GitHub button does not appear on the public portal.",
+    "notice": "Camera mode requires HTTPS or localhost and explicit permission; exposure, focus and white-balance controls depend on the device. Images, simulation, curves and session settings are processed in the browser, without an external analysis backend or camera-frame uploads. No installable PWA is provided; source is public.",
     "capabilities": [
       "Three inputs: camera, PNG/JPEG/WebP pictures and ideal physical simulation",
       "Strip ROI that can be moved, rotated, and scaled by dragging the corners",
@@ -187,11 +195,13 @@
         "role": "research",
         "siteUrl": "https://webcam-laser-fringelab.netlify.app/",
         "status": "active",
-        "note": "The current official online version; the source code repository is private"
+        "note": "Current online version; the public source repository is verified",
+        "githubUrl": "https://github.com/WUHAO19831214/webcam-laser-fringelab"
       }
     ],
-    "updatedAt": "2026-07-14",
-    "order": 2
+    "updatedAt": "2026-10-03",
+    "order": 2,
+    "githubUrl": "https://github.com/WUHAO19831214/webcam-laser-fringelab"
   },
   {
     "id": "dual-camera-acoustic-marker-tracker",
@@ -203,8 +213,19 @@
     "summary": "Track an HSV color marker with two cameras, capture microphone features in sync, and analyze the fused data in 2D, 3D, and acoustic-field views.",
     "description": "A browser-only tool for combined motion and acoustic-field experiments, bringing dual-camera color-marker tracking, microphone feature extraction, timestamp alignment, and interactive 2D/3D visualization into one workflow.",
     "background": "Motion trajectories and sound measurements are often recorded by separate devices, making timing and spatial relationships difficult to compare. This project fuses visual and audio records with a browser monotonic clock and falls back to a single-camera 2D mode when a second camera is unavailable.",
-    "audiences": ["Physics teachers", "Student laboratory groups", "Experimental teaching researchers"],
-    "tags": ["Dual-camera tracking", "Acoustic field", "HSV color marker", "Audio-visual synchronization", "3D trajectory", "Browser experiment"],
+    "audiences": [
+      "Physics teachers",
+      "Student laboratory groups",
+      "Experimental teaching researchers"
+    ],
+    "tags": [
+      "Dual-camera tracking",
+      "Acoustic field",
+      "HSV color marker",
+      "Audio-visual synchronization",
+      "3D trajectory",
+      "Browser experiment"
+    ],
     "status": "active",
     "featured": true,
     "siteUrl": "https://dual-camera-acoustic-marker-tracker-a.netlify.app/",
@@ -212,15 +233,57 @@
     "repositoryName": "WUHAO19831214/dual-camera-acoustic-marker-tracker-antigravity",
     "netlifySiteName": "dual-camera-acoustic-marker-tracker-a",
     "notice": "Camera and microphone features require HTTPS or localhost and explicit device permission. The displayed dBFS value is relative to digital full scale, not calibrated sound pressure level in dB SPL; dual-camera 3D trajectories also require spatial calibration for the experimental setup.",
-    "capabilities": ["Enumerate, select, and preview two cameras with automatic fallback when the second feed is unavailable", "Estimate HSV thresholds from a selected target region and track connected components after morphological cleanup", "Extract RMS, dBFS, fundamental frequency, spectral centroid, and zero-crossing rate", "Match visual and audio observations by nearest timestamp on the performance.now() monotonic clock", "Synchronize 2D trajectories, acoustic-field points, and an interactive rotatable and zoomable 3D trajectory", "Export visual, audio, and fused CSV files, a complete JSON session, and PNG trajectory captures"],
-    "teachingValue": ["Place kinematic trajectories and acoustic measurements in one traceable experiment workflow", "Help students understand time synchronization and fusion across multiple sensors", "Support comparison between single-camera 2D recording and dual-camera 3D reconstruction", "Provide real data for discussing dBFS, pitch, spectral features, and spatial calibration"],
-    "scenarios": ["Synchronized study of moving and sound-producing objects", "Investigation of spatial acoustic fields and trajectories", "Dual-camera visual measurement and 3D reconstruction lessons", "Multimodal experiment data capture and export"],
-    "technicalHighlights": ["Vite, TypeScript, and browser-only static deployment", "MediaDevices and Web Audio API", "Web Worker image processing and exponential smoothing", "Shared monotonic clock with tolerance-based matching", "Interactive Canvas 2D and 3D visualization"],
-    "roadmap": ["Add dual-camera geometric calibration and conversion to physical length units", "Establish a dB SPL calibration workflow with fixed gain and a reference sound source", "Continue compatibility testing across browsers and multi-camera devices"],
-    "versions": [
-      {"name": "Official Netlify release", "role": "stable", "siteUrl": "https://dual-camera-acoustic-marker-tracker-a.netlify.app/", "githubUrl": "https://github.com/WUHAO19831214/dual-camera-acoustic-marker-tracker-antigravity", "status": "active", "note": "Official browser-only entry with dual-camera tracking, acoustic features, and fused-data export"}
+    "capabilities": [
+      "Enumerate, select, and preview two cameras with automatic fallback when the second feed is unavailable",
+      "Estimate HSV thresholds from a selected target region and track connected components after morphological cleanup",
+      "Extract RMS, dBFS, fundamental frequency, spectral centroid, and zero-crossing rate",
+      "Match visual and audio observations by nearest timestamp on the performance.now() monotonic clock",
+      "Synchronize 2D trajectories, acoustic-field points, and an interactive rotatable and zoomable 3D trajectory",
+      "Export visual, audio, and fused CSV files, a complete JSON session, and PNG trajectory captures"
     ],
-    "updatedAt": "2026-08-04",
+    "teachingValue": [
+      "Place kinematic trajectories and acoustic measurements in one traceable experiment workflow",
+      "Help students understand time synchronization and fusion across multiple sensors",
+      "Support comparison between single-camera 2D recording and dual-camera 3D reconstruction",
+      "Provide real data for discussing dBFS, pitch, spectral features, and spatial calibration"
+    ],
+    "scenarios": [
+      "Synchronized study of moving and sound-producing objects",
+      "Investigation of spatial acoustic fields and trajectories",
+      "Dual-camera visual measurement and 3D reconstruction lessons",
+      "Multimodal experiment data capture and export"
+    ],
+    "technicalHighlights": [
+      "Vite, TypeScript, and browser-only static deployment",
+      "MediaDevices and Web Audio API",
+      "Web Worker image processing and exponential smoothing",
+      "Shared monotonic clock with tolerance-based matching",
+      "Interactive Canvas 2D and 3D visualization"
+    ],
+    "roadmap": [
+      "Add dual-camera geometric calibration and conversion to physical length units",
+      "Establish a dB SPL calibration workflow with fixed gain and a reference sound source",
+      "Continue compatibility testing across browsers and multi-camera devices"
+    ],
+    "versions": [
+      {
+        "name": "Official Netlify release",
+        "role": "stable",
+        "siteUrl": "https://dual-camera-acoustic-marker-tracker-a.netlify.app/",
+        "githubUrl": "https://github.com/WUHAO19831214/dual-camera-acoustic-marker-tracker-antigravity",
+        "status": "active",
+        "note": "Official browser-only entry with dual-camera tracking, acoustic features, and fused-data export"
+      },
+      {
+        "name": "Continuity Camera exploration version",
+        "role": "research",
+        "status": "beta",
+        "siteUrl": "https://dual-camera-acoustic-marker-tracker.netlify.app/",
+        "githubUrl": "https://github.com/WUHAO19831214/dual-camera-acoustic-marker-tracker",
+        "note": "Separate uploaded deployment; its release note mentions iPhone Continuity Camera discovery. Exact parity with public source has not been verified."
+      }
+    ],
+    "updatedAt": "2026-10-03",
     "order": 3
   },
   {
@@ -298,8 +361,9 @@
         "note": "Early prototype, terminology and measurement boundaries have been clarified in the documentation"
       }
     ],
-    "updatedAt": "2026-07-13",
-    "order": 4
+    "updatedAt": "2026-08-17",
+    "order": 4,
+    "notice": "A pinned v0.6.0 software-sensor replay comparison adapter is available. Browser realtime tracking still uses the original algorithm; synthetic replay does not establish physical measurement validity."
   },
   {
     "id": "three-polarizer",
@@ -414,7 +478,7 @@
       "Browser side processing"
     ],
     "roadmap": [
-      "Confirm or restore public source repositories",
+      "Document OCR result review",
       "Added download TXT and structured export",
       "Supplementary performance tips for large files"
     ],
@@ -424,11 +488,14 @@
         "role": "research",
         "siteUrl": "https://pdfocrtotxt.netlify.app/",
         "status": "beta",
-        "note": "Feature available; currently there is no reliable access to the corresponding GitHub repository"
+        "note": "Browser PDF extraction and OCR; public repository mapping verified",
+        "githubUrl": "https://github.com/WUHAO19831214/pdf-pdf-html"
       }
     ],
-    "updatedAt": "2026-04-19",
-    "order": 6
+    "updatedAt": "2026-10-03",
+    "order": 6,
+    "githubUrl": "https://github.com/WUHAO19831214/pdf-pdf-html",
+    "repositoryName": "WUHAO19831214/pdf-pdf-html"
   },
   {
     "id": "solenoid-current-teaching",
@@ -583,7 +650,7 @@
     "featured": false,
     "githubUrl": "https://github.com/WUHAO19831214/audio-visual-soundfield-tracker",
     "repositoryName": "WUHAO19831214/audio-visual-soundfield-tracker",
-    "notice": "The original Netlify address currently returns 404. The portal only provides GitHub and local running instructions, and does not generate invalid online buttons.",
+    "notice": "Core capture and analysis require local Python/Streamlit. The portal links to source and setup instructions rather than presenting static hosting as a complete experiment.",
     "capabilities": [
       "Pictures and Videos person count",
       "Synchronous collection of cameras and microphones",
@@ -639,7 +706,7 @@
     "englishTitle": "Local Textbook Structure Workbench",
     "category": "teaching-tools",
     "summary": "Read local Markdown textbook data, organize chapter titles, generate mind maps, and extract card printing content.",
-    "description": "A structured workbench front-end for local teaching materials, including reader, chapter brain map, rule extraction and Anki/CSV export interface.",
+    "description": "A local textbook workbench with reading, chapter maps, rule-based extraction, Anki/CSV, formula rendering and original-layout/editable Word export.",
     "background": "After textbook OCR, only continuous text and picture lists are often obtained. Teachers still need to organize chapter levels, locate page numbers, and generate reusable learning materials.",
     "audiences": [
       "teacher",
@@ -662,7 +729,8 @@
       "Chapter title organization",
       "dynamic brain map",
       "Rule extraction and card making",
-      "CSV export"
+      "CSV export",
+      "Formula rendering and original-layout/editable Word export"
     ],
     "teachingValue": [
       "Convert textbook OCR results into a navigable structure",
@@ -680,7 +748,7 @@
       "Native API workflow"
     ],
     "roadmap": [
-      "Confirm or restore a GitHub repository",
+      "Continue validating formulas and editable exports",
       "Deploy a secure backend or explicitly target it as a native app",
       "Merge duplicate Netlify project IDs"
     ],
@@ -690,11 +758,21 @@
         "role": "research",
         "siteUrl": "https://local-textbook-structure2.netlify.app/",
         "status": "beta",
-        "note": "Core operations require local backend; duplicate sites are no longer listed"
+        "note": "Core operations require local backend; duplicate sites are no longer listed",
+        "githubUrl": "https://github.com/WUHAO19831214/local-textbook-structure-workbench"
+      },
+      {
+        "name": "Local OCR Dataset Builder",
+        "role": "research",
+        "status": "beta",
+        "githubUrl": "https://github.com/WUHAO19831214/local-ocr-dataset-builder",
+        "note": "Companion macOS app for local OCR, formula review and two Word export modes; requires a configured local OCR environment."
       }
     ],
-    "updatedAt": "2026-05-18",
-    "order": 10
+    "updatedAt": "2026-09-29",
+    "order": 10,
+    "githubUrl": "https://github.com/WUHAO19831214/local-textbook-structure-workbench",
+    "repositoryName": "WUHAO19831214/local-textbook-structure-workbench"
   },
   {
     "id": "nihongo-master",
@@ -754,12 +832,12 @@
   {
     "id": "physics-lecture-survey",
     "slug": "physics-lecture-survey",
-    "title": "Physics lecture on-site interaction and evaluation system",
-    "shortTitle": "Physics Lecture Survey",
+    "title": "Physics teacher AI innovation and experiment needs survey",
+    "shortTitle": "Teacher innovation survey",
     "englishTitle": "Physics Lecture Survey",
     "category": "teaching-tools",
-    "summary": "Collect participating teachers’ information, teaching needs and on-site evaluation for junior high school physics special lectures.",
-    "description": "A mobile-first one-page questionnaire prototype for live interaction in lectures and teacher demand collection.",
+    "summary": "Use mobile surveys and realtime dashboards to organize teachers’ AI usage, capability profiles and experiment development needs.",
+    "description": "Use mobile surveys and realtime dashboards to organize teachers’ AI usage, capability profiles and experiment development needs.",
     "background": "Regional teaching and research activities need to quickly summarize the backgrounds, teaching difficulties and activity evaluations of participating teachers. This prototype explores the on-site QR code filling process.",
     "audiences": [
       "Teaching and Research Fellow",
@@ -776,12 +854,12 @@
     "featured": false,
     "githubUrl": "https://github.com/WUHAO19831214/physics-survey",
     "repositoryName": "WUHAO19831214/physics-survey",
-    "notice": "The current commit endpoint points to a temporary ngrok local service with no reliable production entry.",
+    "notice": "v2.0 requires a local Node.js service. Temporary tunnels are not permanent entries. Clarify data purpose, storage and access before collecting teacher information.",
     "capabilities": [
-      "Collection of information from participating teachers",
-      "Teaching needs survey",
-      "Activity evaluation",
-      "Mobile form"
+      "Mobile step-by-step survey",
+      "AI usage and five-dimensional capability profiles",
+      "Experiment needs and innovation-stage statistics",
+      "Realtime lecturer dashboard and local analysis suggestions"
     ],
     "teachingValue": [
       "Support regional teaching and research needs analysis",
@@ -793,9 +871,9 @@
       "Teacher training feedback"
     ],
     "technicalHighlights": [
-      "Single file HTML",
-      "Mobile form",
-      "Multiple backend submission solution prototype"
+      "Native Node.js server",
+      "Mobile survey and realtime research dashboard",
+      "Local model and rule-based analysis"
     ],
     "roadmap": [
       "Remove temporary ngrok address",
@@ -803,7 +881,179 @@
       "Deploy formal questionnaire portal"
     ],
     "versions": [],
-    "updatedAt": "2026-06-11",
+    "updatedAt": "2026-08-28",
     "order": 12
+  },
+  {
+    "id": "isochoric-gas-workbench",
+    "category": "digital-experiments",
+    "order": 3.5,
+    "featured": true,
+    "status": "beta",
+    "slug": "isochoric-gas-workbench",
+    "title": "Isochoric gas experiment and microscopic visualization workbench",
+    "summary": "Combine pressure and temperature OCR, an experiment camera, p–T plots and a molecular motion model in one workflow.",
+    "notice": "Both versions are research betas. Camera and screen sharing require consent. The microscopic model is a simulation; verify OCR readings and keep demo data separate from measurements.",
+    "capabilities": [
+      "Dual pressure/temperature OCR regions",
+      "p–T / p–t plots and linear fits",
+      "Experiment camera and time-series replay",
+      "3D molecular motion model",
+      "CSV / JSON data export"
+    ],
+    "teachingValue": [
+      "Connect macroscopic evidence with microscopic explanations",
+      "Compare Celsius and absolute temperature scales",
+      "Retain the sampling, fitting and replay evidence chain"
+    ],
+    "tags": [
+      "Isochoric gas",
+      "Screen OCR",
+      "Molecular motion",
+      "Experiment replay"
+    ],
+    "audiences": [
+      "High-school physics teachers",
+      "Student experiment groups"
+    ],
+    "description": "Combine pressure and temperature OCR, an experiment camera, p–T plots and a molecular motion model in one workflow.",
+    "background": "Connect macroscopic evidence with microscopic explanations",
+    "githubUrl": "https://github.com/WUHAO19831214/charles-law-isochoric-lab",
+    "repositoryName": "WUHAO19831214/charles-law-isochoric-lab",
+    "updatedAt": "2026-10-02",
+    "versions": [
+      {
+        "name": "Isochoric lab with two microscopic models",
+        "note": "p–T / p–t plots, two microscopic models and replay",
+        "role": "research",
+        "status": "beta",
+        "siteUrl": "https://charles-law-isochoric-lab.netlify.app/",
+        "githubUrl": "https://github.com/WUHAO19831214/charles-law-isochoric-lab"
+      },
+      {
+        "name": "C+KIMI K3 workbench",
+        "note": "Column-based recording and macro–micro evidence chain; an independent version of the same experiment",
+        "role": "research",
+        "status": "beta",
+        "siteUrl": "https://isochoric-gas-workbench-c-kimi-k3.netlify.app/",
+        "githubUrl": "https://github.com/WUHAO19831214/isochoric-gas-workbench-c-kimi-k3"
+      }
+    ],
+    "siteUrl": "https://charles-law-isochoric-lab.netlify.app/",
+    "netlifySiteName": "charles-law-isochoric-lab"
+  },
+  {
+    "id": "arc-track-force-demo",
+    "category": "digital-experiments",
+    "order": 4.5,
+    "featured": false,
+    "status": "prototype",
+    "slug": "arc-track-force-demo",
+    "title": "Arc-track force demonstrator",
+    "summary": "Combine three-axis force OCR, camera color tracking and 2D/3D vectors to demonstrate track–ball interactions.",
+    "notice": "Public source and local setup are available; no verified Netlify entry. Simulation and sensor OCR are distinct, and pixel tracking requires geometric calibration.",
+    "capabilities": [
+      "Three-channel force OCR with confidence",
+      "HSV ball-color tracking",
+      "2D/3D force and reaction vectors",
+      "Zeroing, force plots and CSV export"
+    ],
+    "teachingValue": [
+      "Connect sensor readings with Newton’s third law",
+      "Compare simulations with experimental readings"
+    ],
+    "tags": [
+      "Circular motion",
+      "Force vectors",
+      "Screen OCR",
+      "Color tracking"
+    ],
+    "audiences": [
+      "Physics teachers",
+      "Student experiment groups"
+    ],
+    "description": "Combine three-axis force OCR, camera color tracking and 2D/3D vectors to demonstrate track–ball interactions.",
+    "background": "Connect sensor readings with Newton’s third law",
+    "githubUrl": "https://github.com/WUHAO19831214/arc-track-force-demo",
+    "repositoryName": "WUHAO19831214/arc-track-force-demo",
+    "updatedAt": "2026-08-17",
+    "versions": []
+  },
+  {
+    "id": "physics-software-sensors",
+    "category": "digital-experiments",
+    "order": 9.5,
+    "featured": false,
+    "status": "beta",
+    "slug": "physics-software-sensors",
+    "title": "Physics Software Sensors",
+    "summary": "Reuse camera, screen, OCR and tracking capabilities through traceable contracts for experiment applications and processing tools.",
+    "notice": "The online entry is multilingual documentation and a capability showcase, rather than a complete experiment. Seven software sensors and one companion tool provide software observations, which require physical calibration.",
+    "capabilities": [
+      "Camera and screen capture contracts",
+      "Numeric OCR and spot-centroid processing",
+      "Traceable FramePacket / SensorEvent records",
+      "Companion 3D vector composition tool",
+      "Complete Chinese, English and Japanese documentation"
+    ],
+    "teachingValue": [
+      "Reduce duplicated experiment implementations",
+      "Clarify software observation and physical calibration boundaries"
+    ],
+    "tags": [
+      "Capability library",
+      "OCR",
+      "Sensor contracts",
+      "Data quality"
+    ],
+    "audiences": [
+      "Experiment software developers",
+      "Experiment education researchers"
+    ],
+    "description": "Reuse camera, screen, OCR and tracking capabilities through traceable contracts for experiment applications and processing tools.",
+    "background": "Reduce duplicated experiment implementations",
+    "githubUrl": "https://github.com/WUHAO19831214/physics-software-sensors",
+    "repositoryName": "WUHAO19831214/physics-software-sensors",
+    "updatedAt": "2026-08-17",
+    "versions": [],
+    "siteUrl": "https://wuhao19831214.github.io/physics-software-sensors/"
+  },
+  {
+    "id": "classroom-signal-console",
+    "category": "teaching-tools",
+    "order": 10.5,
+    "featured": false,
+    "status": "prototype",
+    "slug": "classroom-signal-console",
+    "title": "Classroom Signal Console",
+    "summary": "Turn local speech or JSONL replay into classroom events and use auditable policies for teacher-private prompts.",
+    "notice": "A local research prototype with no formal online entry. ASR runs locally; Jev processes text and structured state, so review model-service data routing before use. No camera, face or voiceprint recognition or automatic student messages.",
+    "capabilities": [
+      "Microphone input and JSONL replay",
+      "Two-pass Chinese speech recognition",
+      "Events with temporal boundaries and evidence quality",
+      "Structured judgments and deterministic intervention policies",
+      "Teacher-private prompts and auditable logs"
+    ],
+    "teachingValue": [
+      "Study classroom timing and intervention decisions",
+      "Retain traceable teacher decisions and feedback"
+    ],
+    "tags": [
+      "Classroom research",
+      "Local ASR",
+      "Teacher prompts",
+      "Auditable policies"
+    ],
+    "audiences": [
+      "Teachers",
+      "Classroom researchers"
+    ],
+    "description": "Turn local speech or JSONL replay into classroom events and use auditable policies for teacher-private prompts.",
+    "background": "Study classroom timing and intervention decisions",
+    "githubUrl": "https://github.com/WUHAO19831214/classroom-signal-console",
+    "repositoryName": "WUHAO19831214/classroom-signal-console",
+    "updatedAt": "2026-09-21",
+    "versions": []
   }
 ]

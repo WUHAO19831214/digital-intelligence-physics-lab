@@ -76,7 +76,7 @@ export default function ProjectDetail({ slug }: { slug: string }) {
                     {project.versions.map((version) => (
                       <article key={`${version.name}-${version.role}`}>
                         <div><span className={`status-pill status-${version.status}`}><i />{statusMeta[version.status].label}</span><h3>{version.name}</h3><p>{version.note}</p></div>
-                        <div className="version-links">{version.siteUrl && <a href={version.siteUrl} target="_blank" rel="noreferrer noopener">{copy.detail.web} <ArrowUpRight size={15} /></a>}{version.githubUrl && <a href={version.githubUrl} target="_blank" rel="noreferrer noopener">GitHub <GithubIcon size={15} /></a>}</div>
+                        <div className="version-links">{version.downloadUrl && <a href={version.downloadUrl} target="_blank" rel="noreferrer noopener">{copy.detail.download} <ArrowUpRight size={15} /></a>}{version.siteUrl && <a href={version.siteUrl} target="_blank" rel="noreferrer noopener">{copy.detail.web} <ArrowUpRight size={15} /></a>}{version.githubUrl && <a href={version.githubUrl} target="_blank" rel="noreferrer noopener">GitHub <GithubIcon size={15} /></a>}</div>
                       </article>
                     ))}
                   </div>

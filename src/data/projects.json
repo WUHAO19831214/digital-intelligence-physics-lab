@@ -9,28 +9,111 @@
     "summary": "把 DIS 屏幕读数、磁场方向识别与三维力矢量组织在同一课堂工作流中。",
     "description": "面向高中物理安培力实验与左手定则教学，将实验数据读取、视觉证据和空间模型结合起来，支持教师演示与学生探究两个互补入口。",
     "background": "传统安培力教学容易停留在口诀记忆，实验读数、磁场方向和三维受力关系也常分散在不同工具中。本项目尝试把多源证据放在同一教学链路中。",
-    "audiences": ["高中物理教师", "高中学生", "教研人员"],
-    "tags": ["安培力", "三维可视化", "屏幕 OCR", "计算机视觉", "课堂探究"],
+    "audiences": [
+      "高中物理教师",
+      "高中学生",
+      "教研人员"
+    ],
+    "tags": [
+      "安培力",
+      "三维可视化",
+      "屏幕 OCR",
+      "计算机视觉",
+      "课堂探究"
+    ],
     "status": "active",
     "featured": true,
     "siteUrl": "https://ampere-force-visualizer-teacher-yanan.netlify.app/",
     "githubUrl": "https://github.com/WUHAO19831214/ampere-force-visualizer-teacher-yanan",
     "repositoryName": "WUHAO19831214/ampere-force-visualizer-teacher-yanan",
     "netlifySiteName": "ampere-force-visualizer-teacher-yanan",
-    "capabilities": ["DIS 屏幕捕获与 ROI 数字读取", "摄像头磁极方向识别", "F1、F2、F3 三力合成与三维展示", "学生端 I、B、F 空间关系探究", "实验数据 CSV 导出"],
-    "teachingValue": ["把左手定则从口诀记忆转向证据推理", "帮助学生建立 y-z 平面与三维空间的对应关系", "让教师同时呈现实验读数、视觉证据和物理模型"],
-    "scenarios": ["安培力演示实验", "左手定则规律发现课", "数字化实验数据研讨", "教师公开课与区域教研"],
-    "technicalHighlights": ["Vite、React 与 Three.js", "浏览器 Screen Capture API", "Tesseract.js 本地 OCR", "颜色标记与磁场方向映射"],
-    "roadmap": ["继续验证 OCR 在不同 DIS 界面下的稳定性", "完善摄像头空间标定", "形成可复用的课堂实验数据协议"],
-    "versions": [
-      {"name": "教师端", "role": "teacher", "siteUrl": "https://ampere-force-visualizer-teacher-yanan.netlify.app/", "githubUrl": "https://github.com/WUHAO19831214/ampere-force-visualizer-teacher-yanan", "status": "active", "note": "正式教师入口"},
-      {"name": "学生端 V2", "role": "student", "siteUrl": "https://ampere-force-student-explorer-yananv2.netlify.app/", "githubUrl": "https://github.com/WUHAO19831214/ampere-force-student-explorer-yanan-v2", "status": "active", "note": "正式学生入口，已修正坐标系并补充研究文档"},
-      {"name": "学生端旧版", "role": "legacy", "siteUrl": "https://ampere-force-student-explorer-yanan.netlify.app/", "githubUrl": "https://github.com/WUHAO19831214/ampere-force-student-explorer-yanan", "status": "archived", "note": "历史版本"},
-      {"name": "延安中学实验版", "role": "research", "siteUrl": "https://physics-force-vector-visualizer-mvp-y.netlify.app/", "githubUrl": "https://github.com/WUHAO19831214/physics-force-vector-visualizer-mvp-yananzhongxue", "status": "beta", "note": "教师端的直接历史祖先"},
-      {"name": "通用力矢量 MVP", "role": "prototype", "siteUrl": "https://physics-force-vector-visualizer-mvp.netlify.app/", "githubUrl": "https://github.com/WUHAO19831214/physics-force-vector-visualizer-mvp", "status": "prototype", "note": "通用技术底座原型"},
-      {"name": "多源实验数据桥接原型", "role": "prototype", "githubUrl": "https://github.com/WUHAO19831214/physics-experiment-bridge-mvp", "status": "prototype", "note": "GitHub 归档原型，无正式在线入口"}
+    "capabilities": [
+      "DIS 屏幕捕获与 ROI 数字读取",
+      "摄像头磁极方向识别",
+      "F1、F2、F3 三力合成与三维展示",
+      "学生端 I、B、F 空间关系探究",
+      "实验数据 CSV 导出"
     ],
-    "updatedAt": "2026-07-13",
+    "teachingValue": [
+      "把左手定则从口诀记忆转向证据推理",
+      "帮助学生建立 y-z 平面与三维空间的对应关系",
+      "让教师同时呈现实验读数、视觉证据和物理模型"
+    ],
+    "scenarios": [
+      "安培力演示实验",
+      "左手定则规律发现课",
+      "数字化实验数据研讨",
+      "教师公开课与区域教研"
+    ],
+    "technicalHighlights": [
+      "Vite、React 与 Three.js",
+      "浏览器 Screen Capture API",
+      "Tesseract.js 本地 OCR",
+      "颜色标记与磁场方向映射"
+    ],
+    "roadmap": [
+      "继续验证 OCR 在不同 DIS 界面下的稳定性",
+      "完善摄像头空间标定",
+      "形成可复用的课堂实验数据协议"
+    ],
+    "versions": [
+      {
+        "name": "教师端",
+        "role": "teacher",
+        "siteUrl": "https://ampere-force-visualizer-teacher-yanan.netlify.app/",
+        "githubUrl": "https://github.com/WUHAO19831214/ampere-force-visualizer-teacher-yanan",
+        "status": "active",
+        "note": "正式教师入口"
+      },
+      {
+        "name": "学生端 V2",
+        "role": "student",
+        "siteUrl": "https://ampere-force-student-explorer-yananv2.netlify.app/",
+        "githubUrl": "https://github.com/WUHAO19831214/ampere-force-student-explorer-yanan-v2",
+        "status": "active",
+        "note": "正式学生入口，已修正坐标系并补充研究文档"
+      },
+      {
+        "name": "学生端旧版",
+        "role": "legacy",
+        "siteUrl": "https://ampere-force-student-explorer-yanan.netlify.app/",
+        "githubUrl": "https://github.com/WUHAO19831214/ampere-force-student-explorer-yanan",
+        "status": "archived",
+        "note": "历史版本"
+      },
+      {
+        "name": "延安中学实验版",
+        "role": "research",
+        "siteUrl": "https://physics-force-vector-visualizer-mvp-y.netlify.app/",
+        "githubUrl": "https://github.com/WUHAO19831214/physics-force-vector-visualizer-mvp-yananzhongxue",
+        "status": "beta",
+        "note": "教师端的直接历史祖先"
+      },
+      {
+        "name": "通用力矢量 MVP",
+        "role": "prototype",
+        "siteUrl": "https://physics-force-vector-visualizer-mvp.netlify.app/",
+        "githubUrl": "https://github.com/WUHAO19831214/physics-force-vector-visualizer-mvp",
+        "status": "prototype",
+        "note": "通用技术底座原型"
+      },
+      {
+        "name": "多源实验数据桥接原型",
+        "role": "prototype",
+        "githubUrl": "https://github.com/WUHAO19831214/physics-experiment-bridge-mvp",
+        "status": "prototype",
+        "note": "GitHub 归档原型，无正式在线入口"
+      },
+      {
+        "name": "学生端 V2 单 HTML 离线版",
+        "role": "student",
+        "status": "beta",
+        "downloadUrl": "https://github.com/WUHAO19831214/ampere-force-student-explorer-yanan-v2/releases/download/v0.1.0-offline.1/ampere-force-student-explorer-yanan-v2.html",
+        "githubUrl": "https://github.com/WUHAO19831214/ampere-force-student-explorer-yanan-v2",
+        "note": "下载后用支持 WebGL 的 Chrome/Edge 打开，无需网络或本地服务器；保留方向输入与视角切换。"
+      }
+    ],
+    "updatedAt": "2026-10-03",
     "order": 1
   },
   {
@@ -43,8 +126,21 @@
     "summary": "通过摄像头、实验图片或物理仿真采集激光图样，提取相对光强剖面并完成波长反演、模型比较与不确定度分析。",
     "description": "面向单缝衍射和双缝干涉实验，将图样采集、ROI 选取、空间标定、光强剖面提取、特征识别、物理模型选择和波长反演组织为一条可追溯的数字化实验链路。",
     "background": "传统激光干涉与衍射实验主要依靠肉眼观察亮暗条纹、手工测量间距并代入公式，难以完整呈现真实光强分布，也不利于连续、可重复的数据分析。FringeLab 将光屏图样转化为相对相机响应曲线，使学生能够从图样采集走向模型反演与实验质量评价。",
-    "audiences": ["高中物理教师", "高中学生", "实验教学研究者"],
-    "tags": ["激光干涉", "单缝衍射", "双缝干涉", "计算机视觉", "光强分布", "波长测量", "摄像头实验", "不确定度分析"],
+    "audiences": [
+      "高中物理教师",
+      "高中学生",
+      "实验教学研究者"
+    ],
+    "tags": [
+      "激光干涉",
+      "单缝衍射",
+      "双缝干涉",
+      "计算机视觉",
+      "光强分布",
+      "波长测量",
+      "摄像头实验",
+      "不确定度分析"
+    ],
     "status": "active",
     "featured": true,
     "siteUrl": "https://webcam-laser-fringelab.netlify.app/",
@@ -52,17 +148,60 @@
     "netlifySiteName": "webcam-laser-fringelab",
     "imageUrl": "/projects/webcam-laser-fringelab.png",
     "imageAlt": "FringeLab 生产界面，左侧显示红色激光干涉条纹和可调 ROI，右侧显示相对光强曲线与波长测量结果",
-    "notice": "摄像头模式需要 HTTPS 或 localhost，并需用户主动授予摄像头权限；不同手机与浏览器对曝光、对焦和白平衡锁定的支持不同。图片处理、仿真、曲线分析和会话参数保存均在当前浏览器完成，不依赖外部分析后端，摄像头帧不会上传。当前版本未提供可安装 PWA 所需的 manifest 与 Service Worker。源码仓库已核实但目前为私有，因此公共门户不显示 GitHub 按钮。",
-    "capabilities": ["摄像头、PNG/JPEG/WebP 图片与理想物理仿真三种输入", "可移动、旋转并通过四角拖动缩放的带状 ROI", "两点标定、实物尺识别与虚拟标尺套合", "RGB、亮度与自动通道选择，背景扣除和高斯平滑", "峰值、谷值、亚像素中心、FWHM 与过曝平台检测", "单缝多级暗纹与双缝多级亮纹波长反演", "精确几何回归与小角近似结果对照", "Fresnel 数、采样充分度、曝光与标定质量门控", "95% 扩展不确定度、理想模型拟合与 CSV/JSON/PNG 导出", "浏览器本地实验参数保存与恢复"],
-    "teachingValue": ["把“看条纹”提升为对相对光强分布的定量分析", "把公式代入提升为由实验数据驱动的模型反演", "支持饱和、采样、标定和不确定度的实验质量讨论", "便于比较理论曲线、真实图样、精确几何与小角近似", "适用于课堂演示、学生实验和研究性学习"],
-    "scenarios": ["双缝干涉条纹间距与激光波长测量", "单缝衍射暗纹和中央主极大宽度分析", "真实实验图样与理想模型比较", "实验误差、不确定度与远场条件讨论", "无器材条件下的光学仿真实验预习"],
-    "technicalHighlights": ["React、TypeScript 与 HTML Canvas", "浏览器 MediaDevices 摄像头接口", "纯浏览器像素处理与实时曲线绘制", "Web Worker 实物尺检测", "localStorage 本地会话参数保存", "无外部图像分析后端"],
-    "roadmap": ["继续验证不同手机和摄像头的曝光与对焦控制差异", "完善明显透视条件下的实物尺单应性校正", "补充真实器材条件下的重复测量与教学实证数据", "如需可安装体验，补充经过验证的 PWA manifest 与离线缓存策略"],
-    "versions": [
-      {"name": "FringeLab v0.1.0", "role": "research", "siteUrl": "https://webcam-laser-fringelab.netlify.app/", "status": "active", "note": "当前正式在线版本；源码仓库为私有"}
+    "notice": "摄像头模式需要 HTTPS 或 localhost，并需用户主动授权；曝光、对焦与白平衡锁定取决于设备。图片、仿真、曲线与会话参数在浏览器处理，不依赖外部分析后端，摄像头帧不上传。当前没有可安装 PWA；源码仓库已公开。",
+    "capabilities": [
+      "摄像头、PNG/JPEG/WebP 图片与理想物理仿真三种输入",
+      "可移动、旋转并通过四角拖动缩放的带状 ROI",
+      "两点标定、实物尺识别与虚拟标尺套合",
+      "RGB、亮度与自动通道选择，背景扣除和高斯平滑",
+      "峰值、谷值、亚像素中心、FWHM 与过曝平台检测",
+      "单缝多级暗纹与双缝多级亮纹波长反演",
+      "精确几何回归与小角近似结果对照",
+      "Fresnel 数、采样充分度、曝光与标定质量门控",
+      "95% 扩展不确定度、理想模型拟合与 CSV/JSON/PNG 导出",
+      "浏览器本地实验参数保存与恢复"
     ],
-    "updatedAt": "2026-07-14",
-    "order": 2
+    "teachingValue": [
+      "把“看条纹”提升为对相对光强分布的定量分析",
+      "把公式代入提升为由实验数据驱动的模型反演",
+      "支持饱和、采样、标定和不确定度的实验质量讨论",
+      "便于比较理论曲线、真实图样、精确几何与小角近似",
+      "适用于课堂演示、学生实验和研究性学习"
+    ],
+    "scenarios": [
+      "双缝干涉条纹间距与激光波长测量",
+      "单缝衍射暗纹和中央主极大宽度分析",
+      "真实实验图样与理想模型比较",
+      "实验误差、不确定度与远场条件讨论",
+      "无器材条件下的光学仿真实验预习"
+    ],
+    "technicalHighlights": [
+      "React、TypeScript 与 HTML Canvas",
+      "浏览器 MediaDevices 摄像头接口",
+      "纯浏览器像素处理与实时曲线绘制",
+      "Web Worker 实物尺检测",
+      "localStorage 本地会话参数保存",
+      "无外部图像分析后端"
+    ],
+    "roadmap": [
+      "继续验证不同手机和摄像头的曝光与对焦控制差异",
+      "完善明显透视条件下的实物尺单应性校正",
+      "补充真实器材条件下的重复测量与教学实证数据",
+      "如需可安装体验，补充经过验证的 PWA manifest 与离线缓存策略"
+    ],
+    "versions": [
+      {
+        "name": "FringeLab v0.1.0",
+        "role": "research",
+        "siteUrl": "https://webcam-laser-fringelab.netlify.app/",
+        "status": "active",
+        "note": "当前在线版本；公开源码仓库已核验",
+        "githubUrl": "https://github.com/WUHAO19831214/webcam-laser-fringelab"
+      }
+    ],
+    "updatedAt": "2026-10-03",
+    "order": 2,
+    "githubUrl": "https://github.com/WUHAO19831214/webcam-laser-fringelab"
   },
   {
     "id": "dual-camera-acoustic-marker-tracker",
@@ -74,8 +213,19 @@
     "summary": "用双摄像头实时追踪 HSV 颜色标记，同步采集麦克风声学特征，并在二维、三维轨迹与声场视图中融合分析。",
     "description": "面向运动与声场融合实验的纯前端工具，将双摄颜色标记追踪、麦克风特征提取、统一时间戳对齐和交互式二维/三维可视化组织在同一浏览器工作流中。",
     "background": "物理实验中的运动轨迹与声音数据常由不同设备分别记录，时间难以对齐，空间关系也不直观。本项目使用浏览器单调时钟融合视觉与音频记录，并在第二台摄像头不可用时自动降级到单摄二维模式。",
-    "audiences": ["物理教师", "学生实验小组", "实验教学研究者"],
-    "tags": ["双摄追踪", "声场", "HSV 颜色标记", "音视频同步", "三维轨迹", "浏览器实验"],
+    "audiences": [
+      "物理教师",
+      "学生实验小组",
+      "实验教学研究者"
+    ],
+    "tags": [
+      "双摄追踪",
+      "声场",
+      "HSV 颜色标记",
+      "音视频同步",
+      "三维轨迹",
+      "浏览器实验"
+    ],
     "status": "active",
     "featured": true,
     "siteUrl": "https://dual-camera-acoustic-marker-tracker-a.netlify.app/",
@@ -83,15 +233,57 @@
     "repositoryName": "WUHAO19831214/dual-camera-acoustic-marker-tracker-antigravity",
     "netlifySiteName": "dual-camera-acoustic-marker-tracker-a",
     "notice": "摄像头和麦克风功能需要 HTTPS 或 localhost，并需用户主动授予设备权限。系统显示的 dBFS 是相对于数字满刻度的电平，不等同于经过校准的真实声压级 dB SPL；双摄三维轨迹也需要结合实验装置完成空间标定。",
-    "capabilities": ["双摄像头枚举、选择与实时预览，第二路不可用时自动降级", "框选目标区域并自动估算 HSV 阈值，结合形态学去噪与连通域追踪", "提取 RMS、dBFS、主频、频谱质心与过零率等音频特征", "以 performance.now() 单调时钟进行视觉—音频最邻近时间匹配", "二维轨迹、声场散点与可旋转缩放的三维轨迹同步展示", "导出视觉、音频与融合 CSV、完整 JSON 会话及 PNG 轨迹截图"],
-    "teachingValue": ["把运动学轨迹与声学测量放入同一可追溯实验链路", "帮助学生理解多传感器数据的时间同步与融合", "支持比较单摄二维记录与双摄三维重构的能力边界", "为 dBFS、主频、频谱特征和空间标定讨论提供真实数据"],
-    "scenarios": ["运动物体与发声过程同步研究", "空间声场与轨迹关系探究", "双摄视觉测量与三维重构教学", "多模态实验数据采集与导出"],
-    "technicalHighlights": ["Vite、TypeScript 与纯浏览器静态部署", "MediaDevices 与 Web Audio API", "Web Worker 图像处理与指数平滑", "统一单调时钟与容差匹配", "交互式 Canvas 二维/三维可视化"],
-    "roadmap": ["补充双摄几何标定与真实长度单位换算", "在固定增益和标准声源条件下建立 dB SPL 校准流程", "继续验证不同浏览器和多摄像头设备的兼容性"],
-    "versions": [
-      {"name": "Netlify 正式在线版", "role": "stable", "siteUrl": "https://dual-camera-acoustic-marker-tracker-a.netlify.app/", "githubUrl": "https://github.com/WUHAO19831214/dual-camera-acoustic-marker-tracker-antigravity", "status": "active", "note": "纯浏览器正式入口，支持双摄追踪、声学特征与融合导出"}
+    "capabilities": [
+      "双摄像头枚举、选择与实时预览，第二路不可用时自动降级",
+      "框选目标区域并自动估算 HSV 阈值，结合形态学去噪与连通域追踪",
+      "提取 RMS、dBFS、主频、频谱质心与过零率等音频特征",
+      "以 performance.now() 单调时钟进行视觉—音频最邻近时间匹配",
+      "二维轨迹、声场散点与可旋转缩放的三维轨迹同步展示",
+      "导出视觉、音频与融合 CSV、完整 JSON 会话及 PNG 轨迹截图"
     ],
-    "updatedAt": "2026-08-04",
+    "teachingValue": [
+      "把运动学轨迹与声学测量放入同一可追溯实验链路",
+      "帮助学生理解多传感器数据的时间同步与融合",
+      "支持比较单摄二维记录与双摄三维重构的能力边界",
+      "为 dBFS、主频、频谱特征和空间标定讨论提供真实数据"
+    ],
+    "scenarios": [
+      "运动物体与发声过程同步研究",
+      "空间声场与轨迹关系探究",
+      "双摄视觉测量与三维重构教学",
+      "多模态实验数据采集与导出"
+    ],
+    "technicalHighlights": [
+      "Vite、TypeScript 与纯浏览器静态部署",
+      "MediaDevices 与 Web Audio API",
+      "Web Worker 图像处理与指数平滑",
+      "统一单调时钟与容差匹配",
+      "交互式 Canvas 二维/三维可视化"
+    ],
+    "roadmap": [
+      "补充双摄几何标定与真实长度单位换算",
+      "在固定增益和标准声源条件下建立 dB SPL 校准流程",
+      "继续验证不同浏览器和多摄像头设备的兼容性"
+    ],
+    "versions": [
+      {
+        "name": "Netlify 正式在线版",
+        "role": "stable",
+        "siteUrl": "https://dual-camera-acoustic-marker-tracker-a.netlify.app/",
+        "githubUrl": "https://github.com/WUHAO19831214/dual-camera-acoustic-marker-tracker-antigravity",
+        "status": "active",
+        "note": "纯浏览器正式入口，支持双摄追踪、声学特征与融合导出"
+      },
+      {
+        "name": "连续互通相机探索版",
+        "role": "research",
+        "status": "beta",
+        "siteUrl": "https://dual-camera-acoustic-marker-tracker.netlify.app/",
+        "githubUrl": "https://github.com/WUHAO19831214/dual-camera-acoustic-marker-tracker",
+        "note": "独立上传部署，发布说明包含 iPhone 连续互通相机发现；部署与公开源码的逐项对应尚未核验。"
+      }
+    ],
+    "updatedAt": "2026-10-03",
     "order": 3
   },
   {
@@ -104,25 +296,74 @@
     "summary": "用浏览器摄像头追踪红色反射光斑，并把位移范围与驱动频率自动关联。",
     "description": "服务于受迫振动、周期振动和频率响应实验，以实时光斑重心追踪代替逐帧人工标点，形成频率—位移范围数据和响应曲线。",
     "background": "人工视频分析效率低、读数主观，频率与位移数据也容易错位。该系统把摄像头追踪、空间标定、扫频记录和图表呈现合并在浏览器中。",
-    "audiences": ["高中物理教师", "学生实验小组", "实验教学研究者"],
-    "tags": ["振动", "光斑追踪", "摄像头", "频率响应", "实验测量"],
+    "audiences": [
+      "高中物理教师",
+      "学生实验小组",
+      "实验教学研究者"
+    ],
+    "tags": [
+      "振动",
+      "光斑追踪",
+      "摄像头",
+      "频率响应",
+      "实验测量"
+    ],
     "status": "beta",
     "featured": true,
     "siteUrl": "https://fspot-vibration-tracking-system.netlify.app/",
     "githubUrl": "https://github.com/WUHAO19831214/spot-vibration-tracking-system-20260508-171952",
     "repositoryName": "WUHAO19831214/spot-vibration-tracking-system-20260508-171952",
     "netlifySiteName": "fspot-vibration-tracking-system",
-    "capabilities": ["红色光斑实时追踪", "1 cm 像素标尺校准", "自动往返扫频", "频率—位移范围散点与曲线", "实验条件与误差提示"],
-    "teachingValue": ["降低逐帧人工标点的负担", "帮助学生理解频率响应数据的形成过程", "强调峰—峰位移与机械振幅的术语边界"],
-    "scenarios": ["受迫振动实验", "共振现象探究", "光杠杆或反射光斑测量", "学生研究性学习"],
-    "technicalHighlights": ["原生浏览器摄像头 API", "HSV 红色阈值与加权重心", "Web Audio 正弦信号", "浏览器端实时绘图"],
-    "roadmap": ["增加 CSV 导出", "补充滤波与离群点处理", "验证反射光路放大率与测量不确定度"],
-    "versions": [
-      {"name": "光斑振动追踪系统", "role": "research", "siteUrl": "https://fspot-vibration-tracking-system.netlify.app/", "githubUrl": "https://github.com/WUHAO19831214/spot-vibration-tracking-system-20260508-171952", "status": "beta", "note": "当前推荐版本"},
-      {"name": "受迫振动 A-F 分析器", "role": "legacy", "siteUrl": "https://forced-vibration-af-analyzer.netlify.app/", "githubUrl": "https://github.com/WUHAO19831214/forced-vibration-af-analyzer-20260502-122715", "status": "prototype", "note": "早期原型，术语与测量边界已在文档中澄清"}
+    "capabilities": [
+      "红色光斑实时追踪",
+      "1 cm 像素标尺校准",
+      "自动往返扫频",
+      "频率—位移范围散点与曲线",
+      "实验条件与误差提示"
     ],
-    "updatedAt": "2026-07-13",
-    "order": 4
+    "teachingValue": [
+      "降低逐帧人工标点的负担",
+      "帮助学生理解频率响应数据的形成过程",
+      "强调峰—峰位移与机械振幅的术语边界"
+    ],
+    "scenarios": [
+      "受迫振动实验",
+      "共振现象探究",
+      "光杠杆或反射光斑测量",
+      "学生研究性学习"
+    ],
+    "technicalHighlights": [
+      "原生浏览器摄像头 API",
+      "HSV 红色阈值与加权重心",
+      "Web Audio 正弦信号",
+      "浏览器端实时绘图"
+    ],
+    "roadmap": [
+      "增加 CSV 导出",
+      "补充滤波与离群点处理",
+      "验证反射光路放大率与测量不确定度"
+    ],
+    "versions": [
+      {
+        "name": "光斑振动追踪系统",
+        "role": "research",
+        "siteUrl": "https://fspot-vibration-tracking-system.netlify.app/",
+        "githubUrl": "https://github.com/WUHAO19831214/spot-vibration-tracking-system-20260508-171952",
+        "status": "beta",
+        "note": "当前推荐版本"
+      },
+      {
+        "name": "受迫振动 A-F 分析器",
+        "role": "legacy",
+        "siteUrl": "https://forced-vibration-af-analyzer.netlify.app/",
+        "githubUrl": "https://github.com/WUHAO19831214/forced-vibration-af-analyzer-20260502-122715",
+        "status": "prototype",
+        "note": "早期原型，术语与测量边界已在文档中澄清"
+      }
+    ],
+    "updatedAt": "2026-08-17",
+    "order": 4,
+    "notice": "新增固定 v0.6.0 软件传感器的离线回放比较适配器；浏览器实时追踪仍使用原算法，合成回放验证不等于真实物理计量验证。"
   },
   {
     "id": "three-polarizer",
@@ -134,21 +375,58 @@
     "summary": "通过 P1、P2、P3 三个偏振方向的连续调节，观察光强投影与马吕斯定律。",
     "description": "一个面向偏振教学的三维交互原型，解释两个正交偏振片之间加入第三片后重新出现透射光的现象。",
     "background": "三偏振片实验常被描述为反直觉现象。交互模型把每一次偏振投影和光强衰减按物理顺序展开，帮助学习者建立连续过程模型。",
-    "audiences": ["高中物理教师", "高中学生", "大学基础物理学习者"],
-    "tags": ["偏振", "马吕斯定律", "三维模型", "光学"],
+    "audiences": [
+      "高中物理教师",
+      "高中学生",
+      "大学基础物理学习者"
+    ],
+    "tags": [
+      "偏振",
+      "马吕斯定律",
+      "三维模型",
+      "光学"
+    ],
     "status": "prototype",
     "featured": false,
     "siteUrl": "https://3dpolarizer2.netlify.app/",
     "githubUrl": "https://github.com/WUHAO19831214/3D-",
     "repositoryName": "WUHAO19831214/3D-",
     "netlifySiteName": "3dpolarizer2",
-    "capabilities": ["三偏振片角度独立调节", "逐级透射率计算", "三维偏振方向显示", "两种典型实验组合切换"],
-    "teachingValue": ["把马吕斯定律对应到连续投影过程", "解释中间偏振片为何能恢复部分透射光", "支持教师快速改变参数进行对比"],
-    "scenarios": ["光的偏振课堂演示", "马吕斯定律探究", "课前预习与课后复盘"],
-    "technicalHighlights": ["React Three Fiber", "Three.js", "实时光强计算"],
-    "roadmap": ["修正网页元数据", "增加无障碍键盘控制说明", "补充实验数据对照"],
+    "capabilities": [
+      "三偏振片角度独立调节",
+      "逐级透射率计算",
+      "三维偏振方向显示",
+      "两种典型实验组合切换"
+    ],
+    "teachingValue": [
+      "把马吕斯定律对应到连续投影过程",
+      "解释中间偏振片为何能恢复部分透射光",
+      "支持教师快速改变参数进行对比"
+    ],
+    "scenarios": [
+      "光的偏振课堂演示",
+      "马吕斯定律探究",
+      "课前预习与课后复盘"
+    ],
+    "technicalHighlights": [
+      "React Three Fiber",
+      "Three.js",
+      "实时光强计算"
+    ],
+    "roadmap": [
+      "修正网页元数据",
+      "增加无障碍键盘控制说明",
+      "补充实验数据对照"
+    ],
     "versions": [
-      {"name": "已构建在线版本", "role": "prototype", "siteUrl": "https://3dpolarizer2.netlify.app/", "githubUrl": "https://github.com/WUHAO19831214/3D-", "status": "prototype", "note": "当前唯一可用入口"}
+      {
+        "name": "已构建在线版本",
+        "role": "prototype",
+        "siteUrl": "https://3dpolarizer2.netlify.app/",
+        "githubUrl": "https://github.com/WUHAO19831214/3D-",
+        "status": "prototype",
+        "note": "当前唯一可用入口"
+      }
     ],
     "updatedAt": "2026-04-22",
     "order": 5
@@ -163,22 +441,61 @@
     "summary": "在浏览器内提取 PDF 原生文本，并为扫描页提供中英文 OCR。",
     "description": "面向教师资料整理的轻量工具，支持拖拽 PDF、逐页文本提取、扫描页 OCR、结果去重和文本复制。",
     "background": "扫描讲义与教材资料常难以检索和二次编辑。这个前端工具提供不依赖服务器上传的基础转换流程。",
-    "audiences": ["教师", "教研人员", "学生"],
-    "tags": ["PDF", "OCR", "资料整理", "纯前端"],
+    "audiences": [
+      "教师",
+      "教研人员",
+      "学生"
+    ],
+    "tags": [
+      "PDF",
+      "OCR",
+      "资料整理",
+      "纯前端"
+    ],
     "status": "beta",
     "featured": true,
     "siteUrl": "https://pdfocrtotxt.netlify.app/",
     "netlifySiteName": "pdfocrtotxt",
-    "capabilities": ["PDF 原生文本提取", "扫描页中英文 OCR", "重复文本检测", "结果清空与复制"],
-    "teachingValue": ["降低扫描资料转写成本", "便于后续建立可检索的课堂资料", "文件在浏览器端处理"],
-    "scenarios": ["扫描讲义转文本", "教材资料归档", "课堂素材整理"],
-    "technicalHighlights": ["PDF.js", "Tesseract.js", "浏览器端处理"],
-    "roadmap": ["确认或恢复公开源码仓库", "增加下载 TXT 与结构化导出", "补充大文件性能提示"],
-    "versions": [
-      {"name": "Netlify 在线版", "role": "research", "siteUrl": "https://pdfocrtotxt.netlify.app/", "status": "beta", "note": "功能可用；当前无法可靠访问对应 GitHub 仓库"}
+    "capabilities": [
+      "PDF 原生文本提取",
+      "扫描页中英文 OCR",
+      "重复文本检测",
+      "结果清空与复制"
     ],
-    "updatedAt": "2026-04-19",
-    "order": 6
+    "teachingValue": [
+      "降低扫描资料转写成本",
+      "便于后续建立可检索的课堂资料",
+      "文件在浏览器端处理"
+    ],
+    "scenarios": [
+      "扫描讲义转文本",
+      "教材资料归档",
+      "课堂素材整理"
+    ],
+    "technicalHighlights": [
+      "PDF.js",
+      "Tesseract.js",
+      "浏览器端处理"
+    ],
+    "roadmap": [
+      "补充 OCR 结果复核说明",
+      "增加下载 TXT 与结构化导出",
+      "补充大文件性能提示"
+    ],
+    "versions": [
+      {
+        "name": "Netlify 在线版",
+        "role": "research",
+        "siteUrl": "https://pdfocrtotxt.netlify.app/",
+        "status": "beta",
+        "note": "浏览器内 PDF 文本提取与 OCR；公开仓库映射已核验",
+        "githubUrl": "https://github.com/WUHAO19831214/pdf-pdf-html"
+      }
+    ],
+    "updatedAt": "2026-10-03",
+    "order": 6,
+    "githubUrl": "https://github.com/WUHAO19831214/pdf-pdf-html",
+    "repositoryName": "WUHAO19831214/pdf-pdf-html"
   },
   {
     "id": "solenoid-current-teaching",
@@ -190,19 +507,49 @@
     "summary": "对照实物视图与三维线圈模型，辨认绕向、引线接入和电流方向。",
     "description": "面向电脑端演示的 Three.js 教学原型，通过绕向切换、电流动画和多视图参照降低螺线管空间判断的难度。",
     "background": "螺线管表面导线的前后遮挡容易造成空间判断困难。项目同时提供实物参考图、透明端盖和动态电流箭头。",
-    "audiences": ["初高中物理教师", "中学生"],
-    "tags": ["螺线管", "电流方向", "三维可视化", "电磁学"],
+    "audiences": [
+      "初高中物理教师",
+      "中学生"
+    ],
+    "tags": [
+      "螺线管",
+      "电流方向",
+      "三维可视化",
+      "电磁学"
+    ],
     "status": "prototype",
     "featured": false,
     "siteUrl": "https://resplendent-caramel-cff4b6.netlify.app/",
     "githubUrl": "https://github.com/WUHAO19831214/solenoid-current-mr-teaching",
     "repositoryName": "WUHAO19831214/solenoid-current-mr-teaching",
     "netlifySiteName": "resplendent-caramel-cff4b6",
-    "capabilities": ["绕向 A/B 切换", "上引线进入或流出切换", "电流方向动画", "立体、俯视、正视参照", "答案显示与隐藏"],
-    "teachingValue": ["降低遮挡导致的空间判断负担", "把二维判别与三维模型相互校验", "适合课堂即时演示"],
-    "scenarios": ["通电螺线管方向判断", "右手螺旋定则复习", "课堂空间模型演示"],
-    "technicalHighlights": ["原生 Three.js", "多视角模型控制", "电流箭头动画"],
-    "roadmap": ["将随机 Netlify 名称迁移到清晰的新入口时保留旧站", "增加移动端交互说明", "补充磁场方向可视化"],
+    "capabilities": [
+      "绕向 A/B 切换",
+      "上引线进入或流出切换",
+      "电流方向动画",
+      "立体、俯视、正视参照",
+      "答案显示与隐藏"
+    ],
+    "teachingValue": [
+      "降低遮挡导致的空间判断负担",
+      "把二维判别与三维模型相互校验",
+      "适合课堂即时演示"
+    ],
+    "scenarios": [
+      "通电螺线管方向判断",
+      "右手螺旋定则复习",
+      "课堂空间模型演示"
+    ],
+    "technicalHighlights": [
+      "原生 Three.js",
+      "多视角模型控制",
+      "电流箭头动画"
+    ],
+    "roadmap": [
+      "将随机 Netlify 名称迁移到清晰的新入口时保留旧站",
+      "增加移动端交互说明",
+      "补充磁场方向可视化"
+    ],
     "versions": [],
     "updatedAt": "2026-04-24",
     "order": 7
@@ -217,21 +564,62 @@
     "summary": "将玻璃砖实验的二维标注、折射率计算与三维光路模型连接起来。",
     "description": "面向高中光学实验的混合现实研究原型，支持图片、视频与摄像头底图、手动标注、教学仿真和实验记录。",
     "background": "手工作图和量角器读数误差较大，学生也不容易从二维纸面建立光在透明介质中传播的空间图景。",
-    "audiences": ["高中物理教师", "高中学生", "实验教学研究者"],
-    "tags": ["光的折射", "全反射", "混合现实", "计算机视觉", "Three.js"],
+    "audiences": [
+      "高中物理教师",
+      "高中学生",
+      "实验教学研究者"
+    ],
+    "tags": [
+      "光的折射",
+      "全反射",
+      "混合现实",
+      "计算机视觉",
+      "Three.js"
+    ],
     "status": "beta",
     "featured": false,
     "githubUrl": "https://github.com/WUHAO19831214/Physics-MR-Lab-Development",
     "repositoryName": "WUHAO19831214/Physics-MR-Lab-Development",
     "netlifySiteName": "physics-mr-lab-development",
     "notice": "Netlify 页面可用于教学仿真与手动标注；自动 OpenCV 分析仍依赖本机 FastAPI 服务，因此不作为首页正式在线入口。",
-    "capabilities": ["图片、视频和摄像头底图", "矩形、半圆与四边形手动标注", "折射与全反射教学仿真", "2D/3D 分屏对照", "实验历史与 JSON 导出"],
-    "teachingValue": ["连接真实实验图像与空间光路模型", "帮助比较自动识别、手动标注和模拟数据", "支持折射率与临界角的探究"],
-    "scenarios": ["测量玻璃砖折射率", "折射定律探究", "全反射演示", "混合现实教学研究"],
-    "technicalHighlights": ["React 与 Three.js", "OpenCV + FastAPI 本地分析", "SVG 手动标注", "数据来源分层"],
-    "roadmap": ["部署独立后端或改为本地完整应用", "增加透视校正", "补充课堂实证数据"],
+    "capabilities": [
+      "图片、视频和摄像头底图",
+      "矩形、半圆与四边形手动标注",
+      "折射与全反射教学仿真",
+      "2D/3D 分屏对照",
+      "实验历史与 JSON 导出"
+    ],
+    "teachingValue": [
+      "连接真实实验图像与空间光路模型",
+      "帮助比较自动识别、手动标注和模拟数据",
+      "支持折射率与临界角的探究"
+    ],
+    "scenarios": [
+      "测量玻璃砖折射率",
+      "折射定律探究",
+      "全反射演示",
+      "混合现实教学研究"
+    ],
+    "technicalHighlights": [
+      "React 与 Three.js",
+      "OpenCV + FastAPI 本地分析",
+      "SVG 手动标注",
+      "数据来源分层"
+    ],
+    "roadmap": [
+      "部署独立后端或改为本地完整应用",
+      "增加透视校正",
+      "补充课堂实证数据"
+    ],
     "versions": [
-      {"name": "Netlify 前端演示", "role": "research", "siteUrl": "https://physics-mr-lab-development.netlify.app/", "githubUrl": "https://github.com/WUHAO19831214/Physics-MR-Lab-Development", "status": "beta", "note": "教学模式可用；自动分析需要本机后端"}
+      {
+        "name": "Netlify 前端演示",
+        "role": "research",
+        "siteUrl": "https://physics-mr-lab-development.netlify.app/",
+        "githubUrl": "https://github.com/WUHAO19831214/Physics-MR-Lab-Development",
+        "status": "beta",
+        "note": "教学模式可用；自动分析需要本机后端"
+      }
     ],
     "updatedAt": "2026-07-13",
     "order": 8
@@ -246,21 +634,66 @@
     "summary": "同步记录人物位置与麦克风特征，形成轨迹、相对声强和主频空间分布。",
     "description": "完全本地运行的 Python/Streamlit 实验系统，融合人物追踪、音频特征提取和统一时间戳数据。",
     "background": "声场实验中，空间位置与音频读数往往分别记录。本项目用共享时钟将视觉轨迹与音频块对齐，并明确相对 dBFS 与真实声压级的边界。",
-    "audiences": ["物理教师", "实验研究者", "科学教育开发者"],
-    "tags": ["声场", "音视频同步", "目标追踪", "Python", "实验数据"],
+    "audiences": [
+      "物理教师",
+      "实验研究者",
+      "科学教育开发者"
+    ],
+    "tags": [
+      "声场",
+      "音视频同步",
+      "目标追踪",
+      "Python",
+      "实验数据"
+    ],
     "status": "beta",
     "featured": false,
     "githubUrl": "https://github.com/WUHAO19831214/audio-visual-soundfield-tracker",
     "repositoryName": "WUHAO19831214/audio-visual-soundfield-tracker",
-    "notice": "原 Netlify 地址当前返回 404。门户仅提供 GitHub 与本地运行说明，不生成无效在线按钮。",
-    "capabilities": ["图片与视频 person 计数", "摄像头与麦克风同步采集", "RMS、dBFS、主频和频谱质心", "轨迹与声学分布图", "融合 CSV 导出"],
-    "teachingValue": ["展示多模态实验数据如何同步", "帮助理解相对声强与空间标定", "适合实验方法与数据质量讨论"],
-    "scenarios": ["空间声场初步测量", "视听同步实验", "课堂行为与声学研究原型"],
-    "technicalHighlights": ["Streamlit", "YOLOv8 与 ByteTrack", "OpenCV HOG 回退", "共享单调时钟"],
-    "roadmap": ["建立真正可用的在线或远程演示入口", "补充米制空间标定", "固定声学增益并进行 dB SPL 校准"],
+    "notice": "核心采集与分析需要本地 Python/Streamlit 环境；门户提供源码与本地运行说明，不把静态托管页面当作完整实验入口。",
+    "capabilities": [
+      "图片与视频 person 计数",
+      "摄像头与麦克风同步采集",
+      "RMS、dBFS、主频和频谱质心",
+      "轨迹与声学分布图",
+      "融合 CSV 导出"
+    ],
+    "teachingValue": [
+      "展示多模态实验数据如何同步",
+      "帮助理解相对声强与空间标定",
+      "适合实验方法与数据质量讨论"
+    ],
+    "scenarios": [
+      "空间声场初步测量",
+      "视听同步实验",
+      "课堂行为与声学研究原型"
+    ],
+    "technicalHighlights": [
+      "Streamlit",
+      "YOLOv8 与 ByteTrack",
+      "OpenCV HOG 回退",
+      "共享单调时钟"
+    ],
+    "roadmap": [
+      "建立真正可用的在线或远程演示入口",
+      "补充米制空间标定",
+      "固定声学增益并进行 dB SPL 校准"
+    ],
     "versions": [
-      {"name": "开发主线", "role": "research", "githubUrl": "https://github.com/WUHAO19831214/audio-visual-soundfield-tracker", "status": "beta", "note": "本地运行"},
-      {"name": "稳定基线 2026-07-11", "role": "stable", "githubUrl": "https://github.com/WUHAO19831214/audio-visual-soundfield-tracker-stable", "status": "active", "note": "经 64 项测试验证的复现实验基线，无在线入口"}
+      {
+        "name": "开发主线",
+        "role": "research",
+        "githubUrl": "https://github.com/WUHAO19831214/audio-visual-soundfield-tracker",
+        "status": "beta",
+        "note": "本地运行"
+      },
+      {
+        "name": "稳定基线 2026-07-11",
+        "role": "stable",
+        "githubUrl": "https://github.com/WUHAO19831214/audio-visual-soundfield-tracker-stable",
+        "status": "active",
+        "note": "经 64 项测试验证的复现实验基线，无在线入口"
+      }
     ],
     "updatedAt": "2026-07-13",
     "order": 9
@@ -273,24 +706,73 @@
     "englishTitle": "Local Textbook Structure Workbench",
     "category": "teaching-tools",
     "summary": "读取本地 Markdown 教材数据，整理章节标题、生成脑图并抽取制卡内容。",
-    "description": "面向本地教材资料的结构化工作台前端，包含阅读器、章节脑图、规则抽取和 Anki/CSV 导出界面。",
+    "description": "本地教材资料的结构化工作台，提供阅读器、章节脑图、规则抽取、Anki/CSV、公式渲染和 Word 原版式/可编辑导出。",
     "background": "教材 OCR 后往往只得到连续文本和图片目录，教师仍需要整理章节层级、定位页码并生成可复用的学习材料。",
-    "audiences": ["教师", "教材研究者", "本地知识库使用者"],
-    "tags": ["教材结构化", "Markdown", "脑图", "制卡", "本地工具"],
+    "audiences": [
+      "教师",
+      "教材研究者",
+      "本地知识库使用者"
+    ],
+    "tags": [
+      "教材结构化",
+      "Markdown",
+      "脑图",
+      "制卡",
+      "本地工具"
+    ],
     "status": "beta",
     "featured": false,
     "netlifySiteName": "local-textbook-structure2",
     "notice": "两个 Netlify 地址是同一提交的重复部署；核心功能依赖未部署的本地 API，因此不作为正式在线入口。",
-    "capabilities": ["Markdown 教材阅读", "章节标题整理", "动态脑图", "规则抽取与制卡", "CSV 导出"],
-    "teachingValue": ["把教材 OCR 结果转化为可导航结构", "支持章节层级检查", "为本地题卡与知识库准备数据"],
-    "scenarios": ["教材 OCR 后处理", "章节结构核验", "复习卡片制作"],
-    "technicalHighlights": ["Vue 前端", "Markdown 与数学公式渲染", "本地 API 工作流"],
-    "roadmap": ["确认或恢复 GitHub 仓库", "部署安全的后端或明确定位为本地应用", "合并重复 Netlify 项目标识"],
-    "versions": [
-      {"name": "Netlify 前端外壳", "role": "research", "siteUrl": "https://local-textbook-structure2.netlify.app/", "status": "beta", "note": "核心操作需要本地后端；重复站点不再列出"}
+    "capabilities": [
+      "Markdown 教材阅读",
+      "章节标题整理",
+      "动态脑图",
+      "规则抽取与制卡",
+      "CSV 导出",
+      "公式渲染与 Word 原版式/可编辑导出"
     ],
-    "updatedAt": "2026-05-18",
-    "order": 10
+    "teachingValue": [
+      "把教材 OCR 结果转化为可导航结构",
+      "支持章节层级检查",
+      "为本地题卡与知识库准备数据"
+    ],
+    "scenarios": [
+      "教材 OCR 后处理",
+      "章节结构核验",
+      "复习卡片制作"
+    ],
+    "technicalHighlights": [
+      "Vue 前端",
+      "Markdown 与数学公式渲染",
+      "本地 API 工作流"
+    ],
+    "roadmap": [
+      "继续验证公式识别与可编辑导出的准确性",
+      "部署安全的后端或明确定位为本地应用",
+      "合并重复 Netlify 项目标识"
+    ],
+    "versions": [
+      {
+        "name": "Netlify 前端外壳",
+        "role": "research",
+        "siteUrl": "https://local-textbook-structure2.netlify.app/",
+        "status": "beta",
+        "note": "核心操作需要本地后端；重复站点不再列出",
+        "githubUrl": "https://github.com/WUHAO19831214/local-textbook-structure-workbench"
+      },
+      {
+        "name": "Local OCR Dataset Builder",
+        "role": "research",
+        "status": "beta",
+        "githubUrl": "https://github.com/WUHAO19831214/local-ocr-dataset-builder",
+        "note": "macOS 桌面配套工具：本机 OCR、公式复核、Word 双格式输出；依赖本机已配置的 OCR 环境。"
+      }
+    ],
+    "updatedAt": "2026-09-29",
+    "order": 10,
+    "githubUrl": "https://github.com/WUHAO19831214/local-textbook-structure-workbench",
+    "repositoryName": "WUHAO19831214/local-textbook-structure-workbench"
   },
   {
     "id": "nihongo-master",
@@ -302,19 +784,47 @@
     "summary": "结合词卡、发音、自定义词表和模拟 AI 反馈的个人日语学习工具。",
     "description": "面向个人词汇练习的互动网页，支持日文、罗马字、中英文释义和自定义词表。",
     "background": "项目把个人词汇复习、自定义内容输入和即时反馈组合在一个轻量学习界面中。",
-    "audiences": ["日语学习者", "个人学习工具使用者"],
-    "tags": ["日语", "词汇", "学习工具", "AI 反馈"],
+    "audiences": [
+      "日语学习者",
+      "个人学习工具使用者"
+    ],
+    "tags": [
+      "日语",
+      "词汇",
+      "学习工具",
+      "AI 反馈"
+    ],
     "status": "beta",
     "featured": false,
     "siteUrl": "https://nihongo-master.netlify.app/",
     "githubUrl": "https://github.com/WUHAO19831214/nihongo-master",
     "repositoryName": "WUHAO19831214/nihongo-master",
     "netlifySiteName": "nihongo-master",
-    "capabilities": ["日语词卡", "浏览器语音朗读", "自定义词表", "练习笔记", "模拟 AI 反馈"],
-    "teachingValue": ["展示非物理类个人学习工具的实践", "支持自定义词表与多语言释义"],
-    "scenarios": ["日语词汇复习", "个人学习资料整理"],
-    "technicalHighlights": ["React", "Web Speech API", "AI 服务模拟回退"],
-    "roadmap": ["避免在浏览器端配置私人 AI 密钥", "增加学习进度持久化", "完善真实 OCR 的隐私说明"],
+    "capabilities": [
+      "日语词卡",
+      "浏览器语音朗读",
+      "自定义词表",
+      "练习笔记",
+      "模拟 AI 反馈"
+    ],
+    "teachingValue": [
+      "展示非物理类个人学习工具的实践",
+      "支持自定义词表与多语言释义"
+    ],
+    "scenarios": [
+      "日语词汇复习",
+      "个人学习资料整理"
+    ],
+    "technicalHighlights": [
+      "React",
+      "Web Speech API",
+      "AI 服务模拟回退"
+    ],
+    "roadmap": [
+      "避免在浏览器端配置私人 AI 密钥",
+      "增加学习进度持久化",
+      "完善真实 OCR 的隐私说明"
+    ],
     "versions": [],
     "updatedAt": "2026-02-10",
     "order": 11
@@ -322,27 +832,228 @@
   {
     "id": "physics-lecture-survey",
     "slug": "physics-lecture-survey",
-    "title": "物理讲座现场互动与评价系统",
-    "shortTitle": "物理讲座调查",
+    "title": "物理教师 AI 创新能力画像与实验开发需求调查平台",
+    "shortTitle": "教师创新与实验需求调查",
     "englishTitle": "Physics Lecture Survey",
     "category": "teaching-tools",
-    "summary": "为初中物理专题讲座收集参会教师信息、教学需求与现场评价。",
-    "description": "一个移动端优先的单页问卷原型，用于讲座现场互动和教师需求收集。",
+    "summary": "通过移动端调查与实时看板整理教师 AI 工具使用、能力画像和实验开发需求。",
+    "description": "通过移动端调查与实时看板整理教师 AI 工具使用、能力画像和实验开发需求。",
     "background": "区域教研活动需要快速汇总参会教师背景、教学难点和活动评价，该原型探索了现场二维码填报流程。",
-    "audiences": ["教研员", "物理教师", "活动组织者"],
-    "tags": ["教师调查", "教研活动", "问卷", "移动端"],
+    "audiences": [
+      "教研员",
+      "物理教师",
+      "活动组织者"
+    ],
+    "tags": [
+      "教师调查",
+      "教研活动",
+      "问卷",
+      "移动端"
+    ],
     "status": "prototype",
     "featured": false,
     "githubUrl": "https://github.com/WUHAO19831214/physics-survey",
     "repositoryName": "WUHAO19831214/physics-survey",
-    "notice": "当前提交端点指向临时 ngrok 本地服务，没有可靠生产入口。",
-    "capabilities": ["参会教师信息收集", "教学需求调查", "活动评价", "移动端表单"],
-    "teachingValue": ["支持区域教研需求分析", "形成活动反馈的结构化入口"],
-    "scenarios": ["专题讲座", "区域教研活动", "教师培训反馈"],
-    "technicalHighlights": ["单文件 HTML", "移动端表单", "多后端提交方案原型"],
-    "roadmap": ["移除临时 ngrok 地址", "建立合规的数据存储和隐私说明", "部署正式问卷入口"],
+    "notice": "v2.0 需要本地 Node.js 服务；不提供临时隧道作为永久入口。收集教师信息前应明确数据用途、保存位置与访问权限。",
+    "capabilities": [
+      "移动端分步式调查",
+      "AI 工具使用与五维能力画像",
+      "实验开发需求与创新阶段统计",
+      "实时讲师看板与本地分析建议"
+    ],
+    "teachingValue": [
+      "支持区域教研需求分析",
+      "形成活动反馈的结构化入口"
+    ],
+    "scenarios": [
+      "专题讲座",
+      "区域教研活动",
+      "教师培训反馈"
+    ],
+    "technicalHighlights": [
+      "Node.js 原生服务",
+      "移动端问卷与实时研究看板",
+      "本地模型与规则分析"
+    ],
+    "roadmap": [
+      "移除临时 ngrok 地址",
+      "建立合规的数据存储和隐私说明",
+      "部署正式问卷入口"
+    ],
     "versions": [],
-    "updatedAt": "2026-06-11",
+    "updatedAt": "2026-08-28",
     "order": 12
+  },
+  {
+    "id": "isochoric-gas-workbench",
+    "category": "digital-experiments",
+    "order": 3.5,
+    "featured": true,
+    "status": "beta",
+    "slug": "isochoric-gas-workbench",
+    "title": "气体等容变化实验与微观可视化工作台",
+    "summary": "将压强与温度的屏幕 OCR、实验摄像头、p–T 图像与分子热运动模型放在同一实验流程中。",
+    "notice": "两个版本均为研究测试；摄像头和屏幕共享由用户授权。微观模型是仿真，OCR 数据需人工核验，演示数据不作为实测证据。",
+    "capabilities": [
+      "压强与温度双 ROI 屏幕 OCR",
+      "p–T / p–t 图像与线性拟合",
+      "实验摄像头与时间序列回放",
+      "分子热运动 3D 模型",
+      "CSV / JSON 实验数据导出"
+    ],
+    "teachingValue": [
+      "连接宏观实验数据与微观解释",
+      "比较摄氏温标与热力学温标",
+      "保留采样、拟合和回放的证据链"
+    ],
+    "tags": [
+      "气体等容变化",
+      "屏幕 OCR",
+      "分子热运动",
+      "实验回放"
+    ],
+    "audiences": [
+      "高中物理教师",
+      "学生实验小组"
+    ],
+    "description": "将压强与温度的屏幕 OCR、实验摄像头、p–T 图像与分子热运动模型放在同一实验流程中。",
+    "background": "连接宏观实验数据与微观解释",
+    "githubUrl": "https://github.com/WUHAO19831214/charles-law-isochoric-lab",
+    "repositoryName": "WUHAO19831214/charles-law-isochoric-lab",
+    "updatedAt": "2026-10-02",
+    "versions": [
+      {
+        "name": "等容实验与双微观模型版",
+        "note": "支持 p–T / p–t 图像、双微观模型与回放",
+        "role": "research",
+        "status": "beta",
+        "siteUrl": "https://charles-law-isochoric-lab.netlify.app/",
+        "githubUrl": "https://github.com/WUHAO19831214/charles-law-isochoric-lab"
+      },
+      {
+        "name": "C+KIMI K3 工作台",
+        "note": "分栏实验记录与宏微观证据链；同一实验主题的独立版本",
+        "role": "research",
+        "status": "beta",
+        "siteUrl": "https://isochoric-gas-workbench-c-kimi-k3.netlify.app/",
+        "githubUrl": "https://github.com/WUHAO19831214/isochoric-gas-workbench-c-kimi-k3"
+      }
+    ],
+    "siteUrl": "https://charles-law-isochoric-lab.netlify.app/",
+    "netlifySiteName": "charles-law-isochoric-lab"
+  },
+  {
+    "id": "arc-track-force-demo",
+    "category": "digital-experiments",
+    "order": 4.5,
+    "featured": false,
+    "status": "prototype",
+    "slug": "arc-track-force-demo",
+    "title": "圆弧轨道受力演示器",
+    "summary": "结合三轴力传感器屏幕 OCR、摄像头颜色追踪与 2D/3D 力矢量，演示轨道与小球的相互作用。",
+    "notice": "目前提供公开源码与本地运行说明，无已核验的 Netlify 入口。模拟数据与传感器 OCR 数据分开标识，像素追踪需要几何标定。",
+    "capabilities": [
+      "三通道力读数 OCR 与置信度",
+      "HSV 小球颜色追踪",
+      "2D/3D 受力与反作用力矢量",
+      "调零、受力曲线与 CSV 导出"
+    ],
+    "teachingValue": [
+      "连接传感器读数与牛顿第三定律",
+      "对照模拟模型与实验读数"
+    ],
+    "tags": [
+      "圆周运动",
+      "力矢量",
+      "屏幕 OCR",
+      "颜色追踪"
+    ],
+    "audiences": [
+      "物理教师",
+      "学生实验小组"
+    ],
+    "description": "结合三轴力传感器屏幕 OCR、摄像头颜色追踪与 2D/3D 力矢量，演示轨道与小球的相互作用。",
+    "background": "连接传感器读数与牛顿第三定律",
+    "githubUrl": "https://github.com/WUHAO19831214/arc-track-force-demo",
+    "repositoryName": "WUHAO19831214/arc-track-force-demo",
+    "updatedAt": "2026-08-17",
+    "versions": []
+  },
+  {
+    "id": "physics-software-sensors",
+    "category": "digital-experiments",
+    "order": 9.5,
+    "featured": false,
+    "status": "beta",
+    "slug": "physics-software-sensors",
+    "title": "物理实验软件传感器库",
+    "summary": "复用摄像头、屏幕、OCR 与追踪能力，以可追溯数据契约连接实验软件与处理工具。",
+    "notice": "在线入口是中英日公共文档与能力展示，不是完整实验应用。7 个软件传感器与 1 个伴随处理工具提供软件观测，不能自动视为已校准物理量。",
+    "capabilities": [
+      "摄像头与屏幕采集契约",
+      "数字 OCR 与光斑重心处理",
+      "FramePacket / SensorEvent 可追溯记录",
+      "三维矢量合成伴随工具",
+      "中英日完整公共文档"
+    ],
+    "teachingValue": [
+      "减少实验应用间重复实现",
+      "明确软件观测与物理标定边界"
+    ],
+    "tags": [
+      "能力库",
+      "OCR",
+      "传感器契约",
+      "数据质量"
+    ],
+    "audiences": [
+      "实验软件开发者",
+      "实验教学研究者"
+    ],
+    "description": "复用摄像头、屏幕、OCR 与追踪能力，以可追溯数据契约连接实验软件与处理工具。",
+    "background": "减少实验应用间重复实现",
+    "githubUrl": "https://github.com/WUHAO19831214/physics-software-sensors",
+    "repositoryName": "WUHAO19831214/physics-software-sensors",
+    "updatedAt": "2026-08-17",
+    "versions": [],
+    "siteUrl": "https://wuhao19831214.github.io/physics-software-sensors/"
+  },
+  {
+    "id": "classroom-signal-console",
+    "category": "teaching-tools",
+    "order": 10.5,
+    "featured": false,
+    "status": "prototype",
+    "slug": "classroom-signal-console",
+    "title": "课堂脉搏：本地课堂信号控制台",
+    "summary": "将本地语音或 JSONL 回放整理为课堂事件，用可审查策略生成教师私密提示。",
+    "notice": "当前是本地研究原型，无正式在线入口。语音识别在本机完成；Jev 处理文字与结构化状态，使用前需检查模型服务的数据去向。不包含摄像头、人脸或声纹识别，也不自动向学生推送。",
+    "capabilities": [
+      "麦克风输入与 JSONL 回放",
+      "双轮中文语音识别",
+      "带时间边界和证据质量的事件",
+      "结构化判断与确定性介入策略",
+      "教师私密提示与可审查日志"
+    ],
+    "teachingValue": [
+      "研究课堂节奏与介入时机",
+      "保留教师判断和反馈的可追溯证据"
+    ],
+    "tags": [
+      "课堂研究",
+      "本地语音识别",
+      "教师提示",
+      "可审查策略"
+    ],
+    "audiences": [
+      "教师",
+      "课堂研究者"
+    ],
+    "description": "将本地语音或 JSONL 回放整理为课堂事件，用可审查策略生成教师私密提示。",
+    "background": "研究课堂节奏与介入时机",
+    "githubUrl": "https://github.com/WUHAO19831214/classroom-signal-console",
+    "repositoryName": "WUHAO19831214/classroom-signal-console",
+    "updatedAt": "2026-09-21",
+    "versions": []
   }
 ]
