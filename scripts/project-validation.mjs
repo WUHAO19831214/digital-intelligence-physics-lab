@@ -8,7 +8,7 @@ const siteHosts = new Set([
   "dual-camera-acoustic-marker-tracker-a.netlify.app", "dual-camera-acoustic-marker-tracker.netlify.app",
   "fspot-vibration-tracking-system.netlify.app", "forced-vibration-af-analyzer.netlify.app",
   "3dpolarizer2.netlify.app", "pdfocrtotxt.netlify.app", "resplendent-caramel-cff4b6.netlify.app",
-  "physics-mr-lab-development.netlify.app", "local-textbook-structure2.netlify.app", "nihongo-master.netlify.app",
+  "physics-mr-lab.netlify.app", "physics-mr-lab-development.netlify.app", "local-textbook-structure2.netlify.app", "nihongo-master.netlify.app",
   "charles-law-isochoric-lab.netlify.app", "isochoric-gas-workbench-c-kimi-k3.netlify.app",
   "wuhao19831214.github.io",
 ]);

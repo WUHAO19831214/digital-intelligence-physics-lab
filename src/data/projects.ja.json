@@ -580,8 +580,8 @@
     "featured": false,
     "githubUrl": "https://github.com/WUHAO19831214/Physics-MR-Lab-Development",
     "repositoryName": "WUHAO19831214/Physics-MR-Lab-Development",
-    "netlifySiteName": "physics-mr-lab-development",
-    "notice": "Netlify ページは、教育シミュレーションと手動注釈に使用できます。 OpenCV の自動分析は依然としてネイティブの FastAPI サービスに依存しているため、ホームページへの公式のオンライン入口としては使用されていません。",
+    "netlifySiteName": "physics-mr-lab",
+    "notice": "新しく公開されたオンライン入口では、教育シミュレーションと手動注釈を利用できます。OpenCV による自動解析には、ローカルで実行する FastAPI サービスが必要です。",
     "capabilities": [
       "写真、ビデオ、カメラのベースマップ",
       "長方形、半円、四角形の手動ラベル付け",
@@ -613,16 +613,25 @@
     ],
     "versions": [
       {
-        "name": "Netlify フロントエンドのデモ",
+        "name": "MR光学研究室オンライン版",
         "role": "research",
-        "siteUrl": "https://physics-mr-lab-development.netlify.app/",
+        "siteUrl": "https://physics-mr-lab.netlify.app/",
         "githubUrl": "https://github.com/WUHAO19831214/Physics-MR-Lab-Development",
         "status": "beta",
+        "note": "教育シミュレーションと手動注釈。自動解析にはローカルのバックエンドが必要です"
+      },
+      {
+        "name": "Netlify フロントエンドのデモ",
+        "role": "legacy",
+        "siteUrl": "https://physics-mr-lab-development.netlify.app/",
+        "githubUrl": "https://github.com/WUHAO19831214/Physics-MR-Lab-Development",
+        "status": "archived",
         "note": "チュートリアルモードが利用可能。自動分析にはネイティブ バックエンドが必要です"
       }
     ],
-    "updatedAt": "2026-07-13",
-    "order": 8
+    "updatedAt": "2026-10-03",
+    "order": 8,
+    "siteUrl": "https://physics-mr-lab.netlify.app/"
   },
   {
     "id": "audio-visual-soundfield",

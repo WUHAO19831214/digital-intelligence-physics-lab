@@ -580,8 +580,8 @@
     "featured": false,
     "githubUrl": "https://github.com/WUHAO19831214/Physics-MR-Lab-Development",
     "repositoryName": "WUHAO19831214/Physics-MR-Lab-Development",
-    "netlifySiteName": "physics-mr-lab-development",
-    "notice": "The Netlify page can be used for teaching simulation and manual annotation; automatic OpenCV analysis still relies on the native FastAPI service, so it is not used as the official online entrance to the homepage.",
+    "netlifySiteName": "physics-mr-lab",
+    "notice": "The newly published online entrance supports teaching simulation and manual annotation. Automatic OpenCV analysis still requires a locally running FastAPI service.",
     "capabilities": [
       "Pictures, videos and camera basemaps",
       "Manual labeling of rectangles, semicircles and quadrilaterals",
@@ -613,16 +613,25 @@
     ],
     "versions": [
       {
-        "name": "Netlify front-end demo",
+        "name": "MR Optics Laboratory online",
         "role": "research",
-        "siteUrl": "https://physics-mr-lab-development.netlify.app/",
+        "siteUrl": "https://physics-mr-lab.netlify.app/",
         "githubUrl": "https://github.com/WUHAO19831214/Physics-MR-Lab-Development",
         "status": "beta",
+        "note": "Teaching simulation and manual annotation; automatic analysis requires a local backend"
+      },
+      {
+        "name": "Netlify front-end demo",
+        "role": "legacy",
+        "siteUrl": "https://physics-mr-lab-development.netlify.app/",
+        "githubUrl": "https://github.com/WUHAO19831214/Physics-MR-Lab-Development",
+        "status": "archived",
         "note": "Tutorial mode available; automatic analysis requires native backend"
       }
     ],
-    "updatedAt": "2026-07-13",
-    "order": 8
+    "updatedAt": "2026-10-03",
+    "order": 8,
+    "siteUrl": "https://physics-mr-lab.netlify.app/"
   },
   {
     "id": "audio-visual-soundfield",

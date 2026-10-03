@@ -580,8 +580,8 @@
     "featured": false,
     "githubUrl": "https://github.com/WUHAO19831214/Physics-MR-Lab-Development",
     "repositoryName": "WUHAO19831214/Physics-MR-Lab-Development",
-    "netlifySiteName": "physics-mr-lab-development",
-    "notice": "Netlify 页面可用于教学仿真与手动标注；自动 OpenCV 分析仍依赖本机 FastAPI 服务，因此不作为首页正式在线入口。",
+    "netlifySiteName": "physics-mr-lab",
+    "notice": "新发布的在线入口支持教学仿真与手动标注；自动 OpenCV 分析仍需要在本机运行 FastAPI 服务。",
     "capabilities": [
       "图片、视频和摄像头底图",
       "矩形、半圆与四边形手动标注",
@@ -613,16 +613,25 @@
     ],
     "versions": [
       {
-        "name": "Netlify 前端演示",
+        "name": "MR 光学实验室在线版",
         "role": "research",
-        "siteUrl": "https://physics-mr-lab-development.netlify.app/",
+        "siteUrl": "https://physics-mr-lab.netlify.app/",
         "githubUrl": "https://github.com/WUHAO19831214/Physics-MR-Lab-Development",
         "status": "beta",
+        "note": "教学仿真与手动标注入口；自动分析需要本机后端"
+      },
+      {
+        "name": "Netlify 前端演示",
+        "role": "legacy",
+        "siteUrl": "https://physics-mr-lab-development.netlify.app/",
+        "githubUrl": "https://github.com/WUHAO19831214/Physics-MR-Lab-Development",
+        "status": "archived",
         "note": "教学模式可用；自动分析需要本机后端"
       }
     ],
-    "updatedAt": "2026-07-13",
-    "order": 8
+    "updatedAt": "2026-10-03",
+    "order": 8,
+    "siteUrl": "https://physics-mr-lab.netlify.app/"
   },
   {
     "id": "audio-visual-soundfield",
